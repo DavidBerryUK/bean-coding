@@ -1,0 +1,30 @@
+{
+    "categories": [
+        {
+            "categoryId": "1",
+            "name": "Latte"
+        },
+        {
+            "categoryId": "2",
+            "name": "Mocha"
+        },
+        {
+            "categoryId": "3",
+            "name": "Macchiato"
+        },
+        {
+            "categoryId": "4",
+            "name": "Cappuccino"
+        }
+        ,
+        {
+            "categoryId": "5",
+            "name": "Americano"
+        }
+        ,
+        {
+            "categoryId": "6",
+            "name": "Espresso"
+        }        
+    ]
+}

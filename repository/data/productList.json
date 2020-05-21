@@ -1,0 +1,94 @@
+{
+    "products": [
+        {
+            "productNumber": "999001",
+            "name": "Caffè Americano",
+            "categoryId": "5"
+        },
+        {
+            "productNumber": "999002",
+            "name": "Iced Caffè Americano",
+            "categoryId": "5"
+        },
+        {
+            "productNumber": "999003",
+            "name": "Cappuccino",
+            "categoryId": "4"
+        },
+        {
+            "productNumber": "999004",
+            "name": "Classic Iced Cappuccino",
+            "categoryId": "4"
+        },
+        {
+            "productNumber": "999005",
+            "name": "Cold Foam Iced Cappuccino",
+            "categoryId": "4"
+        },
+        {
+            "productNumber": "999006",
+            "name": "Cortado",
+            "categoryId": "6"
+        },
+        {
+            "productNumber": "999007",
+            "name": "Espresso",
+            "categoryId": "6"
+        },
+        {
+            "productNumber": "999008",
+            "name": "Espresso Con Panna",
+            "categoryId": "6"
+        },
+        {
+            "productNumber": "999009",
+            "name": "Espresso Macchiato",
+            "categoryId": "6"
+        },
+        {
+            "productNumber": "999010",
+            "name": "Caffè Latte",
+            "categoryId": "1"
+        },
+        {
+            "productNumber": "999011",
+            "name": "White Chocolate Mocha",
+            "categoryId": "2"
+        },
+        {
+            "productNumber": "999012",
+            "name": "Flat White",
+            "categoryId": "1"
+        },
+        {
+            "productNumber": "999013",
+            "name": "Caramel Macchiato",
+            "categoryId": "3"
+        },
+        {
+            "productNumber": "999014",
+            "name": "Iced Caramel Macchiato",
+            "categoryId": "3"
+        },
+        {
+            "productNumber": "999015",
+            "name": "Latte Macchiato",
+            "categoryId": "3"
+        },
+        {
+            "productNumber": "999016",
+            "name": "Caffè Mocha",
+            "categoryId": "2"
+        },
+        {
+            "productNumber": "999017",
+            "name": "Iced Caffè Mocha",
+            "categoryId": "2"
+        },
+        {
+            "productNumber": "999018",
+            "name": "Iced White Chocolate Mocha",
+            "categoryId": "2"
+        }        
+    ]
+}
