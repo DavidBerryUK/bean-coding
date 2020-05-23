@@ -1,9 +1,9 @@
-import { Box }                                  from '@material-ui/core';
+import './Styles.scss';
 import { BrowserRouter }                        from 'react-router-dom';
 import { useState }                             from 'react';
-import ApplicationContentWrapper                from '../applicationContentWrapper/ApplicationContentWrapper';
-import ApplicationHeader                        from '../applicationHeader/ApplicationHeader';
-import ApplicationSideDrawer                    from '../applicationSideMenu/ApplicationSideMenu';
+import ApplicationContentWrapper                from '../widgets/applicationContentWrapper/ApplicationContentWrapper';
+import ApplicationHeader                        from '../widgets/applicationHeader/ApplicationHeader';
+import ApplicationSideDrawer                    from '../widgets/applicationSideMenu/ApplicationSideMenu';
 import CssBaseline                              from '@material-ui/core/CssBaseline';
 import React                                    from 'react';
 import TopLevelRoutes                           from '../routes/TopLevelRoutes';
@@ -18,16 +18,16 @@ const App: React.FC = () => {
 
   return (
     <>
-      <CssBaseline />
+    <CssBaseline />          
       <ApplicationHeader onMenuTogglePressed={handleonMenuTogglePressed} />
       <BrowserRouter>
-        <Box display="flex">
-          <ApplicationSideDrawer isOpen={menuOpen} />
-          <ApplicationContentWrapper isOpen={menuOpen}>
+        <div  className='page-split-container'>
+          <ApplicationSideDrawer isOpen={menuOpen} /> 
+          <ApplicationContentWrapper isOpen={menuOpen} >
             <TopLevelRoutes />
-          </ApplicationContentWrapper>
-        </Box>
-      </BrowserRouter>
+          </ApplicationContentWrapper> 
+        </div>
+       </BrowserRouter>     
     </>
   );
 }

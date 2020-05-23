@@ -1,6 +1,6 @@
 import { Box }                                  from '@material-ui/core';
-import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import React                                    from 'react';
+import './Styles.scss';
 
 interface IProperties {
     isOpen: boolean;
@@ -8,10 +8,12 @@ interface IProperties {
 
 const ApplicationContentWrapper: React.FC<IProperties> = (props) => {
 
-    const classStyles = ClassStyleDefinition();
+    const containerStyle = () => {
+        return `application-container ${props.isOpen ? ' draw-open' : 'draw-closed'}`;
+    }
 
     return (
-        <Box className={props.isOpen ? classStyles.contentDrawOpen : classStyles.contentDrawClosed} mt={8} width={1}>    
+        <Box className={containerStyle()} >    
             {props.children}
         </Box>
     )

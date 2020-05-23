@@ -1,6 +1,6 @@
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Drawer }                               from '@material-ui/core';
-import { EnumTopLevelRoutes }                   from "../routes/TopLevelRouteConstants";
+import { EnumTopLevelRoutes }                   from "../../routes/TopLevelRouteConstants";
 import { Link }                                 from '@material-ui/core';
 import { Link as RouterLink }                   from 'react-router-dom';
 import { List }                                 from '@material-ui/core';

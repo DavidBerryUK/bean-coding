@@ -2,8 +2,8 @@ import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { useEffect }                            from 'react';
 import { useState }                             from 'react';
 import CategoryItem                             from '../categoryItem/CategoryItem';
-import CategoryModel                            from '../../repository/categoryRepository/models/CategoryModel';
-import CategoryRepository                       from '../../repository/categoryRepository/CategoryRepository';
+import CategoryModel                            from '../../../repository/categoryRepository/models/CategoryModel';
+import CategoryRepository                       from '../../../repository/categoryRepository/CategoryRepository';
 import React                                    from 'react';
 
 const CategoryList: React.FC = (props) => {

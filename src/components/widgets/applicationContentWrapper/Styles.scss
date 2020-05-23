@@ -1,0 +1,16 @@
+.application-container {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    transition:left 0.2s linear;
+
+    &.draw-open {
+        left: 280px;
+    }
+
+    &.draw-closed {
+        left:0;
+    }
+}

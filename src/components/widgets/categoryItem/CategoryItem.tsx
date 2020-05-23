@@ -4,7 +4,7 @@ import { CardContent }                          from '@material-ui/core';
 import { CardMedia }                            from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Typography }                           from '@material-ui/core';
-import CategoryModel                            from '../../repository/categoryRepository/models/CategoryModel';
+import CategoryModel                            from '../../../repository/categoryRepository/models/CategoryModel';
 import React                                    from 'react';
 
 interface IProperties {

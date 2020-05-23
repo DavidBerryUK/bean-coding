@@ -1,0 +1,19 @@
+$order-panel-width: 340px;
+
+.region-menu-category {
+    position: absolute;
+    left: 0;
+    right: $order-panel-width;
+    top: 4px;
+    height: 100px;
+    border: dotted 1px red;
+}
+
+.region-order-panel {
+    position: absolute;    
+    right: 0;
+    width: $order-panel-width;;
+    top: 4px;
+    bottom:0;
+    border: dotted 1px blue;
+}
