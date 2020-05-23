@@ -2,29 +2,69 @@
     "categories": [
         {
             "categoryId": "1",
-            "name": "Latte"
+            "name": "Latte",
+            "imageFull":"latte.png",
+            "imageThumbnail":"latte_tn.png",
+            "products": [
+                999010,
+                999012,
+                999015
+            ]
         },
         {
             "categoryId": "2",
-            "name": "Mocha"
+            "name": "Mocha",
+            "imageFull":"mocha.png",
+            "imageThumbnail":"mocha_tn.png",
+            "products": [
+                999011,
+                999018,
+                999016,
+                999017
+            ]
         },
         {
             "categoryId": "3",
-            "name": "Macchiato"
+            "name": "Macchiato",
+            "imageFull":"macchiato.png",
+            "imageThumbnail":"macchiato_tn.png",
+            "products": [
+                999013,
+                999014
+            ]
         },
         {
             "categoryId": "4",
-            "name": "Cappuccino"
-        }
-        ,
+            "name": "Cappuccino",
+            "imageFull":"cappuccino.png",
+            "imageThumbnail":"cappuccino_tn.png",
+            "products": [
+                999003,
+                999004,
+                999005
+            ]
+        },
         {
             "categoryId": "5",
-            "name": "Americano"
-        }
-        ,
+            "name": "Americano",
+            "imageFull":"americano_tn.png",
+            "imageThumbnail":"americano_tn.png",
+            "products": [
+                999001,
+                999002
+            ]
+        },
         {
             "categoryId": "6",
-            "name": "Espresso"
-        }        
+            "name": "Espresso",
+            "imageFull":"expresso.png",
+            "imageThumbnail":"expresso_tn.png",
+            "products": [
+                999006,
+                999007,
+                999008,
+                999009
+            ]
+        }
     ]
 }

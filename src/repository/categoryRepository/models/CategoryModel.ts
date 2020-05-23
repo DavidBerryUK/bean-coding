@@ -1,10 +1,8 @@
 export default class CategoryModel {
 
-    categoryId: string;
-    name: string;
-
-    constructor(categoryId: string ,name: string) {
-        this.categoryId = categoryId;
-        this.name = name;
-    }
+    categoryId: string = "";
+    name: string = "";
+    imageFull: string = "";
+    imageThumbnail: string = "";
+    products : Array<number> = new Array<number>();    
 }

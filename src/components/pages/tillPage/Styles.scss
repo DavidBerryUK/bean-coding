@@ -1,19 +1,31 @@
 $order-panel-width: 340px;
+$product-panel-width: 200px;
+$categpry-panel-top:6px;
+$category-panel-height:86px;
 
 .region-menu-category {
     position: absolute;
     left: 0;
     right: $order-panel-width;
-    top: 4px;
-    height: 100px;
+    top: $categpry-panel-top;
+    height: $category-panel-height;
     border: dotted 1px red;
 }
 
-.region-order-panel {
+.region-order-panel {    
     position: absolute;    
     right: 0;
     width: $order-panel-width;;
     top: 4px;
     bottom:0;
     border: dotted 1px blue;
+}
+
+.region-product-list {
+    position: absolute;            
+    top: $category-panel-height + $categpry-panel-top;
+    width: $product-panel-width;
+    left:0;
+    bottom:0;
+    border: dotted 1px purple;;
 }

@@ -6,10 +6,14 @@ import CategoryModel                            from '../../../repository/catego
 import CategoryRepository                       from '../../../repository/categoryRepository/CategoryRepository';
 import React                                    from 'react';
 
-const CategoryList: React.FC = (props) => {
+interface IProperties {    
+    onCategorySelected: (image: CategoryModel) => void;
+}
+
+const CategoryList: React.FC<IProperties> = (props) => {
 
     const classStyles = ClassStyleDefinition();
-    const [categoryList, setCategoryList] = useState<Array<CategoryModel>>(new Array<CategoryModel>())
+    const [categoryList, setCategoryList] = useState<Array<CategoryModel>>(new Array<CategoryModel>());        
 
     // when component loads, get the data
     //
@@ -20,13 +24,18 @@ const CategoryList: React.FC = (props) => {
         })
     }, [])
 
+    const handleCategoryClicked = (category: CategoryModel) => {
+        props.onCategorySelected(category);
+    }
 
     // display a list of categories
     //
     return (
         <div className={classStyles.root}>
             {categoryList.map((item) => (
-                <CategoryItem key={item.categoryId} category={item} />
+                <CategoryItem key={item.categoryId} 
+                category={item} 
+                onCategorySelected={(category)=>{ handleCategoryClicked(category)}}/>
             ))}
         </div>
     )

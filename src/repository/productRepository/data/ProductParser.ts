@@ -1,11 +1,11 @@
-import * as productJson                         from './drinks/products.json'
-import NutritionAdditionalModel                 from "./models/NutritionAdditionalModel";
-import NutritionModel                           from "./models/NutritionModel";
-import ProductModel                             from "./models/ProductModel";
-import ProductOptionModel                       from "./models/ProductOptionModel";
-import ProductOptionSizeModel                   from "./models/ProductOptionSizeModel";
-import ProductSizeModel                         from "./models/ProductSizeModel";
-import RecipeItemModel                          from "./models/RecipeItemModel";
+import * as productJson                         from './products.json'
+import NutritionAdditionalModel                 from "../models/NutritionAdditionalModel";
+import NutritionModel                           from "../models/NutritionModel";
+import ProductModel                             from "../models/ProductModel";
+import ProductOptionModel                       from "../models/ProductOptionModel";
+import ProductOptionSizeModel                   from "../models/ProductOptionSizeModel";
+import ProductSizeModel                         from "../models/ProductSizeModel";
+import RecipeItemModel                          from "../models/RecipeItemModel";
 
 
 export default class ProductParser {
@@ -24,6 +24,7 @@ export default class ProductParser {
     private extractProduct(json: any): ProductModel {
         var product = new ProductModel();
         product.name = json.name;
+        product.productNumber = json.productNumber;
         product.description = json.description;
         product.filenameThumbnail = json.assets.thumbnail.large.filename;
         product.filenameLarge = json.assets.fullSize.filename;
