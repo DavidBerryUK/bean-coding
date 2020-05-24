@@ -34,7 +34,7 @@ const DevelopmentPage: React.FC = (props) => {
                     <Link key={item.route} component={RouterLink} to={item.route} color="inherit" variant="inherit" underline="none">
                         <Button
                         className = {classStyles.linkButton}
-                            color={item.route == pageState ? "primary" : "default"}
+                            color={item.route === pageState ? "primary" : "default"}
                             variant="contained"
                             onClick={() => { handlepress(item.route) }}>{item.name}</Button>
                     </Link>
