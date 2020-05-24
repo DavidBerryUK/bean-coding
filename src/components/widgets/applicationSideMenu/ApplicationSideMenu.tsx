@@ -1,12 +1,13 @@
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Drawer }                               from '@material-ui/core';
-import { EnumTopLevelRoutes }                   from "../../routes/TopLevelRouteConstants";
+import { EnumTopLevelRoutes }                   from "../../routes/TopLevel/TopLevelRouteConstants";
 import { Link }                                 from '@material-ui/core';
 import { Link as RouterLink }                   from 'react-router-dom';
 import { List }                                 from '@material-ui/core';
 import { ListItem }                             from '@material-ui/core';
 import { ListItemIcon }                         from '@material-ui/core';
 import { ListItemText }                         from '@material-ui/core';
+import BuildOutlinedIcon                        from '@material-ui/icons/BuildOutlined';
 import HomeOutlinedIcon                         from '@material-ui/icons/HomeOutlined';
 import InfoOutlinedIcon                         from '@material-ui/icons/InfoOutlined';
 import MenuModel                                from "./MenuModel";
@@ -26,7 +27,8 @@ const ApplicationSideDrawer: React.FC<IProperties> = (props) => {
         new MenuModel(1, 'Home', <HomeOutlinedIcon />, EnumTopLevelRoutes.HomePage),
         new MenuModel(2, 'Till', <ShoppingCartOutlinedIcon />, EnumTopLevelRoutes.TillPage),
         new MenuModel(3, 'System', <SettingsOutlinedIcon />, EnumTopLevelRoutes.SystemPage),
-        new MenuModel(4, 'About', <InfoOutlinedIcon />, EnumTopLevelRoutes.AboutPage),
+        new MenuModel(4, 'Development', <BuildOutlinedIcon />, EnumTopLevelRoutes.DevelopmentPage),
+        new MenuModel(5, 'About', <InfoOutlinedIcon />, EnumTopLevelRoutes.AboutPage),
     ]
 
     return (

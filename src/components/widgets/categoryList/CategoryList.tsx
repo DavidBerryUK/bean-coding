@@ -1,13 +1,13 @@
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { useEffect }                            from 'react';
 import { useState }                             from 'react';
-import CategoryItem                             from '../categoryItem/CategoryItem';
+import CategoryListItem                         from '../categoryListItem/CategoryListItem';
 import CategoryModel                            from '../../../repository/categoryRepository/models/CategoryModel';
 import CategoryRepository                       from '../../../repository/categoryRepository/CategoryRepository';
 import React                                    from 'react';
 
 interface IProperties {    
-    onCategorySelected: (image: CategoryModel) => void;
+    onCategorySelected: (category: CategoryModel) => void;
 }
 
 const CategoryList: React.FC<IProperties> = (props) => {
@@ -33,7 +33,7 @@ const CategoryList: React.FC<IProperties> = (props) => {
     return (
         <div className={classStyles.root}>
             {categoryList.map((item) => (
-                <CategoryItem key={item.categoryId} 
+                <CategoryListItem key={item.categoryId} 
                 category={item} 
                 onCategorySelected={(category)=>{ handleCategoryClicked(category)}}/>
             ))}

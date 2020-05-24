@@ -6,7 +6,7 @@ import ApplicationHeader                        from '../widgets/applicationHead
 import ApplicationSideDrawer                    from '../widgets/applicationSideMenu/ApplicationSideMenu';
 import CssBaseline                              from '@material-ui/core/CssBaseline';
 import React                                    from 'react';
-import TopLevelRoutes                           from '../routes/TopLevelRoutes';
+import TopLevelRoutes                           from '../routes/TopLevel/TopLevelRoutes';
 
 const App: React.FC = () => {
 

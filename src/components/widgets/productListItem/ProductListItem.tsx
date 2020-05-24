@@ -4,33 +4,33 @@ import { CardContent }                          from '@material-ui/core';
 import { CardMedia }                            from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Typography }                           from '@material-ui/core';
-import CategoryModel                            from '../../../repository/categoryRepository/models/CategoryModel';
+import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
 import React                                    from 'react';
 
 interface IProperties {
-    category: CategoryModel
-    onCategorySelected: (image: CategoryModel) => void;
+    product: ProductModel
+    onProductSelected: (image: ProductModel) => void;
 }
 
-const CategoryItem: React.FC<IProperties> = (props) => {
+const ProductListItem: React.FC<IProperties> = (props) => {
 
     const classStyles = ClassStyleDefinition();
 
-    const handleCategoryClicked = () => {
-        props.onCategorySelected(props.category);
+    const handleProductClicked = () => {
+        props.onProductSelected(props.product);
     }
 
     return (
-        <Card className={classStyles.root} onClick={handleCategoryClicked}>
+        <Card className={classStyles.root} onClick={handleProductClicked}>
             <CardActionArea>
                 <CardMedia
                     className={classStyles.media}
-                    image={`/images/categories/${props.category.imageThumbnail}`}
-                    title={props.category.name}
+                    image={`/images/products/${props.product.filenameThumbnail}`}
+                    title={props.product.name}
                 />
                 <CardContent className={classStyles.cardContent}>
                     <Typography gutterBottom variant="subtitle1" >
-                        {props.category.name}
+                        {props.product.name}
                     </Typography>                    
                 </CardContent>
             </CardActionArea>
@@ -38,4 +38,4 @@ const CategoryItem: React.FC<IProperties> = (props) => {
     )
 }
 
-export default CategoryItem
+export default ProductListItem

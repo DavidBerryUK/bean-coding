@@ -1,4 +1,4 @@
-import { EnumTopLevelRoutes }                   from '../../routes/TopLevelRouteConstants';
+import { EnumTopLevelRoutes }                   from '../../routes/TopLevel/TopLevelRouteConstants';
 
 export default class MenuModel {
     public id: number;
