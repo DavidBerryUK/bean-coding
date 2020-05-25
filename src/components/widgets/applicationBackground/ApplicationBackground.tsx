@@ -1,6 +1,5 @@
 import React                                    from 'react';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
-import clsx                                     from 'clsx';
 
 interface IProperties {
     imageUrl: string | undefined,
