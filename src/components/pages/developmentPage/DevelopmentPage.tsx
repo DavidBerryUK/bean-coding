@@ -16,8 +16,10 @@ const DevelopmentPage: React.FC = (props) => {
 
     const [pageState, setPageState] = useState<EnumDevelopmentRoutes>();
     const pageList = [
+        { name: 'App Background', route: EnumDevelopmentRoutes.DevelopmentAppBackground },
         { name: 'Frosted Glass', route: EnumDevelopmentRoutes.DevelopmentFrostedGlass },
-        { name: 'Muted Image', route: EnumDevelopmentRoutes.DevelopmentMuted }
+        { name: 'Muted Image', route: EnumDevelopmentRoutes.DevelopmentMuted },
+
     ]
 
     const handlepress = (page: EnumDevelopmentRoutes) => {

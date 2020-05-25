@@ -1,39 +1,52 @@
 import { Box }                                  from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Paper }                                from '@material-ui/core';
-import { Typography }                           from '@material-ui/core';
 import { useState }                             from 'react';
+import DevelopmentMasterPageWrapper             from '../../widgets/devMasterPageWrapper/DevelopmentMasterPageWrapper';
+import MutedImagePanel                          from '../../ui/mutedImagePanel/MutedImagePanel';
 import React                                    from 'react';
 import SampleImageList                          from '../../widgets/sampleImageList/SampleImageList';
 
 
 const DevMutedImagePage: React.FC = () => {
-
-    const [imageName, setImageName] = useState<string>();
+    
     const [imagePath, setImagePath] = useState<string>();
 
     const classStyles = ClassStyleDefinition();
 
     const handleImageSelected = (name: string, fullPath: string) => {
-        setImageName(name);
         setImagePath(fullPath)
     }
 
+    const imageStyle = (): {} => {
+        const style = {
+            backgroundImage: `url(${imagePath})`,
+            height: '100%',
+            backgroundPosition: 'fixed',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+
+        };
+        return style;
+    }
+
     return (
-        <>
-            <Typography variant="h5">Muted Images</Typography>
+        <DevelopmentMasterPageWrapper 
+            title="Muted Glass"
+            description="Experiment with muted overlay, not supported in Firefox"
+            isExperimental>            
             <SampleImageList onImageSelected={handleImageSelected} />
 
             <Box display='flex' justifyContent='center' pt={4}>
                 <Paper className={classStyles.regionImage}>
-                    {imageName === null
-                        ? null
-                        : <img src={imagePath} alt={imageName} />
-                    }
-                    
+                    <div style={imageStyle()}>
+                        <MutedImagePanel className={classStyles.sampleRegion1} />
+                        <MutedImagePanel className={classStyles.sampleRegion2} />
+                        <MutedImagePanel className={classStyles.sampleRegion3} />
+                    </div>
                 </Paper>
             </Box>
-        </>
+            </DevelopmentMasterPageWrapper>
     );
 }
 

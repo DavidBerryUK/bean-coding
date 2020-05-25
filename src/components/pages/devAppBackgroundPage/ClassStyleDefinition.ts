@@ -28,6 +28,5 @@ export const ClassStyleDefinition = makeStyles(theme => ({
         width: 250,
         height: 600,        
     }
-
 })
 );
