@@ -1,6 +1,8 @@
+import { EnumOptionSelectType }                 from '../enum/ProductEnums';
 import * as productJson                         from './products.json'
 import NutritionAdditionalModel                 from "../models/NutritionAdditionalModel";
 import NutritionModel                           from "../models/NutritionModel";
+import ProductEnums                             from '../enum/ProductEnums';
 import ProductModel                             from "../models/ProductModel";
 import ProductOptionModel                       from "../models/ProductOptionModel";
 import ProductOptionSizeModel                   from "../models/ProductOptionSizeModel";
@@ -29,8 +31,7 @@ export default class ProductParser {
         product.filenameThumbnail = json.assets.thumbnail.large.filename;
         product.filenameLarge = json.assets.fullSize.filename;
         product.sizes = this.extractProductSizeNodeList(json.sizes);
-        product.options = this.extractProductOptionNodeList(json.productOptions)
-
+        product.options = this.extractProductOptionNodeList(json.productOptions)        
 
         return product;
     }
@@ -60,7 +61,7 @@ export default class ProductParser {
         const form = json.form;
         if ( form ) {
             data.name = form.name;
-            data.formCode = form.formCode;
+            data.formCode =  ProductEnums.convertToEnumOptionSelectType(form.formCode);
             
             const sizes = form.sizes;
             if ( sizes ) {
@@ -70,6 +71,12 @@ export default class ProductParser {
                 
         data.children = this.extractProductOptionNodeList(json.children);        
         data.products = this.extractProductOptionNodeList(json.products);
+
+        if ( data.formCode === EnumOptionSelectType.None ) {
+        if ( data.products.length > 0) {
+            data.formCode = ProductEnums.convertToEnumOptionSelectType(data.products[0].formCode);
+            }
+        }                
 
         return data;
     }
@@ -219,7 +226,9 @@ export default class ProductParser {
         var recipe = new RecipeItemModel();
         recipe.name = json.skuName;
         recipe.quantity = json.quantity;
-        recipe.formCode = json.formCode;
+        recipe.formCode = ProductEnums.convertToEnumOptionSelectType( json.formCode );
+        recipe.productNumber = json.productOption.productNumber;
+        recipe.sizeCode = json.sizeCode;
         return recipe;
     }
 }

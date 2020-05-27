@@ -5459,7 +5459,7 @@
     },
     {
       "starCost": null,
-      "name": "Iced Caffè Americano",
+      "name": "Iced Caffe Americano",
       "formCode": "Iced",
       "productNumber": 999002,
       "productType": "beverages",
@@ -9813,7 +9813,7 @@
     },
     {
       "starCost": null,
-      "name": "Caffè Americano",
+      "name": "Caffe Americano",
       "formCode": "Hot",
       "productNumber": 999001,
       "productType": "beverages",
@@ -19080,7 +19080,7 @@
       "formCode": "Iced",
       "productNumber": 999004,
       "productType": "beverages",
-      "description": "With less milk than an Iced Latte, Iced Cappuccino offers a stronger espresso flavour, topped with hot frothed milk foam — ideal for dairy alternatives.",
+      "description": "With less milk than an Iced Latte, Iced Cappuccino offers a stronger espresso flavour, topped with hot frothed milk foam e ideal for dairy alternatives.",
       "assets": {
         "thumbnail": {
           "large": {
@@ -32556,7 +32556,7 @@
     },
     {
       "starCost": null,
-      "name": "Caffè Latte",
+      "name": "Caffe Latte",
       "formCode": "Hot",
       "productNumber": 999010,
       "productType": "beverages",
@@ -60401,7 +60401,7 @@
     },
     {
       "starCost": null,
-      "name": "Caffè Mocha",
+      "name": "Caffe Mocha",
       "formCode": "Hot",
       "productNumber": 999016,
       "productType": "beverages",
@@ -65930,7 +65930,7 @@
     },
     {
       "starCost": null,
-      "name": "Iced Caffè Mocha",
+      "name": "Iced Caffe Mocha",
       "formCode": "Iced",
       "productNumber": 999017,
       "productType": "beverages",

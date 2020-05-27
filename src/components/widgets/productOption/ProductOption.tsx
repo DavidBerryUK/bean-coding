@@ -1,11 +1,11 @@
-// import { useState }                             from 'react';
-import React from 'react';
-import { useState } from 'react';
-import ProductOptionModel from '../../../repository/productRepository/models/ProductOptionModel';
-import { Typography, Box } from '@material-ui/core';
-import ProductOptionSizeModel from '../../../repository/productRepository/models/ProductOptionSizeModel';
-
-
+import { EnumOptionSelectType }                 from '../../../repository/productRepository/enum/ProductEnums';
+import { Typography }                           from '@material-ui/core';
+import ProductOptionModel                       from '../../../repository/productRepository/models/ProductOptionModel';
+import ProductOptionTypeModifier                from '../productOptionTypeModifier/ProductOptionTypeModifier';
+import ProductOptionTypeOne                     from '../productOptionTypeOne/ProductOptionTypeOne';
+import ProductOptionTypeQuantity                from '../productOptionTypeQuantity/ProductOptionTypeQuantity';
+import ProductOptionTypeUnknown                 from '../productOptionTypeUnknown/ProductOptionTypeUnknown';
+import React                                    from 'react';
 
 interface IProperties {
     option: ProductOptionModel
@@ -13,10 +13,23 @@ interface IProperties {
 
 const ProductOption: React.FC<IProperties> = (props) => {
 
-    var [selectedOption, setselectedOption] = useState<ProductOptionModel>();
+    const optionComponent = (option : ProductOptionModel) => {
+        switch (option.formCode)
+        {
+            case EnumOptionSelectType.One:
+                return <ProductOptionTypeOne option={option}/>
+            case EnumOptionSelectType.Quantity:
+                return <ProductOptionTypeQuantity option={option}/>                
+            case EnumOptionSelectType.Modifier:
+                return <ProductOptionTypeModifier option={option}/>        
+        }
 
-    const handleSizeOptionClicked = (event: React.ChangeEvent<any>, option: ProductOptionModel) => {
-        setselectedOption(option);
+        if ( option.children.length === 0 && option.products.length === 0 ) {
+            // empty configuration in original JSON
+            return null
+        }
+
+        return <ProductOptionTypeUnknown option={option}/>;
     }
 
     return (
@@ -28,28 +41,9 @@ const ProductOption: React.FC<IProperties> = (props) => {
 
             <h5>Sub Options</h5>
             {props.option.children.map((item: ProductOptionModel) => (
-                <Box key={item.name} border={2} color="Red" p={3}>
-                    <div>name:{item.name}</div>
-                    <div>formCode:{item.formCode}</div>
-                    <div>children:{item.children.length}</div>
-                    <div>products:{item.products.length}</div>
-
-                    {item.products.map((item: ProductOptionModel) => (
-                        <Box key={item.name} border={2} color="green" p={3}>
-                            <div>name:{item.name}</div>
-                            <div>formCode:{item.formCode}</div>
-
-                            {item.sizes.map((item: ProductOptionSizeModel) => (
-                            <Box key={item.name} border={2} color="blue" p={3}>
-                                <div>name:{item.name}</div>
-                                <div>size:{item.size}</div>
-                            </Box>
-                            ))}
-
-
-                        </Box>
-                    ))}
-                </Box>
+                <>                            
+                    {optionComponent(item)}                                    
+                </>
             ))}
 
 

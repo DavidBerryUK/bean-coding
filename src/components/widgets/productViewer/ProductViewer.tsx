@@ -1,11 +1,11 @@
-import { ClassStyleDefinition } from "./ClassStyleDefinition";
-import { Grid } from '@material-ui/core';
-import { Paper } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
-import ProductModel from '../../../repository/productRepository/models/ProductModel';
-import ProductSizeSelector from "../productSizeSelector/ProductSizeSelector";
-import React from 'react';
-import ProductOptionsList from "../productOptionsList/ProductOptionsList";
+import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
+import { Grid }                                 from '@material-ui/core';
+import { Paper }                                from '@material-ui/core';
+import { Typography }                           from '@material-ui/core';
+import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
+import ProductOptionsList                       from "../productOptionsList/ProductOptionsList";
+import ProductSizeSelector                      from "../productSizeSelector/ProductSizeSelector";
+import React                                    from 'react';
 
 interface IProperties {
     product: ProductModel
@@ -18,10 +18,10 @@ const ProductViewer: React.FC<IProperties> = (props) => {
     return (
         <Paper className={classStyles.root} >
             <Grid container>
-                <Grid xs={12}>
+                <Grid item xs={12}>
                     <Typography variant="h4">{props.product.name}</Typography>
                 </Grid>
-                <Grid xs={12}>
+                <Grid item xs={12}>
                     <Typography variant="body1">{props.product.description}</Typography>
                 </Grid>
                 <Grid item xs={4}>

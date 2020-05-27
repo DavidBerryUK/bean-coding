@@ -1,5 +1,5 @@
-import NutritionModel from "./NutritionModel";
-import RecipeItemModel from "./RecipeItemModel";
+import NutritionModel                           from "./NutritionModel";
+import RecipeItemModel                          from "./RecipeItemModel";
 
 export default class ProductSizeModel {
     name: string = "";

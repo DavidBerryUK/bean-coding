@@ -19,7 +19,8 @@ const DevelopmentPage: React.FC = (props) => {
         { name: 'App Background', route: EnumDevelopmentRoutes.DevelopmentAppBackground },
         { name: 'Frosted Glass', route: EnumDevelopmentRoutes.DevelopmentFrostedGlass },
         { name: 'Muted Image', route: EnumDevelopmentRoutes.DevelopmentMuted },
-
+        { name: 'Item List', route: EnumDevelopmentRoutes.DevelopmentItemList },
+        { name: 'Item Qty', route: EnumDevelopmentRoutes.DevelopmentItemQuantity },        
     ]
 
     const handlepress = (page: EnumDevelopmentRoutes) => {
