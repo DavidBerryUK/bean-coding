@@ -2,6 +2,7 @@ import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { IconButton }                           from '@material-ui/core';
 import ControlPointRoundedIcon                  from '@material-ui/icons/ControlPointRounded';
 import React                                    from 'react';
+import { useEffect }                            from 'react';
 import RemoveCircleOutlineRoundedIcon           from '@material-ui/icons/RemoveCircleOutlineRounded';
 
 interface IProperties {
@@ -15,15 +16,25 @@ const ItemQuantitySelector: React.FC<IProperties> = (props) => {
 
     const classStyles = ClassStyleDefinition();
 
+    useEffect(() => {
+        if ( props.minValue !== undefined && props.value < props.minValue) {
+            props.onValueChanged(props.minValue)
+        }
+        if ( props.maxValue !== undefined && props.value > props.maxValue) {
+            props.onValueChanged(props.maxValue)
+        }
+    },[props])
+
+
     const handleMinusButtonPressed = () => {
-        if ( props.minValue && props.value <= props.minValue) {
+        if ( props.minValue !== undefined && props.value <= props.minValue) {
             return;
         }
         props.onValueChanged( props.value - 1);
     }
 
     const handleAddButtonPressed = () => {
-        if ( props.maxValue && props.value >= props.maxValue) {
+        if ( props.maxValue !== undefined && props.value >= props.maxValue) {
             return;
         }
         props.onValueChanged( props.value + 1);

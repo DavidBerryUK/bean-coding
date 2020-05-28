@@ -1,19 +1,17 @@
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { EnumCupSize }                          from "../../../Services/CupSize/EnumCupSize";
 import { Paper }                                from '@material-ui/core';
-import { Typography }                           from '@material-ui/core';
 import CupSizeModel                             from "../../../Services/CupSize/CupSizeModel";
 import CupSizeService                           from "../../../Services/CupSize/CupSizeService";
 import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
 import DevelopmentMasterPageWrapper             from '../../widgets/devMasterPageWrapper/DevelopmentMasterPageWrapper';
-import ItemListSelector                         from "../../ui/itemListSelector/ItemListSelector";
 import React                                    from 'react';
 
-const DevItemListSelectorPage: React.FC = () => {
+const DevCupSizeThumbnailPage: React.FC = () => {
    
     const classStyles = ClassStyleDefinition();    
 
-    const cupModels : Array<CupSizeModel> = [
+    const cups : Array<CupSizeModel> = [
         CupSizeService.cupSizeModelfactory(EnumCupSize.Solo),
         CupSizeService.cupSizeModelfactory(EnumCupSize.Doppio),
         CupSizeService.cupSizeModelfactory(EnumCupSize.Demo),
@@ -25,26 +23,22 @@ const DevItemListSelectorPage: React.FC = () => {
         CupSizeService.cupSizeModelfactory(EnumCupSize.Venti)
     ]
 
-    const cupThumbnailsElements = cupModels.map((cup) => 
-        <CupSizeThumbnail sizeName={cup.name} volumeDescription={cup.volume} scalePercentage={cup.iconScale}/>
-    );
 
     return (
         <DevelopmentMasterPageWrapper 
-            title="Item List Selected"
-            description="UI Component to select an item from a list">            
+            title="Cup Size Thumbnail"
+            description="Provide a consistant thumbnail for cup sizes">            
             
-            <Paper className={classStyles.paper}>
-                <Typography variant="subtitle1" color="textSecondary">Example component using an array of cup thumbnails</Typography>
-                <ItemListSelector elements={cupThumbnailsElements}/>
-            </Paper>
-            <Paper className={classStyles.paper}>
-                <Typography variant="subtitle1" color="textSecondary">Example component using an array of cup shot number elements</Typography>
-                <ItemListSelector elements={cupThumbnailsElements}/>
+            <Paper className={classStyles.paper}>                
+                {
+                    cups.map((cup: CupSizeModel) => (
+                        <CupSizeThumbnail sizeName={cup.name} volumeDescription={cup.volume}  scalePercentage={cup.iconScale}/>
+                    ))
+                }               
             </Paper>
 
             </DevelopmentMasterPageWrapper>
     );
 }
 
-export default DevItemListSelectorPage;
+export default DevCupSizeThumbnailPage;

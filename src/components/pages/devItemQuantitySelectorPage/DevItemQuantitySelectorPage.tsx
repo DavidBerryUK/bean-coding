@@ -6,6 +6,7 @@ import { TableBody }                            from '@material-ui/core';
 import { TableCell }                            from '@material-ui/core';
 import { TableHead}                             from '@material-ui/core';
 import { TableRow }                             from '@material-ui/core';
+import { TextField }                            from '@material-ui/core';
 import { Typography }                           from '@material-ui/core';
 import { useState }                             from 'react';
 import DevelopmentMasterPageWrapper             from '../../widgets/devMasterPageWrapper/DevelopmentMasterPageWrapper';
@@ -17,19 +18,33 @@ const DevItemQuantitySelectorPage: React.FC = () => {
     const classStyles = ClassStyleDefinition();
 
     const [quantity, setQuantity] = useState(10);
-    const [isMinValueUsed, setIsMinValueUsed]  = useState(true);
-    const [isMaxValueUsed, setIsMaxValueUsed]  = useState(true);
+    const [isMinValueUsed, setIsMinValueUsed] = useState(true);
+    const [isMaxValueUsed, setIsMaxValueUsed] = useState(true);
+    const [minValue, setMinValue] = useState(0);
+    const [maxValue, setMaxValue] = useState(15);
 
     const handleOnValueChanged = (value: number) => {
         setQuantity(value);
     }
-    
-    const handleIsMinValueUsedChanged = (e : React.ChangeEvent<HTMLInputElement>) => {
+
+    const handleIsMinValueUsedChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
         setIsMinValueUsed(e.target.checked);
     }
 
-    const handleIsMaxValueUsedChanged = (e : React.ChangeEvent<HTMLInputElement>) => {
+    const handleIsMaxValueUsedChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
         setIsMaxValueUsed(e.target.checked);
+    }
+
+    const handleMinValueUpdated = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setMinValue(Number(e.target.value));
+    }
+
+    const handleMaxValueUpdated = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setMaxValue(Number(e.target.value));
+    }
+
+    const handleQuantityValueUpdated = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setQuantity(Number(e.target.value));
     }
 
     return (
@@ -39,12 +54,17 @@ const DevItemQuantitySelectorPage: React.FC = () => {
 
             <Paper className={classStyles.paper}>
                 <Typography variant="subtitle1" color="textSecondary">Example component</Typography>
-                <ItemQuantitySelector value={quantity} onValueChanged={handleOnValueChanged} />
+                <ItemQuantitySelector
+                    value={quantity}
+                    minValue = { isMinValueUsed ? minValue : undefined }
+                    maxValue = { isMaxValueUsed ? maxValue : undefined }
+                    onValueChanged={handleOnValueChanged}
+                />
             </Paper>
 
             <Paper className={classStyles.paper}>
                 <Typography variant="subtitle1" color="textSecondary">Parameters</Typography>
-                
+
                 <Table size="small" >
                     <TableHead>
                         <TableRow>
@@ -54,25 +74,35 @@ const DevItemQuantitySelectorPage: React.FC = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                    <TableRow>
+                        <TableRow>
                             <TableCell>Value</TableCell>
-                            <TableCell><Switch  checked={true} disabled/></TableCell>
-                            <TableCell>00</TableCell>
+                            <TableCell><Switch checked={true} disabled /></TableCell>
+                            <TableCell>
+                                <TextField type='number' value={quantity} disabled={!isMinValueUsed} onChange={handleQuantityValueUpdated} />
+                            </TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>Min Value</TableCell>
-                            <TableCell><Switch  checked={isMinValueUsed} onChange={handleIsMinValueUsedChanged}/></TableCell>
-                            <TableCell>00</TableCell>
+                            <TableCell>
+                                <Switch checked={isMinValueUsed} onChange={handleIsMinValueUsedChanged} />
+                            </TableCell>
+                            <TableCell>
+                                <TextField type='number' value={minValue} disabled={!isMinValueUsed} onChange={handleMinValueUpdated} />
+                            </TableCell>
                         </TableRow>
 
                         <TableRow>
                             <TableCell>Max Value</TableCell>
-                            <TableCell><Switch  checked={isMaxValueUsed}  onChange={handleIsMaxValueUsedChanged}/></TableCell>
-                            <TableCell>00</TableCell>
+                            <TableCell>
+                                <Switch checked={isMaxValueUsed} onChange={handleIsMaxValueUsedChanged} />
+                            </TableCell>
+                            <TableCell>
+                                <TextField type='number' value={maxValue} disabled={!isMaxValueUsed} onChange={handleMaxValueUpdated} />
+                            </TableCell>
                         </TableRow>
                     </TableBody>
-                    </Table>
-                
+                </Table>
+
             </Paper>
 
 
