@@ -1,8 +1,9 @@
 export enum EnumDevelopmentRoutes  {
-    DevelopmentAppBackground = '/development/appbackGround',
-    DevelopmentCupSizeThumbnail = '/development/CupSizeThumbnail',
-    DevelopmentFrostedGlass = '/development/frostedGlass',    
-    DevelopmentItemList = '/development/ItemList',
-    DevelopmentItemQuantity = '/development/itemQuantity',
-    DevelopmentMuted = '/development/muted',
+    AppBackground = '/development/appbackGround',
+    CupSizeThumbnail = '/development/CupSizeThumbnail',
+    FrostedGlass = '/development/frostedGlass',    
+    ItemList = '/development/ItemList',
+    ItemQuantity = '/development/itemQuantity',
+    Muted = '/development/muted',
+    ShotCount = '/development/shotCount',
 }

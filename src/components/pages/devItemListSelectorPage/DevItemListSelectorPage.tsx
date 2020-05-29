@@ -32,14 +32,10 @@ const DevItemListSelectorPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper 
             title="Item List Selected"
-            description="UI Component to select an item from a list">            
+            description="UI Component to select an item from a list of components, this example shows a list of <CupSizeThumbnail> elements">            
             
             <Paper className={classStyles.paper}>
                 <Typography variant="subtitle1" color="textSecondary">Example component using an array of cup thumbnails</Typography>
-                <ItemListSelector elements={cupThumbnailsElements}/>
-            </Paper>
-            <Paper className={classStyles.paper}>
-                <Typography variant="subtitle1" color="textSecondary">Example component using an array of cup shot number elements</Typography>
                 <ItemListSelector elements={cupThumbnailsElements}/>
             </Paper>
 

@@ -11,7 +11,18 @@ export const ClassStyleDefinition = makeStyles(theme => ({
         marginLeft:0,
         marginRight:0,
         boxShadow:'none',
-        backgroundColor:grey[100]
+        backgroundColor:grey[100],
+
+
+    },
+    shot: {
+        width:50,
+        height:60,
+        background:'url("/glass.svg") no-repeat center ',
+        backgroundSize: "40px 50px",
+    },
+    count: {
+        textAlign:'center'
     },
     selected: {
         backgroundColor:blue[400],
