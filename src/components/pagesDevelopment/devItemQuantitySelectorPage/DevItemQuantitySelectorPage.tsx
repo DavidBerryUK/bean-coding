@@ -1,3 +1,4 @@
+import { Box }                                  from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Paper }                                from '@material-ui/core';
 import { Switch }                               from '@material-ui/core';
@@ -52,17 +53,16 @@ const DevItemQuantitySelectorPage: React.FC = () => {
             title="Item Quantity Selector"
             description="UI Component to select quantities">
 
-            <Paper className={classStyles.paper}>
-                <Typography variant="subtitle1" color="textSecondary">Example component</Typography>
+            <Box className={classStyles.box}>
                 <ItemQuantitySelector
                     value={quantity}
                     minValue = { isMinValueUsed ? minValue : undefined }
                     maxValue = { isMaxValueUsed ? maxValue : undefined }
                     onValueChanged={handleOnValueChanged}
                 />
-            </Paper>
+            </Box>
 
-            <Paper className={classStyles.paper}>
+            <Paper className={classStyles.box}>
                 <Typography variant="subtitle1" color="textSecondary">Parameters</Typography>
 
                 <Table size="small" >

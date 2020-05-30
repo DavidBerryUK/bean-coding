@@ -36,8 +36,9 @@ const DevItemListSelectorPage: React.FC = () => {
             
             <Paper className={classStyles.paper}>
                 <Typography variant="subtitle1" color="textSecondary">Example component using an array of cup thumbnails</Typography>
-                <ItemListSelector elements={cupThumbnailsElements}/>
             </Paper>
+            <ItemListSelector elements={cupThumbnailsElements}/>
+            
 
             </DevelopmentMasterPageWrapper>
     );

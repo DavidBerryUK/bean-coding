@@ -1,7 +1,8 @@
-//import { ClassStyleDefinition }                 from "../devMenuHierarchicalListPage/ClassStyleDefinition";
 import AcUnitIcon                               from '@material-ui/icons/AcUnit';
 import BathtubOutlinedIcon                      from '@material-ui/icons/BathtubOutlined';
 import ChildCareOutlinedIcon                    from '@material-ui/icons/ChildCareOutlined';
+import CommandAddToAudit                        from '../../context/developerContext/actions/CommandAddToAudit';
+import DeveloperContext                         from '../../context/developerContext/DeveloperContext';
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import EmojiFoodBeverageOutlinedIcon            from '@material-ui/icons/EmojiFoodBeverageOutlined';
 import FastfoodIcon                             from '@material-ui/icons/Fastfood';
@@ -10,14 +11,14 @@ import MenuItemModel                            from "../../ui/menuList/MenuItem
 import MenuItemRootModel                        from "../../ui/menuList/MenuItemRootModel";
 import MenuList                                 from '../../ui/menuList/MenuList';
 import PetsOutlinedIcon                         from '@material-ui/icons/PetsOutlined';
-import React                                    from 'react';
+import React, { useContext }                    from 'react';
 import SpaOutlinedIcon                          from '@material-ui/icons/SpaOutlined';
 import SportsEsportsOutlinedIcon                from '@material-ui/icons/SportsEsportsOutlined';
 
 const DevMenuListPage: React.FC = () => {
-   
-    // const classStyles = ClassStyleDefinition(); 
-    
+       
+    const dispatch = useContext(DeveloperContext).dispatch;
+
     const rootMenu = new MenuItemRootModel();
     rootMenu.add(new MenuItemModel('1',"Fresh Food","",<FastfoodIcon/>));
     rootMenu.add(new MenuItemModel('2',"Chilled Food","",<AcUnitIcon/>));
@@ -30,12 +31,17 @@ const DevMenuListPage: React.FC = () => {
     rootMenu.add(new MenuItemModel('9',"Entertainment","",<SportsEsportsOutlinedIcon/>));
     rootMenu.add(new MenuItemModel('10',"Baby","",<ChildCareOutlinedIcon/>));
     
+
+    const handleMenuItemSelected = ( menuItem : MenuItemModel) => {
+        dispatch(new CommandAddToAudit(`Item Selected [id:${menuItem.id}] ${menuItem.name}`));
+    }
+
     return (
         <DevelopmentMasterPageWrapper 
                                
         title="Menu List"
         description="UI Component present a consistent menu list">                 
-            <MenuList  rootMenuItem={rootMenu}/>
+            <MenuList  rootMenuItem={rootMenu} onMenuItemSelected={(menuItem: MenuItemModel)=> { handleMenuItemSelected(menuItem) }}/>
             </DevelopmentMasterPageWrapper>
     );
 }

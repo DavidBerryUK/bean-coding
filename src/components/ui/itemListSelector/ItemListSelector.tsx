@@ -38,7 +38,7 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
         <Paper elevation={1} className={classStyles.paper}>
             {
                 props.elements.map((element, index) => (
-                    <Button
+                    <Button key={index}
                         variant="contained"
                         className={getClassNames(index)}
                         onClick={() => { handleItemSelected(element) }}>
