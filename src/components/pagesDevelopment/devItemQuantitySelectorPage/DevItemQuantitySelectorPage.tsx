@@ -9,7 +9,7 @@ import { TableRow }                             from '@material-ui/core';
 import { TextField }                            from '@material-ui/core';
 import { Typography }                           from '@material-ui/core';
 import { useState }                             from 'react';
-import DevelopmentMasterPageWrapper             from '../../widgets/devMasterPageWrapper/DevelopmentMasterPageWrapper';
+import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import ItemQuantitySelector                     from "../../ui/itemQuantitySelector/ItemQuantitySelector";
 import React                                    from 'react';
 

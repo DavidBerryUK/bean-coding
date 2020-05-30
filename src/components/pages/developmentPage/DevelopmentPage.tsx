@@ -16,13 +16,15 @@ const DevelopmentPage: React.FC = (props) => {
 
     const [pageState, setPageState] = useState<EnumDevelopmentRoutes>();
     const pageList = [        
+        { name: 'Menu List', route: EnumDevelopmentRoutes.MenuList },
+        { name: 'Menu Hierarchical List', route: EnumDevelopmentRoutes.MenuhierarchicalList },        
         { name: 'Cup Thumbnail', route: EnumDevelopmentRoutes.CupSizeThumbnail },                
         { name: 'Item List', route: EnumDevelopmentRoutes.ItemList },
         { name: 'Item Qty', route: EnumDevelopmentRoutes.ItemQuantity },        
         { name: 'Shot Qty', route: EnumDevelopmentRoutes.ShotCount },        
         { name: 'App Background', route: EnumDevelopmentRoutes.AppBackground },
         { name: 'Frosted Glass', route: EnumDevelopmentRoutes.FrostedGlass },
-        { name: 'Muted Image', route: EnumDevelopmentRoutes.Muted },
+        { name: 'Muted Image', route: EnumDevelopmentRoutes.Muted },        
     ]
 
     const handlepress = (page: EnumDevelopmentRoutes) => {

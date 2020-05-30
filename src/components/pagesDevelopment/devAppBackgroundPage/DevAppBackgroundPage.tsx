@@ -6,7 +6,7 @@ import { Paper }                                from '@material-ui/core';
 import { Switch }                               from '@material-ui/core';
 import { useState }                             from 'react';
 import ApplicationBackground                    from '../../widgets/applicationBackground/ApplicationBackground';
-import DevelopmentMasterPageWrapper             from '../../widgets/devMasterPageWrapper/DevelopmentMasterPageWrapper';
+import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import React                                    from 'react';
 import SampleImageList                          from '../../widgets/sampleImageList/SampleImageList';
 

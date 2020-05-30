@@ -1,13 +1,15 @@
 import { EnumDevelopmentRoutes }                from './DevelopmentRouteConstants';
 import { Route }                                from 'react-router-dom';
 import { Switch }                               from 'react-router-dom';
-import DevAppBackgroundPage                     from '../../pages/devAppBackgroundPage/DevAppBackgroundPage';
-import DevCupSizeThumbnailPage                  from '../../pages/devCupSizeThumbnailPage/DevCupSizeThumbnailPage';
-import DevFrostedGlassPage                      from '../../pages/devFrostedGlassPage/DevFrostedGlassPage';
-import DevItemListSelectorPage                  from '../../pages/devItemListSelectorPage/DevItemListSelectorPage';
-import DevItemQuantitySelectorPage              from '../../pages/devItemQuantitySelectorPage/DevItemQuantitySelectorPage';
-import DevMutedImagePage                        from '../../pages/devMutedImagePage/DevMutedImagePage';
-import DevShotCountSelectorPage                 from '../../pages/devShotCountSelectorPage/DevShotCountSelectorPage';
+import DevAppBackgroundPage                     from '../../pagesDevelopment/devAppBackgroundPage/DevAppBackgroundPage';
+import DevCupSizeThumbnailPage                  from '../../pagesDevelopment/devCupSizeThumbnailPage/DevCupSizeThumbnailPage';
+import DevFrostedGlassPage                      from '../../pagesDevelopment/devFrostedGlassPage/DevFrostedGlassPage';
+import DevItemListSelectorPage                  from '../../pagesDevelopment/devItemListSelectorPage/DevItemListSelectorPage';
+import DevItemQuantitySelectorPage              from '../../pagesDevelopment/devItemQuantitySelectorPage/DevItemQuantitySelectorPage';
+import DevMenuHierarchicalListPage              from '../../pagesDevelopment/devMenuHierarchicalListPage/DevMenuHierarchicalListPage';
+import DevMenuListPage                          from '../../pagesDevelopment/devMenuListPage/DevMenuListPage';
+import DevMutedImagePage                        from '../../pagesDevelopment/devMutedImagePage/DevMutedImagePage';
+import DevShotCountSelectorPage                 from '../../pagesDevelopment/devShotCountSelectorPage/DevShotCountSelectorPage';
 import React                                    from 'react';
 
 const DevelopmentRoutes: React.SFC = () => {
@@ -21,6 +23,9 @@ const DevelopmentRoutes: React.SFC = () => {
       <Route path={EnumDevelopmentRoutes.ItemQuantity} component={DevItemQuantitySelectorPage} />
       <Route path={EnumDevelopmentRoutes.Muted} component={DevMutedImagePage} />
       <Route path={EnumDevelopmentRoutes.ShotCount} component={DevShotCountSelectorPage} />
+      <Route path={EnumDevelopmentRoutes.MenuhierarchicalList} component={DevMenuHierarchicalListPage} />
+      <Route path={EnumDevelopmentRoutes.MenuList} component={DevMenuListPage}  />
+      
     </Switch>
   )
 }

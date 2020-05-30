@@ -1,7 +1,7 @@
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Paper }                                from '@material-ui/core';
 import { useState }                             from 'react';
-import DevelopmentMasterPageWrapper             from '../../widgets/devMasterPageWrapper/DevelopmentMasterPageWrapper';
+import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import React                                    from 'react';
 import ShotCountSelector                        from "../../ui/ShotCountSelector/ShotCountSelector";
 

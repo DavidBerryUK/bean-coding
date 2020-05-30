@@ -6,4 +6,6 @@ export enum EnumDevelopmentRoutes  {
     ItemQuantity = '/development/itemQuantity',
     Muted = '/development/muted',
     ShotCount = '/development/shotCount',
+    MenuhierarchicalList = '/development/menuHierarchicalList',
+    MenuList = '/development/menuList',
 }

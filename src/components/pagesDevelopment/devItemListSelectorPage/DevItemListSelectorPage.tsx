@@ -1,17 +1,19 @@
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { EnumCupSize }                          from "../../../Services/CupSize/EnumCupSize";
 import { Paper }                                from '@material-ui/core';
+import { Typography }                           from '@material-ui/core';
 import CupSizeModel                             from "../../../Services/CupSize/CupSizeModel";
 import CupSizeService                           from "../../../Services/CupSize/CupSizeService";
 import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
-import DevelopmentMasterPageWrapper             from '../../widgets/devMasterPageWrapper/DevelopmentMasterPageWrapper';
+import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
+import ItemListSelector                         from "../../ui/itemListSelector/ItemListSelector";
 import React                                    from 'react';
 
-const DevCupSizeThumbnailPage: React.FC = () => {
+const DevItemListSelectorPage: React.FC = () => {
    
     const classStyles = ClassStyleDefinition();    
 
-    const cups : Array<CupSizeModel> = [
+    const cupModels : Array<CupSizeModel> = [
         CupSizeService.cupSizeModelfactory(EnumCupSize.Solo),
         CupSizeService.cupSizeModelfactory(EnumCupSize.Doppio),
         CupSizeService.cupSizeModelfactory(EnumCupSize.Demo),
@@ -23,22 +25,22 @@ const DevCupSizeThumbnailPage: React.FC = () => {
         CupSizeService.cupSizeModelfactory(EnumCupSize.Venti)
     ]
 
+    const cupThumbnailsElements = cupModels.map((cup) => 
+        <CupSizeThumbnail sizeName={cup.name} volumeDescription={cup.volume} scalePercentage={cup.iconScale}/>
+    );
 
     return (
         <DevelopmentMasterPageWrapper 
-            title="Cup Size Thumbnail"
-            description="Provide a consistant thumbnail for cup sizes">            
+            title="Item List Selected"
+            description="UI Component to select an item from a list of components, this example shows a list of <CupSizeThumbnail> elements">            
             
-            <Paper className={classStyles.paper}>                
-                {
-                    cups.map((cup: CupSizeModel) => (
-                        <CupSizeThumbnail sizeName={cup.name} volumeDescription={cup.volume}  scalePercentage={cup.iconScale}/>
-                    ))
-                }               
+            <Paper className={classStyles.paper}>
+                <Typography variant="subtitle1" color="textSecondary">Example component using an array of cup thumbnails</Typography>
+                <ItemListSelector elements={cupThumbnailsElements}/>
             </Paper>
 
             </DevelopmentMasterPageWrapper>
     );
 }
 
-export default DevCupSizeThumbnailPage;
+export default DevItemListSelectorPage;
