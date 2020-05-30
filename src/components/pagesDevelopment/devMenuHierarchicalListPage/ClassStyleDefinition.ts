@@ -5,7 +5,9 @@ export const ClassStyleDefinition = makeStyles(theme => ({
 
     menuContainer: {
         transition:'all 1.0s, width 0.5s',    
-        width:'100%'    
+        width:"100%",    
+        height:400,
+        border:'5px dashed red'
       },
       solidBackground : {
         backgroundColor:'#fff',
@@ -15,6 +17,5 @@ export const ClassStyleDefinition = makeStyles(theme => ({
       constrainMenu: {
         width:340,    
       }
-
 })
 );

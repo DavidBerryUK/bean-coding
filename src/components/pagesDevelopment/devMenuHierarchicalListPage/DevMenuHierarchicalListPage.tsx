@@ -1,17 +1,17 @@
+// import { useContext }                           from 'react';
+// import CommandAddToAudit                        from '../../context/developerContext/actions/CommandAddToAudit';
+// import DemoMenuFactory                          from './DemoMenuFactory';
+// import DeveloperContext                         from '../../context/developerContext/DeveloperContext';
+// import MenuItemModel                            from "../../ui/menuList/MenuItemModel";
 import { Box }                                  from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Paper }                                from '@material-ui/core';
 import { Typography }                           from '@material-ui/core';
-import { useContext }                           from 'react';
 import { useState }                             from 'react';
 import clsx                                     from 'clsx';
-import CommandAddToAudit                        from '../../context/developerContext/actions/CommandAddToAudit';
-import DemoMenuFactory                          from './DemoMenuFactory';
-import DeveloperContext                         from '../../context/developerContext/DeveloperContext';
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import FormControlLabel                         from '@material-ui/core/FormControlLabel';
-import MenuItemModel                            from "../../ui/menuList/MenuItemModel";
-import MenuList                                 from '../../ui/menuList/MenuList';
+import MenuHierachical                          from '../../ui/menuHierachical/MenuHierachical';
 import React                                    from 'react';
 import Switch                                   from '@material-ui/core/Switch';
 
@@ -20,14 +20,14 @@ const DevMenuHierarchicalListPage: React.FC = () => {
 
     const classStyles = ClassStyleDefinition();
 
-    const dispatch = useContext(DeveloperContext).dispatch;
+    // const dispatch = useContext(DeveloperContext).dispatch;
 
     const [constrainMenuState, setConstrainMenuState] = useState(true)
     const [solidBackgroundState, setSolidBackgroundState] = useState(true)
 
-    const handleMenuItemSelected = (menuItem: MenuItemModel) => {
-        dispatch(new CommandAddToAudit(`Item Selected [id:${menuItem.id}] ${menuItem.name}`));
-    }
+    // const handleMenuItemSelected = (menuItem: MenuItemModel) => {
+    //     dispatch(new CommandAddToAudit(`Item Selected [id:${menuItem.id}] ${menuItem.name}`));
+    // }
 
     const handleConstrainMenuChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
         setConstrainMenuState(e.target.checked);
@@ -37,7 +37,7 @@ const DevMenuHierarchicalListPage: React.FC = () => {
         setSolidBackgroundState(e.target.checked);
     }
 
-    const rootMenu = DemoMenuFactory.getMenuWithChildren();
+    // const rootMenu = DemoMenuFactory.getMenuWithChildren();
 
     return (
         <DevelopmentMasterPageWrapper
@@ -66,7 +66,7 @@ const DevMenuHierarchicalListPage: React.FC = () => {
                 [classStyles.solidBackground]: solidBackgroundState,
                 [classStyles.constrainMenu]: constrainMenuState
             })}>
-                <MenuList rootMenuItem={rootMenu} onMenuItemSelected={(menuItem: MenuItemModel) => { handleMenuItemSelected(menuItem) }} />
+                <MenuHierachical/>
             </div>
         </DevelopmentMasterPageWrapper>
     );

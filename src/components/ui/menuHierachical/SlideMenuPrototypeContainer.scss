@@ -1,0 +1,26 @@
+.slide-menu-prototype-container {
+    border: dotted 2px red;
+    height: 200px;
+    display: flex;
+    position: relative;
+
+    .menu-container {
+        position: absolute;
+        transition: left 1s;
+        left: 0px;
+
+        &.menu-enter {
+            transition: left 0.25s;            
+            left: 150px;
+        }        
+
+        &.menu-show {
+            transition: left 0.25s;            
+            left: 0;
+        }        
+
+        &.menu-hide {
+            left: -300px;
+        }
+    }
+}
