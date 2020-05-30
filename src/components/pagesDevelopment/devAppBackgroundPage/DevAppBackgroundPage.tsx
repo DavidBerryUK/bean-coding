@@ -36,18 +36,11 @@ const DevApplicationBackgroundPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper
             title="Application Background"
-            description="Develop different styles of presenting an image as the application background">
-            
-            <SampleImageList onImageSelected={handleImageSelected} />
-
-            <ApplicationBackground 
-            imageUrl={imagePath}
-            isBlured={isBurred}
-            isMuted={isMuted}
-            isSaturated={isSaturated}
-            />
-
-            <Box display='flex' justifyContent='center' pl={2} pt={4}>
+            description="Develop different styles of presenting an image as the application background"
+            headerElement = {
+                <>
+                <SampleImageList onImageSelected={handleImageSelected} />
+                <Box display='flex' justifyContent='center' pl={2} pt={4}>
 
                 <Grid container>
                     <Grid item xs={4}>
@@ -66,9 +59,21 @@ const DevApplicationBackgroundPage: React.FC = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-
-
             </Box>
+            </>
+            }>
+            
+            
+            
+
+            <ApplicationBackground 
+            imageUrl={imagePath}
+            isBlured={isBurred}
+            isMuted={isMuted}
+            isSaturated={isSaturated}
+            />
+
+            <h4>This control has no UI</h4>
         </DevelopmentMasterPageWrapper>
     );
 }

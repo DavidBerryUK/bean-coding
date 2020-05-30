@@ -10,7 +10,6 @@ import { Typography }                           from '@material-ui/core';
 import { useState }                             from 'react';
 import DevelopmentAuditLog                      from '../../widgets/developmentAuditTable/DevelopmentAuditTable';
 import DevelopmentRoutes                        from '../../routes/Development/DevelopmentRoutes';
-import GraphPaper                               from '../../ui/graphPaper/GraphPaper';
 import React                                    from 'react';
 
 const DevelopmentPage: React.FC = (props) => {
@@ -49,12 +48,8 @@ const DevelopmentPage: React.FC = (props) => {
                                 variant="contained"
                                 onClick={() => { handlepress(item.route) }}>{item.name}</Button>
                         </Link>
-                    ))}
-                    <GraphPaper>
-
-                        <DevelopmentRoutes />
-
-                    </GraphPaper>
+                    ))}                    
+                    <DevelopmentRoutes />                    
                 </BrowserRouter>
                 <DevelopmentAuditLog />
             </DeveloperContextProvider>

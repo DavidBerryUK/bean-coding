@@ -1,13 +1,16 @@
 import { Box }                                  from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Typography }                           from '@material-ui/core';
+import GraphPaper                               from '../../ui/graphPaper/GraphPaper';
 import NewReleasesOutlinedIcon                  from '@material-ui/icons/NewReleasesOutlined';
 import React                                    from 'react';
 
 interface IProperties {
     title: string,
     description: string,
-    isExperimental?: boolean
+    isExperimental?: boolean,
+    headerElement?: React.ReactElement,
+    footerElement?: React.ReactElement,
 }
 
 
@@ -17,24 +20,30 @@ const DevelopmentMasterPageWrapper: React.FC<IProperties> = (props) => {
 
     return (
         <>
-            <Box display='flex'>
+            <Box display='flex' mt={2} ml={2}>
                 <Box flex={1}>
                     <Typography variant="h5">{props.title}</Typography>
                 </Box>
                 {
                     props.isExperimental === true ?
-                    
+
                         <Box className={classStyles.experimentBox}>
                             <Typography variant="body1" component='span'>Experimental Component</Typography>
-                            <NewReleasesOutlinedIcon  fontSize="large" className={classStyles.experimentIcon}/>
+                            <NewReleasesOutlinedIcon fontSize="large" className={classStyles.experimentIcon} />
                         </Box>
-                     
-                    : null
-                }
 
+                        : null
+                }
+            
+            </Box>
+            <Box ml={2}>
+                <Typography variant="body1">{props.description}</Typography>
             </Box>            
-            <Typography variant="body1">{props.description}</Typography>
-            {props.children}
+            {props.headerElement}
+            <GraphPaper>
+                {props.children}
+            </GraphPaper>
+            {props.footerElement}
         </>
     )
 }

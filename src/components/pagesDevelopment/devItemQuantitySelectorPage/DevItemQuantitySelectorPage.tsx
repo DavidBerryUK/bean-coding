@@ -51,18 +51,9 @@ const DevItemQuantitySelectorPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper
             title="Item Quantity Selector"
-            description="UI Component to select quantities">
-
-            <Box className={classStyles.box}>
-                <ItemQuantitySelector
-                    value={quantity}
-                    minValue = { isMinValueUsed ? minValue : undefined }
-                    maxValue = { isMaxValueUsed ? maxValue : undefined }
-                    onValueChanged={handleOnValueChanged}
-                />
-            </Box>
-
-            <Paper className={classStyles.box}>
+            description="UI Component to select quantities"
+            footerElement = {
+                <Paper className={classStyles.box}>
                 <Typography variant="subtitle1" color="textSecondary">Parameters</Typography>
 
                 <Table size="small" >
@@ -104,6 +95,19 @@ const DevItemQuantitySelectorPage: React.FC = () => {
                 </Table>
 
             </Paper>
+            }
+            >
+
+            <Box className={classStyles.box}>
+                <ItemQuantitySelector
+                    value={quantity}
+                    minValue = { isMinValueUsed ? minValue : undefined }
+                    maxValue = { isMaxValueUsed ? maxValue : undefined }
+                    onValueChanged={handleOnValueChanged}
+                />
+            </Box>
+
+           
 
 
         </DevelopmentMasterPageWrapper>

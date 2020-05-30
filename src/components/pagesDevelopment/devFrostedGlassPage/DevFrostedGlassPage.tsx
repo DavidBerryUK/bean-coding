@@ -32,9 +32,9 @@ const DevFrostedGlassPage: React.FC = () => {
         <DevelopmentMasterPageWrapper 
             title="Frosted Glass"
             description="Experiment with frosted glass overlay, not supported in Firefox"
-            isExperimental>            
-            <SampleImageList onImageSelected={handleImageSelected} />
-
+            isExperimental
+            headerElement= {<SampleImageList onImageSelected={handleImageSelected} />}
+            >                        
             <Box display='flex' justifyContent='center' pt={4}>
                 <Paper className={classStyles.regionImage}>
                     <div style={imageStyle()}>

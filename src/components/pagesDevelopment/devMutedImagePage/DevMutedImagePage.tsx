@@ -34,9 +34,11 @@ const DevMutedImagePage: React.FC = () => {
         <DevelopmentMasterPageWrapper 
             title="Muted Glass"
             description="Experiment with muted overlay, not supported in Firefox"
-            isExperimental>            
-            <SampleImageList onImageSelected={handleImageSelected} />
-
+            isExperimental
+            headerElement={
+                <SampleImageList onImageSelected={handleImageSelected} />
+            }
+            >                        
             <Box display='flex' justifyContent='center' pt={4}>
                 <Paper className={classStyles.regionImage}>
                     <div style={imageStyle()}>
