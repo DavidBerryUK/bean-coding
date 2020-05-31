@@ -8,4 +8,5 @@ export enum EnumDevelopmentRoutes  {
     ShotCount = '/development/shotCount',
     MenuhierarchicalList = '/development/menuHierarchicalList',
     MenuList = '/development/menuList',
+    MenuSliderMechanism = '/development/menuslidermechanism',
 }

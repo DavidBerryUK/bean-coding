@@ -11,7 +11,7 @@ interface IProperties {
 
 }
 
-const MenuHierachical: React.FC<IProperties> = (props) => {
+const MenuSliderMechanism: React.FC<IProperties> = (props) => {
 
     const [cssNew, setCssNew] = useState('menu-show')
     const [levelState, setLevelState] = useState(0);
@@ -109,4 +109,4 @@ const MenuHierachical: React.FC<IProperties> = (props) => {
 }
 
 
-export default MenuHierachical
+export default MenuSliderMechanism
