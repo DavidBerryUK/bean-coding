@@ -6,7 +6,7 @@ import { useContext }                           from 'react';
 import { useState }                             from 'react';
 import clsx                                     from 'clsx';
 import CommandAddToAudit                        from '../../context/developerContext/actions/CommandAddToAudit';
-import DemoMenuFactory                          from '../devMenuHierarchicalListPage/DemoMenuFactory';
+import DemoMenuFactory                          from './DemoMenuFactory';
 import DeveloperContext                         from '../../context/developerContext/DeveloperContext';
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import FormControlLabel                         from '@material-ui/core/FormControlLabel';

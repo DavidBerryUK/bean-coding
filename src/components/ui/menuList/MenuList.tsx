@@ -7,6 +7,7 @@ import { ListItemText }                         from '@material-ui/core';
 import MenuItemModel                            from './MenuItemModel';
 import React                                    from 'react';
 import ChevronRightOutlinedIcon                 from '@material-ui/icons/ChevronRightOutlined';
+import "./MenuList.scss";
 
 interface IProperties {
     rootMenuItem: MenuItemModel,
@@ -27,7 +28,7 @@ const MenuList: React.FC<IProperties> = (props) => {
     }
 
     return (
-        <List>
+        <List className="menu-list">
             {props.rootMenuItem.children.map((item : MenuItemModel) => (
                 <div key={item.id}>
                     {item.route !== '' ?

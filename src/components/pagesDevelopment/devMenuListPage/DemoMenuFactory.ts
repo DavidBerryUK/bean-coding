@@ -1,8 +1,6 @@
 import AcUnitIcon                               from '@material-ui/icons/AcUnit';
 import BathtubOutlinedIcon                      from '@material-ui/icons/BathtubOutlined';
-import CakeOutlinedIcon                         from '@material-ui/icons/CakeOutlined';
 import ChildCareOutlinedIcon                    from '@material-ui/icons/ChildCareOutlined';
-import EcoOutlinedIcon                          from '@material-ui/icons/EcoOutlined';
 import EmojiFoodBeverageOutlinedIcon            from '@material-ui/icons/EmojiFoodBeverageOutlined';
 import FastfoodIcon                             from '@material-ui/icons/Fastfood';
 import HomeOutlinedIcon                         from '@material-ui/icons/HomeOutlined';
@@ -11,7 +9,6 @@ import MenuItemModel                            from "../../ui/menuList/MenuItem
 import MenuItemRootModel                        from "../../ui/menuList/MenuItemRootModel";
 import PetsOutlinedIcon                         from '@material-ui/icons/PetsOutlined';
 import React                                    from 'react';
-import ShoppingBasketOutlinedIcon               from '@material-ui/icons/ShoppingBasketOutlined';
 import SpaOutlinedIcon                          from '@material-ui/icons/SpaOutlined';
 import SportsEsportsOutlinedIcon                from '@material-ui/icons/SportsEsportsOutlined';
 
@@ -33,6 +30,4 @@ export default class DemoMenuFactory {
 
         return rootMenu;
     }
-
-
 }
