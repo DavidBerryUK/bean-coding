@@ -1,8 +1,11 @@
-import React, { useState, useMemo, useCallback } from 'react';
-import TestBox from './TestBox';
-import { Box, Button } from '@material-ui/core';
 import "./SlideMenuPrototypeContainer.scss";
-
+import { Box } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import { useCallback } from 'react';
+import { useMemo } from 'react';
+import { useState } from 'react';
+import React from 'react';
+import TestBox from './TestBox';
 
 interface IProperties {
 
@@ -10,7 +13,7 @@ interface IProperties {
 
 const MenuHierachical: React.FC<IProperties> = (props) => {
 
-    const [cssNew, setCssNew] = useState('menu-enter')
+    const [cssNew, setCssNew] = useState('menu-show')
     const [levelState, setLevelState] = useState(0);
     const [menuArraySate, setMenuArrayState] = useState<Array<React.ReactElement>>(new Array<React.ReactElement>());
 
@@ -22,42 +25,61 @@ const MenuHierachical: React.FC<IProperties> = (props) => {
         menuPop();
     }
 
-    const menuPush = useCallback( () => {
-        if ( levelState >= 6) {
+    const menuPush = useCallback(() => {
+        if (levelState >= 6) {
             return
         }
-        
+
         var newLevel = levelState + 1;
         var array = [...menuArraySate];
-        
-        array.push(React.createElement(TestBox,{backgroundNo: newLevel, className:""}))        
-        setCssNew('menu-enter');
+
+        array.push(React.createElement(TestBox, { backgroundNo: newLevel, className: "" }))
+        if (newLevel === 1) {
+            setCssNew('menu-show');
+        } else {
+            setCssNew('menu-enter');
+        }
+
         setMenuArrayState(array);
-        setLevelState(newLevel);            
-    },[levelState, menuArraySate])
+        setLevelState(newLevel);
+    }, [levelState, menuArraySate])
 
     const menuPop = () => {
-        if ( levelState <= 1) {
+        if (levelState <= 1) {
             return
         }
-        var newLevel = levelState - 1;
-        var array = [...menuArraySate];
-        array.pop();
-           
-        setMenuArrayState(array);
-        setLevelState(newLevel);                    
+        var newLevel = levelState - 1;                        
+        setLevelState(newLevel);
+
+        setTimeout(function () {
+            var array = [...menuArraySate];
+            while( array.length >= levelState) {
+                array.pop();
+            }
+            setMenuArrayState(array);
+        }, 500);
     }
 
     useMemo(() => {
-        // populate inital menu
-        if ( levelState === 0 ) {
+        if (levelState === 0) {
             menuPush();
         }
-        setTimeout(function() {
-            console.log('time out done');
+
+        setTimeout(function () {
             setCssNew('menu-show');
-         }, 50);
-    },[menuPush, levelState]);
+        }, 25);
+    }, [menuPush, levelState]);
+
+
+    const getClassName = (index: number) => {        
+        if ( (index + 1) < levelState) {
+            return 'menu-container menu-hide';
+        }
+        if ( (index + 1) > levelState) {
+            return 'menu-container menu-enter';
+        }
+        return `menu-container ${cssNew}`;
+    }
 
     return (
         <>
@@ -72,15 +94,15 @@ const MenuHierachical: React.FC<IProperties> = (props) => {
                     Level: {levelState}
                 </Box>
             </Box>
-            
+
             <div className="slide-menu-prototype-container">
-            {
-            menuArraySate.map((item,index) => (
-                <div key={index} className={`menu-container ${  (index+1) === levelState ? `${cssNew}` : 'menu-hide'    }`}>
-                    {item}
-                </div>
-            ))
-            }
+                {
+                    menuArraySate.map((item, index) => (                      
+                        <div key={index} className={getClassName(index)}>
+                            {item}
+                        </div>
+                    ))
+                }
             </div>
         </>
     )
