@@ -1,10 +1,11 @@
 import "./MenuHierachicalList.scss";
-import { Box }                                  from '@material-ui/core';
-import { Button }                               from '@material-ui/core';
+import { Button }                               from "@material-ui/core";
+import { Paper }                                from "@material-ui/core";
 import { useCallback }                          from 'react';
 import { useEffect }                            from 'react';
 import { useMemo }                              from 'react';
 import { useState }                             from 'react';
+import ArrowBackIosIcon                         from '@material-ui/icons/ArrowBackIos';
 import MenuItemModel                            from '../menuList/MenuItemModel';
 import MenuList                                 from '../menuList/MenuList';
 import React                                    from 'react';
@@ -19,15 +20,21 @@ const MenuHierachicalList: React.FC<IProperties> = (props) => {
     const [levelState, setLevelState] = useState(0);
     const [menuArraySate, setMenuArrayState] = useState<Array<React.ReactElement>>(new Array<React.ReactElement>());
     const [newMenu, setNewMenu] = useState<MenuItemModel | null>(null);
+    const [backButtonShownState, setBackButtonShownState] = useState(false);
+    const [titleState, setTitleState] = useState<Array<string>>(new Array<string>());
 
 
-    const handlePopButtonClicked = () => {
-        menuPop();
-    }
+    // const handlePopButtonClicked = () => {
+    //     menuPop();
+    // }
 
     const handleMenuOnClickEvent = useCallback((menu: MenuItemModel) => {
         setNewMenu(menu);
     }, []);
+
+    const handleMenuBackButtonClicked = () => {
+        menuPop();
+    }
 
     const menuPop = () => {
         if (levelState <= 1) {
@@ -35,6 +42,13 @@ const MenuHierachicalList: React.FC<IProperties> = (props) => {
         }
         var newLevel = levelState - 1;
         setLevelState(newLevel);
+        setBackButtonShownState(newLevel > 1);
+
+        
+        var titleArray = [...titleState];
+        titleArray.pop();
+        setTitleState(titleArray);                
+
 
         setTimeout(function () {
             var array = [...menuArraySate];
@@ -59,8 +73,15 @@ const MenuHierachicalList: React.FC<IProperties> = (props) => {
         } else {
             setCssNew('menu-enter');
         }
+
+        var titleArray = [...titleState];
+        titleArray.push(menuModel.name);
+        setTitleState(titleArray);                
+
+        
         setMenuArrayState(array);
         setLevelState(newLevel);
+        setBackButtonShownState(newLevel > 1);
 
 
     }, [levelState, menuArraySate, handleMenuOnClickEvent])
@@ -99,26 +120,28 @@ const MenuHierachicalList: React.FC<IProperties> = (props) => {
     }
 
     return (
-        <>
-            <Box display='flex' mt={1} mb={1}>
-                <Box mr={1}>
-                    <Button variant="contained" color="secondary" onClick={handlePopButtonClicked}>Pop</Button>
-                </Box>
-                <Box mr={1}>
-                    Level: {levelState}
-                </Box>
-            </Box>
 
-            <div className="menu-hierachical-list">
-                {
-                    menuArraySate.map((item, index) => (
-                        <div key={index} className={getClassName(index)}>
-                            {item}
-                        </div>
-                    ))
-                }
+
+        <Paper className="menu-hierachical-list">
+            <div className='menu-toolbar'>
+                <div className='title'>
+                    {titleState[titleState.length-1]}
+                </div>
+                <Button variant="text" 
+                        startIcon={<ArrowBackIosIcon />} 
+                        onClick={handleMenuBackButtonClicked}
+                        className = { `back-button ${backButtonShownState ? "show" : "hide"}` }
+                        >Back</Button>
             </div>
-        </>
+            {
+                menuArraySate.map((item, index) => (
+                    <div key={index} className={getClassName(index)}>
+                        {item}
+                    </div>
+                ))
+            }
+        </Paper>
+
     )
 }
 

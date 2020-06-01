@@ -1,17 +1,54 @@
+
+
 .menu-hierachical-list {
-    border: solid black 4px;
-    height: 600px;
+
+    $menu-toolbar-height:40px;
+
+    position: relative;        
     width: 300px;
-    display: flex;
-    position: relative;
-    overflow-y: scroll;
+    height: 100%;
+    display: flex;    
+    overflow-y: hidden;
     overflow-x: hidden;
 
+    .menu-toolbar {
+        position: absolute;
+        left:0;
+        right:0;
+        top:0;
+        height: $menu-toolbar-height;
+        border-bottom-color: #eee;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;;
+        
+        .title {
+            position: absolute;
+            left:0;
+            right:0;
+            top:8px;
+            text-align: center;
+        }
+
+        .back-button {
+            transition: opacity 0.25s;
+            &.show {
+                opacity: 1;                
+            }
+            &.hide {
+                opacity: 0;
+                user-select: none;
+            }
+        }
+
+
+    }
     .menu-container {
         position: absolute;
         transition: all 0.25s;
+        top:$menu-toolbar-height;
         left: 0px;
-        width: 300px;
+        width: 300px;        
+        bottom: 0;
         overflow-x: hidden;
 
         &.menu-enter {
