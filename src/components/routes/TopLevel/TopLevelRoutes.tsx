@@ -1,5 +1,5 @@
 import { EnumTopLevelRoutes }                   from './TopLevelRouteConstants';
-import { Route }                                from 'react-router-dom';
+import { Route, withRouter }                                from 'react-router-dom';
 import { Switch }                               from 'react-router-dom';
 import AboutPage                                from '../../pages/aboutPage/AboutPage';
 import DevelopmentPage                          from '../../pages/developmentPage/DevelopmentPage';
@@ -14,7 +14,7 @@ const TopLevelRoutes: React.SFC = () => {
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path={EnumTopLevelRoutes.AboutPage} component={AboutPage} />      
-      <Route path={EnumTopLevelRoutes.DevelopmentPage} component={DevelopmentPage} />
+      <Route path={EnumTopLevelRoutes.DevelopmentPage} component={withRouter(DevelopmentPage)} />
       <Route path={EnumTopLevelRoutes.HomePage} component={HomePage} />
       <Route path={EnumTopLevelRoutes.SystemPage} component={SystemPage} />      
       <Route path={EnumTopLevelRoutes.TillPage} component={TillPage} />

@@ -1,13 +1,13 @@
+import "./MenuList.scss";
 import { Link }                                 from '@material-ui/core';
 import { Link as RouterLink }                   from 'react-router-dom';
 import { List }                                 from '@material-ui/core';
 import { ListItem }                             from '@material-ui/core';
 import { ListItemIcon }                         from '@material-ui/core';
 import { ListItemText }                         from '@material-ui/core';
+import ChevronRightOutlinedIcon                 from '@material-ui/icons/ChevronRightOutlined';
 import MenuItemModel                            from './MenuItemModel';
 import React                                    from 'react';
-import ChevronRightOutlinedIcon                 from '@material-ui/icons/ChevronRightOutlined';
-import "./MenuList.scss";
 
 interface IProperties {
     rootMenuItem: MenuItemModel,
@@ -17,11 +17,6 @@ interface IProperties {
 const MenuList: React.FC<IProperties> = (props) => {
 
     const handleOnMenuItemClicked = (menuItem : MenuItemModel ) => {
-        // if ( menuItem.children.length > 0) {    
-        //     console.log('item has children');
-        //     return;
-        // }
-
         if ( props.onMenuItemSelected) {
             props.onMenuItemSelected(menuItem);
         }
@@ -32,7 +27,7 @@ const MenuList: React.FC<IProperties> = (props) => {
             {props.rootMenuItem.children.map((item : MenuItemModel) => (
                 <div key={item.id}>
                     {item.route !== '' ?
-                        <Link component={RouterLink} to={item.route} color="inherit" variant="inherit" underline="none">
+                        <Link component={RouterLink} to={item.route} color="inherit" variant="inherit" underline="none" replace={true}>
                             <ListItem button>
                                 <ListItemIcon>
                                     {item.icon}
