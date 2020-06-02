@@ -12,6 +12,7 @@ import React                                    from 'react';
 
 interface IProperties {
     rootMenuItem: MenuItemModel,
+    onMenuItemSelected?:(menuItem: MenuItemModel) => void
 }
 
 const MenuHierachicalList: React.FC<IProperties> = (props) => {
@@ -28,9 +29,15 @@ const MenuHierachicalList: React.FC<IProperties> = (props) => {
     //     menuPop();
     // }
 
-    const handleMenuOnClickEvent = useCallback((menu: MenuItemModel) => {
-        setNewMenu(menu);
-    }, []);
+    const handleMenuOnClickEvent = useCallback((menuItem: MenuItemModel) => {
+        setNewMenu(menuItem);
+        
+        if ( menuItem.children.length === 0) {
+            if ( props.onMenuItemSelected ) {            
+                props.onMenuItemSelected(menuItem);
+            }
+        }
+    }, [props]);
 
     const handleMenuBackButtonClicked = () => {
         menuPop();
@@ -64,7 +71,7 @@ const MenuHierachicalList: React.FC<IProperties> = (props) => {
         var newLevel = levelState + 1;
         var array = [...menuArraySate];
 
-        const newMenuElement = <MenuList rootMenuItem={menuModel} onMenuItemSelected={(x: MenuItemModel) => { handleMenuOnClickEvent(x) }} />
+        const newMenuElement = <MenuList rootMenuItem={menuModel} onMenuItemSelected={(menuItem: MenuItemModel) => { handleMenuOnClickEvent(menuItem) }} />
 
         array.push(newMenuElement)
 
@@ -84,7 +91,7 @@ const MenuHierachicalList: React.FC<IProperties> = (props) => {
         setBackButtonShownState(newLevel > 1);
 
 
-    }, [levelState, menuArraySate, handleMenuOnClickEvent])
+    }, [levelState, menuArraySate, handleMenuOnClickEvent, titleState])
 
     useMemo(() => {
 
