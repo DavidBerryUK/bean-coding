@@ -1,0 +1,342 @@
+{
+    "products": [
+        {
+            "starCost": 50,
+            "name": "Cinnamon Raisin Bagel",
+            "formCode": "Single",
+            "productNumber": 2121804,
+            "productType": "food",
+            "description": "Our New York-style boiled bagel gets sweet cinnamon swirled into the dough, just before heaps of raisins are mixed in, adding a little sweet to your savory breakfast.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": "https://globalassets.starbucks.com/assets/ae1c13f21e304517b999c73cf2c06dbe.jpg"
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/0f508818ff7a4468be2b0a83ef0dfb01.jpg"
+                }
+            },
+            "productOptions": [
+                {
+                    "categoryNumber": 224,
+                    "name": "Butter & Spreads",
+                    "attributes": {
+                        "unitOfMeasure": null
+                    },
+                    "products": [
+                        {
+                            "productNumber": 1189,
+                            "form": {
+                                "name": "Butter",
+                                "formCode": "qty",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Butter",
+                                        "sku": "11016280"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "productNumber": 1190,
+                            "form": {
+                                "name": "Plain Cream Cheese",
+                                "formCode": "qty",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Plain Cream Cheese",
+                                        "sku": "11016278"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "children": []
+                },
+                {
+                    "categoryNumber": 222,
+                    "name": "Warming",
+                    "attributes": {
+                        "unitOfMeasure": null
+                    },
+                    "products": [
+                        {
+                            "productNumber": 1193,
+                            "form": {
+                                "name": "Not Warmed",
+                                "formCode": "one",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Not Warmed",
+                                        "sku": "11035149"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "productNumber": 1179,
+                            "form": {
+                                "name": "Warmed",
+                                "formCode": "one",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Warmed",
+                                        "sku": "204198"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "children": []
+                }
+            ],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": [
+                            {
+                                "productOption": {
+                                    "productNumber": 1179
+                                },
+                                "formCode": "one",
+                                "quantity": 0,
+                                "sizeCode": "add",
+                                "skuName": "Warmed"
+                            }
+                        ]
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 99 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": 270
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": 14
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Total Fat",
+                                "unitOfMeasure": "g",
+                                "value": 1,
+                                "dailyPercentValue": 0.0128,
+                                "saturatedFat": {
+                                    "displayName": "Saturated Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": 0
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 1 g",
+                                "dailyValue": "1%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Saturated Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": 0,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "cholesterol",
+                                "displayValue": " 0 mg",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Sodium",
+                                "unitOfMeasure": "mg",
+                                "value": 370,
+                                "dailyPercentValue": 0.1609,
+                                "id": "sodium",
+                                "displayValue": " 370 mg",
+                                "dailyValue": "16%"
+                            },
+                            {
+                                "displayName": "Total Carbohydrates",
+                                "unitOfMeasure": "g",
+                                "value": 58,
+                                "dailyPercentValue": 0.2109,
+                                "dietaryFiber": {
+                                    "displayName": "Dietary Fiber",
+                                    "unitOfMeasure": "g",
+                                    "value": 3,
+                                    "dailyPercentValue": 0.1071
+                                },
+                                "sugars": {
+                                    "displayName": "Sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 11,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 58 g",
+                                "dailyValue": "21%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Dietary Fiber",
+                                        "unitOfMeasure": "g",
+                                        "value": 3,
+                                        "dailyPercentValue": 0.1071,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 3 g",
+                                        "dailyValue": "11%"
+                                    },
+                                    {
+                                        "displayName": "Sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 11,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 11 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 9,
+                                "dailyPercentValue": 0.18,
+                                "id": "protein",
+                                "displayValue": " 9 g",
+                                "dailyValue": "18%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "11060626",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": "Wheat"
+                    },
+                    "ingredients": [
+                        {
+                            "name": "Unbleached Enriched Flour",
+                            "children": [
+                                {
+                                    "name": "Wheat Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Malted Barley Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Niacin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Reduced Iron",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Thiamine Mononitrate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Riboflavin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Folic Acid",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Water",
+                            "children": []
+                        },
+                        {
+                            "name": "Raisins",
+                            "children": []
+                        },
+                        {
+                            "name": "Sugar",
+                            "children": []
+                        },
+                        {
+                            "name": "Contains 2 Or Less Of Wheat Gluten",
+                            "children": []
+                        },
+                        {
+                            "name": "Salt",
+                            "children": []
+                        },
+                        {
+                            "name": "Yeast",
+                            "children": []
+                        },
+                        {
+                            "name": "Cinnamon",
+                            "children": []
+                        },
+                        {
+                            "name": "Vinegar",
+                            "children": []
+                        },
+                        {
+                            "name": "Guar Gum",
+                            "children": []
+                        },
+                        {
+                            "name": "Sunflower Oil",
+                            "children": []
+                        },
+                        {
+                            "name": "Ascorbic Acid",
+                            "children": []
+                        },
+                        {
+                            "name": "Enzymes",
+                            "children": []
+                        },
+                        {
+                            "name": "Monoglycerides",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

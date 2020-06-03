@@ -20,7 +20,8 @@ const DevShotCountSelectorPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper 
             title="Shot Count Selector"
-            description="Experiment with different ways of selecting shot counts">                                    
+            description="Experiment with different ways of selecting shot counts"
+            componentName="<ShotCountSelector/>">                                    
             <ShotCountSelector shotCount={shotCount} onValueChanged={(shotCount:number)=> { handleShotCountChanged(shotCount) }}/>            
             </DevelopmentMasterPageWrapper>
     );

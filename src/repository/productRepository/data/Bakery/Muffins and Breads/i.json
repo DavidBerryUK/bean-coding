@@ -1,0 +1,165 @@
+{
+    "products": [
+        {
+            "starCost": null,
+            "name": "Cinnamon Swirl",
+            "formCode": "Single",
+            "productNumber": 604,
+            "productType": "food",
+            "description": "Sweet dough with cinnamon filling, sultanas and topped with a cream cheese style icing.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": "https://globalassets.starbucks.com/assets/1b60cc43cff14aacac72b94bc7e9c61e.jpg"
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/da12a240c8084c3db7126fbb034bf021.jpg"
+                }
+            },
+            "productOptions": [],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": []
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 140 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": " 482 kcal"
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": " 0 kcal"
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Fat",
+                                "unitOfMeasure": "g",
+                                "value": 13,
+                                "dailyPercentValue": 0.1667,
+                                "saturatedFat": {
+                                    "displayName": "of which saturates",
+                                    "unitOfMeasure": "g",
+                                    "value": 3.9,
+                                    "dailyPercentValue": 0.195
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 13 g",
+                                "dailyValue": "17%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "of which saturates",
+                                        "unitOfMeasure": "g",
+                                        "value": 3.9,
+                                        "dailyPercentValue": 0.195,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 3.9 g",
+                                        "dailyValue": "20%"
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "cholesterol",
+                                "displayValue": " 0 mg",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Salt",
+                                "unitOfMeasure": "g",
+                                "value": 0.7,
+                                "dailyPercentValue": 0.0003,
+                                "id": "sodium",
+                                "displayValue": " 0.7 g",
+                                "dailyValue": "0%"
+                            },
+                            {
+                                "displayName": "Carbohydrate",
+                                "unitOfMeasure": "g",
+                                "value": 79,
+                                "dailyPercentValue": 0.2873,
+                                "dietaryFiber": {
+                                    "displayName": "Fibre",
+                                    "unitOfMeasure": "g",
+                                    "value": 2.8,
+                                    "dailyPercentValue": 0.1
+                                },
+                                "sugars": {
+                                    "displayName": "of which sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 28,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 79 g",
+                                "dailyValue": "29%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Fibre",
+                                        "unitOfMeasure": "g",
+                                        "value": 2.8,
+                                        "dailyPercentValue": 0.1,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 2.8 g",
+                                        "dailyValue": "10%"
+                                    },
+                                    {
+                                        "displayName": "of which sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 28,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 28 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 11,
+                                "dailyPercentValue": 0.22,
+                                "id": "protein",
+                                "displayValue": " 11 g",
+                                "dailyValue": "22%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "11089674",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": "Egg, Gluten, Milk, Wheat"
+                    },
+                    "ingredients": []
+                }
+            ]
+        }
+    ]
+}

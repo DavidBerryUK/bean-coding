@@ -1,0 +1,165 @@
+{
+    "products": [
+        {
+            "starCost": null,
+            "name": "King Prawn Sandwich",
+            "formCode": "Single",
+            "productNumber": 2123210,
+            "productType": "food",
+            "description": "King prawns and prawns with a Marie Rose sauce and lettuce on oat and barley bread.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": null
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/ed8ca7d27ce547bc89b0add15fa32d6d.jpg"
+                }
+            },
+            "productOptions": [],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": []
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 0 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": " 0 kcal"
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": " 0 kcal"
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Fat",
+                                "unitOfMeasure": "g",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "saturatedFat": {
+                                    "displayName": "of which saturates",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": 0
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 0 g",
+                                "dailyValue": null,
+                                "subfacts": [
+                                    {
+                                        "displayName": "of which saturates",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": 0,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "cholesterol",
+                                "displayValue": " 0 mg",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Salt",
+                                "unitOfMeasure": "g",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "sodium",
+                                "displayValue": " 0 g",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Carbohydrate",
+                                "unitOfMeasure": "g",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "dietaryFiber": {
+                                    "displayName": "Fibre",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": 0
+                                },
+                                "sugars": {
+                                    "displayName": "of which sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 0 g",
+                                "dailyValue": null,
+                                "subfacts": [
+                                    {
+                                        "displayName": "Fibre",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": 0,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    },
+                                    {
+                                        "displayName": "of which sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "protein",
+                                "displayValue": " 0 g",
+                                "dailyValue": null
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "011117073",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": ""
+                    },
+                    "ingredients": []
+                }
+            ]
+        }
+    ]
+}

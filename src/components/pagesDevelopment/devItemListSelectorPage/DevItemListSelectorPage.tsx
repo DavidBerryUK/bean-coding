@@ -40,7 +40,8 @@ const DevItemListSelectorPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper 
             title="Item List Selected"
-            description="UI Component to select an item from a list of components, this example shows a list of <CupSizeThumbnail> elements">                                    
+            description="UI Component to select an item from a list of components, this example shows a list of <CupSizeThumbnail> elements"
+            componentName="<ItemListSelector/>">                                    
             <ItemListSelector elements={cupThumbnailsElements} onItemSelected={(item:ReactElement)=>{ handleItemSelected(item)}}/>            
             </DevelopmentMasterPageWrapper>
     );

@@ -1,0 +1,272 @@
+{
+    "products": [
+        {
+            "starCost": 50,
+            "name": "Everybody's Favorite – Bantam Bagel (2-pack)",
+            "formCode": "Single",
+            "productNumber": 2121661,
+            "productType": "food",
+            "description": "An Everything Bagel stuffed with chopped vegetable cream cheese. A flavorful twist on a classic bound to reawaken your taste buds.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": "https://globalassets.starbucks.com/assets/25072dc1523d4b8f9f69d38df9e289e0.jpg"
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/c9f9ad28f25a41d49130b17b81356812.jpg"
+                }
+            },
+            "productOptions": [],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": []
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 74 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": 200
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": 60
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Total Fat",
+                                "unitOfMeasure": "g",
+                                "value": 8,
+                                "dailyPercentValue": 0.1026,
+                                "saturatedFat": {
+                                    "displayName": "Saturated Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 4,
+                                    "dailyPercentValue": 0.2
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 8 g",
+                                "dailyValue": "10%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Saturated Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 4,
+                                        "dailyPercentValue": 0.2,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 4 g",
+                                        "dailyValue": "20%"
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 20,
+                                "dailyPercentValue": 0.0667,
+                                "id": "cholesterol",
+                                "displayValue": " 20 mg",
+                                "dailyValue": "7%"
+                            },
+                            {
+                                "displayName": "Sodium",
+                                "unitOfMeasure": "mg",
+                                "value": 280,
+                                "dailyPercentValue": 0.1217,
+                                "id": "sodium",
+                                "displayValue": " 280 mg",
+                                "dailyValue": "12%"
+                            },
+                            {
+                                "displayName": "Total Carbohydrates",
+                                "unitOfMeasure": "g",
+                                "value": 28,
+                                "dailyPercentValue": 0.1018,
+                                "dietaryFiber": {
+                                    "displayName": "Dietary Fiber",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": 0
+                                },
+                                "sugars": {
+                                    "displayName": "Sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 2,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 28 g",
+                                "dailyValue": "10%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Dietary Fiber",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": 0,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    },
+                                    {
+                                        "displayName": "Sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 2,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 2 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 6,
+                                "dailyPercentValue": 0.12,
+                                "id": "protein",
+                                "displayValue": " 6 g",
+                                "dailyValue": "12%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "11074223",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": ""
+                    },
+                    "ingredients": [
+                        {
+                            "name": "Enriched Wheat Flour",
+                            "children": [
+                                {
+                                    "name": "Wheat Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Malted Barley Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Niacin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Reduced Iron",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Thiamin Mononitrate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Riboflavin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Folic Acid",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Cream Cheese",
+                            "children": [
+                                {
+                                    "name": "Pasteurized Milk And Cream",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Salt",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Carob Bean Gum",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Cheese Culture",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Water",
+                            "children": []
+                        },
+                        {
+                            "name": "Diastatic Malt Syrup",
+                            "children": []
+                        },
+                        {
+                            "name": "Carrots",
+                            "children": []
+                        },
+                        {
+                            "name": "Scallion",
+                            "children": []
+                        },
+                        {
+                            "name": "Celery",
+                            "children": []
+                        },
+                        {
+                            "name": "Yeast",
+                            "children": []
+                        },
+                        {
+                            "name": "Salt",
+                            "children": []
+                        },
+                        {
+                            "name": "Sugar",
+                            "children": []
+                        },
+                        {
+                            "name": "Dehydrated Onion",
+                            "children": []
+                        },
+                        {
+                            "name": "Sesame Seed",
+                            "children": []
+                        },
+                        {
+                            "name": "Poppy Seed",
+                            "children": []
+                        },
+                        {
+                            "name": "Spices",
+                            "children": []
+                        },
+                        {
+                            "name": "Sodium Bicarbonate",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

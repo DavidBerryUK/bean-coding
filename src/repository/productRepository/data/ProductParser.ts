@@ -23,6 +23,17 @@ export default class ProductParser {
         return products;
     }
 
+    parseJsonFile(json : any) : Array<ProductModel> {
+        var products = new Array<ProductModel>();
+
+        json.products.forEach((productJson: any) => {
+            var product = this.extractProduct(productJson);
+            products.push(product);
+        });
+
+        return products;
+    }
+
     private extractProduct(json: any): ProductModel {
         var product = new ProductModel();
         product.name = json.name;

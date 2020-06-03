@@ -37,6 +37,7 @@ const DevApplicationBackgroundPage: React.FC = () => {
         <DevelopmentMasterPageWrapper
             title="Application Background"
             description="Develop different styles of presenting an image as the application background"
+            componentName="<ApplicationBackground/>"
             headerElement = {
                 <>
                 <SampleImageList onImageSelected={handleImageSelected} />

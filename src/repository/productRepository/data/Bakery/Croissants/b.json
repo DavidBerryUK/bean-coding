@@ -1,0 +1,472 @@
+{
+    "products": [
+        {
+            "starCost": 50,
+            "name": "Almond Croissant",
+            "formCode": "Single",
+            "productNumber": 1131,
+            "productType": "food",
+            "description": "Our rich, almond flan enveloped in a flaky, buttery croissant, then topped with sliced almonds creates the perfect combination of sweet and savory.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": "https://globalassets.starbucks.com/assets/777abcbd2cfc4e0182ffee132e870a05.jpg"
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/6b4dca2be5f04799819327e28f876f2f.jpg"
+                }
+            },
+            "productOptions": [
+                {
+                    "categoryNumber": 222,
+                    "name": "Warming",
+                    "attributes": {
+                        "unitOfMeasure": null
+                    },
+                    "products": [
+                        {
+                            "productNumber": 1193,
+                            "form": {
+                                "name": "Not Warmed",
+                                "formCode": "one",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Not Warmed",
+                                        "sku": "11035149"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "productNumber": 1179,
+                            "form": {
+                                "name": "Warmed",
+                                "formCode": "one",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Warmed",
+                                        "sku": "204198"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "children": []
+                }
+            ],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": [
+                            {
+                                "productOption": {
+                                    "productNumber": 1179
+                                },
+                                "formCode": "one",
+                                "quantity": 1,
+                                "sizeCode": "add",
+                                "skuName": "Warmed"
+                            }
+                        ]
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 97 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": 420
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": 230
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Total Fat",
+                                "unitOfMeasure": "g",
+                                "value": 25,
+                                "dailyPercentValue": 0.3205,
+                                "saturatedFat": {
+                                    "displayName": "Saturated Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 11,
+                                    "dailyPercentValue": 0.55
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0.5,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 25 g",
+                                "dailyValue": "32%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Saturated Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 11,
+                                        "dailyPercentValue": 0.55,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 11 g",
+                                        "dailyValue": "55%"
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0.5,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0.5 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 85,
+                                "dailyPercentValue": 0.2833,
+                                "id": "cholesterol",
+                                "displayValue": " 85 mg",
+                                "dailyValue": "28%"
+                            },
+                            {
+                                "displayName": "Sodium",
+                                "unitOfMeasure": "mg",
+                                "value": 390,
+                                "dailyPercentValue": 0.1696,
+                                "id": "sodium",
+                                "displayValue": " 390 mg",
+                                "dailyValue": "17%"
+                            },
+                            {
+                                "displayName": "Total Carbohydrates",
+                                "unitOfMeasure": "g",
+                                "value": 40,
+                                "dailyPercentValue": 0.1455,
+                                "dietaryFiber": {
+                                    "displayName": "Dietary Fiber",
+                                    "unitOfMeasure": "g",
+                                    "value": 2,
+                                    "dailyPercentValue": 0.0714
+                                },
+                                "sugars": {
+                                    "displayName": "Sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 13,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 40 g",
+                                "dailyValue": "15%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Dietary Fiber",
+                                        "unitOfMeasure": "g",
+                                        "value": 2,
+                                        "dailyPercentValue": 0.0714,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 2 g",
+                                        "dailyValue": "7%"
+                                    },
+                                    {
+                                        "displayName": "Sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 13,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 13 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 8,
+                                "dailyPercentValue": 0.16,
+                                "id": "protein",
+                                "displayValue": " 8 g",
+                                "dailyValue": "16%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "11112726",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": "Egg, Milk, Soy, Treenuts, Wheat"
+                    },
+                    "ingredients": [
+                        {
+                            "name": "Croissant Roll",
+                            "children": [
+                                {
+                                    "name": "Enriched Unbleached Flour",
+                                    "children": [
+                                        {
+                                            "name": "Wheat Flour",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Malted Barley Flour",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Niacin",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Reduced Iron",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Thiamine Mononitrate",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Riboflavin",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Folic Acid",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Enzymes",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Ascorbic Acid",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Butter",
+                                    "children": [
+                                        {
+                                            "name": "Cream",
+                                            "children": [
+                                                {
+                                                    "name": "Milk",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Lactic Acid",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Salt",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Homogenized Milk",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Water",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Sugar",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Yeast",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Salt",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Fermented Wheat Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Wheat Farina",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Dough Conditioner",
+                                    "children": [
+                                        {
+                                            "name": "Ascorbic Acid",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Soy Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Eggs",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Nonfat Dry Milk",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Almonds",
+                            "children": []
+                        },
+                        {
+                            "name": "Water",
+                            "children": []
+                        },
+                        {
+                            "name": "Powdered Sugar",
+                            "children": [
+                                {
+                                    "name": "Sugar",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Cornstarch",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Butter",
+                            "children": [
+                                {
+                                    "name": "Cream",
+                                    "children": [
+                                        {
+                                            "name": "Milk",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Salt",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pudding Mix",
+                            "children": [
+                                {
+                                    "name": "Sugar",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Nonfat Dry Milk",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Modified Potato Starch",
+                                    "children": [
+                                        {
+                                            "name": "Contain Sulphites",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Natural Flavor",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Disodium Phosphate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Sodium Alginate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Tetrasodium Diphosphate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Calcium Sulphate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Beta Carotene",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Enriched Wheat Flour",
+                            "children": [
+                                {
+                                    "name": "Wheat Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Niacin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Iron",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Thiamine Mononitrate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Riboflavin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Folic Acid",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Amylase",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Ascorbic Acid",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Canola Oil",
+                            "children": []
+                        },
+                        {
+                            "name": "Dried Whole Eggs",
+                            "children": []
+                        },
+                        {
+                            "name": "Natural Flavor",
+                            "children": []
+                        },
+                        {
+                            "name": "Salt",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

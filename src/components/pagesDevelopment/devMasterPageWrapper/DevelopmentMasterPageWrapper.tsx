@@ -8,6 +8,7 @@ import React                                    from 'react';
 interface IProperties {
     title: string,
     description: string,
+    componentName: string,
     isExperimental?: boolean,
     headerElement?: React.ReactElement,
     footerElement?: React.ReactElement,
@@ -22,7 +23,7 @@ const DevelopmentMasterPageWrapper: React.FC<IProperties> = (props) => {
         <>
             <Box display='flex' mt={2} ml={2}>
                 <Box flex={1}>
-                    <Typography variant="h4" component="h4">Component Development: {props.title}</Typography>
+                    <Typography variant="h4" component="h4">Component: {props.title}<span className={classStyles.componentName}>{props.componentName}</span></Typography>
                     <Typography variant="body1" color="textSecondary" >This page is used to preview components under development in isolation</Typography>                    
                 </Box>
                 {

@@ -20,8 +20,8 @@ export const ClassStyleDefinition = makeStyles(theme => ({
         }
     },
     first: {
-        borderTopLeftRadius:8,
-        borderBottomLeftRadius:8,
+        borderTopLeftRadius:4,
+        borderBottomLeftRadius:4,
         borderTopRightRadius:0,
         borderBottomRightRadius:0,
     },
@@ -29,8 +29,8 @@ export const ClassStyleDefinition = makeStyles(theme => ({
         borderRadius:0
     },
     last: {
-        borderTopRightRadius:8,
-        borderBottomRightRadius:8,
+        borderTopRightRadius:4,
+        borderBottomRightRadius:4,
         borderTopLeftRadius:0,
         borderBottomLeftRadius:0,
     }

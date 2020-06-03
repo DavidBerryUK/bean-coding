@@ -13,10 +13,10 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
 
     const classStyles = ClassStyleDefinition();
 
-    const [selectedItem, setSelectedItem] = useState<React.ReactElement>();
+    const [selectedIndex, setSelectedIndex] = useState<number>();
 
-    const handleItemSelected = (element: React.ReactElement) => {
-        setSelectedItem(element);
+    const handleItemSelected = (index: number, element: React.ReactElement) => {
+        setSelectedIndex(index);
         if ( props.onItemSelected ) {
             props.onItemSelected(element);
         }
@@ -31,9 +31,14 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
         } else {
             className = `${className} ${classStyles.middle}`;
         }
-        if (props.elements[index] === selectedItem) {
+        if (index === selectedIndex) {
             className = `${className} ${classStyles.selected}`;
         }
+        // console.log('------------------------------');
+        //console.log(props.elements[index].props.name);
+        // console.log(selectedItem);
+        // console.log( props.elements[index] === selectedItem);
+        // console.log(className);
         return className;
     }
 
@@ -45,7 +50,7 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
                     <Button key={index}
                         variant="contained"
                         className={getClassNames(index)}
-                        onClick={() => { handleItemSelected(element) }}>
+                        onClick={() => { handleItemSelected(index,element) }}>
                         {element}
                     </Button>
                 ))

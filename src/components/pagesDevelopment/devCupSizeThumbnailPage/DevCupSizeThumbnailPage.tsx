@@ -24,7 +24,8 @@ const DevCupSizeThumbnailPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper 
             title="Cup Size Thumbnail"
-            description="Provide a consistant thumbnail for cup sizes">            
+            description="Provide a consistant thumbnail for cup sizes"
+            componentName="<CupSizeThumbnail/>">            
                         
                 {
                     cups.map((cup: CupSizeModel, index) => (

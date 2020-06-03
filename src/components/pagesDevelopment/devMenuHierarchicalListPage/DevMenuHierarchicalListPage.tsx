@@ -21,7 +21,8 @@ const DevMenuHierarchicalListPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper
             title="Menu Hierarchical List"
-            description="UI Component present a consistent menu list, an array of MenuItemModel objects are provided as a property, the menu will either auto navigate if a route is provided, or raise a onMenuItemSelected event. The menu will also automatically drill down to child menus"            
+            description="UI Component present a consistent menu list, an array of MenuItemModel objects are provided as a property, the menu will either auto navigate if a route is provided, or raise a onMenuItemSelected event. The menu will also automatically drill down to child menus"           
+            componentName="<MenuHierachicalList/>" 
         >
             <div className={classStyles.menuContainer}>
             <MenuHierachicalList rootMenuItem={rootMenu}  onMenuItemSelected={(menuItem: MenuItemModel) => {handleMenuItemSelected(menuItem)}}/>

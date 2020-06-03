@@ -43,7 +43,8 @@ const DevMenuListPage: React.FC = () => {
         <DevelopmentMasterPageWrapper
             title="Menu List"
             description= 'UI Component present a consistent menu list, an array of MenuItemModel objects are provided as a property, the menu will either auto navigate if a route is provided, or raise a onMenuItemSelected event.'
-            headerElement={
+            componentName="<MenuList/>"
+            footerElement={
                 <Paper>
                     <Box m={2} p={2}>
 

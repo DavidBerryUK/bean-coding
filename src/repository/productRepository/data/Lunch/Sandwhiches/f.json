@@ -1,0 +1,215 @@
+{
+    "products": [
+        {
+            "starCost": null,
+            "name": "Free range egg & mayo sandwich",
+            "formCode": "Single",
+            "productNumber": 2122974,
+            "productType": "food",
+            "description": "Free-range egg with Dijon mustard mayonnaise and cress on a seeded farmhouse bread",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": "https://globalassets.starbucks.com/assets/6b137edaecf94fea84c469ab9cd0c6ed.jpg"
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/c8982e71e7b049369f113cf6986112ef.jpg"
+                }
+            },
+            "productOptions": [
+                {
+                    "categoryNumber": 560,
+                    "name": "Sandwich Options",
+                    "attributes": {
+                        "unitOfMeasure": null
+                    },
+                    "products": [],
+                    "children": [
+                        {
+                            "categoryNumber": 561,
+                            "name": "Sauces",
+                            "attributes": {
+                                "unitOfMeasure": null
+                            },
+                            "products": [
+                                {
+                                    "productNumber": 2121568,
+                                    "form": {
+                                        "name": "HP Sauce",
+                                        "formCode": "qty",
+                                        "availability": "Available",
+                                        "sizes": [
+                                            {
+                                                "sizeCode": "add",
+                                                "name": "HP Sauce",
+                                                "sku": "11054166"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "productNumber": 2121569,
+                                    "form": {
+                                        "name": "Ketchup",
+                                        "formCode": "qty",
+                                        "availability": "Available",
+                                        "sizes": [
+                                            {
+                                                "sizeCode": "add",
+                                                "name": "Ketchup",
+                                                "sku": "11007063"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": []
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 215 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": " 492 kcal"
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": " 0 kcal"
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Fat",
+                                "unitOfMeasure": "g",
+                                "value": 26,
+                                "dailyPercentValue": 0.3333,
+                                "saturatedFat": {
+                                    "displayName": "of which saturates",
+                                    "unitOfMeasure": "g",
+                                    "value": 4.1,
+                                    "dailyPercentValue": 0.205
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 26 g",
+                                "dailyValue": "33%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "of which saturates",
+                                        "unitOfMeasure": "g",
+                                        "value": 4.1,
+                                        "dailyPercentValue": 0.205,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 4.1 g",
+                                        "dailyValue": "20%"
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "cholesterol",
+                                "displayValue": " 0 mg",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Salt",
+                                "unitOfMeasure": "g",
+                                "value": 1.7,
+                                "dailyPercentValue": 0.0007,
+                                "id": "sodium",
+                                "displayValue": " 1.7 g",
+                                "dailyValue": "0%"
+                            },
+                            {
+                                "displayName": "Carbohydrate",
+                                "unitOfMeasure": "g",
+                                "value": 45,
+                                "dailyPercentValue": 0.1636,
+                                "dietaryFiber": {
+                                    "displayName": "Fibre",
+                                    "unitOfMeasure": "g",
+                                    "value": 4.7,
+                                    "dailyPercentValue": 0.1679
+                                },
+                                "sugars": {
+                                    "displayName": "of which sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 2.8,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 45 g",
+                                "dailyValue": "16%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Fibre",
+                                        "unitOfMeasure": "g",
+                                        "value": 4.7,
+                                        "dailyPercentValue": 0.1679,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 4.7 g",
+                                        "dailyValue": "17%"
+                                    },
+                                    {
+                                        "displayName": "of which sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 2.8,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 2.8 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 19,
+                                "dailyPercentValue": 0.38,
+                                "id": "protein",
+                                "displayValue": " 19 g",
+                                "dailyValue": "38%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "11103815",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": "Egg, Gluten, Mustard, Wheat"
+                    },
+                    "ingredients": []
+                }
+            ]
+        }
+    ]
+}

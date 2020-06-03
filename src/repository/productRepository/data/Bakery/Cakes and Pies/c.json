@@ -1,0 +1,448 @@
+{
+    "products": [
+        {
+            "starCost": null,
+            "name": "Vegan Chocolate and Raspberry Mini Loaf Cake",
+            "formCode": "Single",
+            "productNumber": 2123178,
+            "productType": "food",
+            "description": "A mini vegan chocolate loaf cake injected with raspberry jam, and topped with pink icing and dried raspberry pieces.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": null
+                    }
+                },
+                "fullSize": {
+                    "uri": null
+                }
+            },
+            "productOptions": [],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": []
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 100 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": " 293 kcal"
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": " 0 kcal"
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Fat",
+                                "unitOfMeasure": "g",
+                                "value": 7.4,
+                                "dailyPercentValue": 0.0949,
+                                "saturatedFat": {
+                                    "displayName": "of which saturates",
+                                    "unitOfMeasure": "g",
+                                    "value": 3.2,
+                                    "dailyPercentValue": 0.16
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 7.4 g",
+                                "dailyValue": "9%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "of which saturates",
+                                        "unitOfMeasure": "g",
+                                        "value": 3.2,
+                                        "dailyPercentValue": 0.16,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 3.2 g",
+                                        "dailyValue": "16%"
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "cholesterol",
+                                "displayValue": " 0 mg",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Salt",
+                                "unitOfMeasure": "g",
+                                "value": 0.38,
+                                "dailyPercentValue": 0.0002,
+                                "id": "sodium",
+                                "displayValue": " 0.38 g",
+                                "dailyValue": "0%"
+                            },
+                            {
+                                "displayName": "Carbohydrate",
+                                "unitOfMeasure": "g",
+                                "value": 54,
+                                "dailyPercentValue": 0.1964,
+                                "dietaryFiber": {
+                                    "displayName": "Fibre",
+                                    "unitOfMeasure": "g",
+                                    "value": 2.2,
+                                    "dailyPercentValue": 0.0786
+                                },
+                                "sugars": {
+                                    "displayName": "of which sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 33,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 54 g",
+                                "dailyValue": "20%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Fibre",
+                                        "unitOfMeasure": "g",
+                                        "value": 2.2,
+                                        "dailyPercentValue": 0.0786,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 2.2 g",
+                                        "dailyValue": "8%"
+                                    },
+                                    {
+                                        "displayName": "of which sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 33,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 33 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 2.9,
+                                "dailyPercentValue": 0.058,
+                                "id": "protein",
+                                "displayValue": " 2.9 g",
+                                "dailyValue": "6%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "11115323",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": "Gluten, Soy, Treenuts, Wheat"
+                    },
+                    "ingredients": [
+                        {
+                            "name": "Almond Drink",
+                            "children": [
+                                {
+                                    "name": "Water",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Almonds",
+                                    "children": [
+                                        {
+                                            "name": "Nuts",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Calcium",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Sea Salt",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Stabilisers Locust Bean Gum",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Gellan Gum Emulsifier Sunflower Lecithin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Vitamins B 2 Riboflavin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "B 12 Folate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "E Alpha Tocopherol",
+                                    "children": []
+                                },
+                                {
+                                    "name": "D 2 Ergocalciferol",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Wheat Flour",
+                            "children": [
+                                {
+                                    "name": "Wheat Flour",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Calcium Carbonate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Iron",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Niacin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Thiamin",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Vegetable Margarine",
+                            "children": [
+                                {
+                                    "name": "Vegetable Oils",
+                                    "children": [
+                                        {
+                                            "name": "Palm",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Rapeseed",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Water",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Salt",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Emulsifier Polyglycerol Esters Of Fatty Acids",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Natural Colourings Annatto",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Curcumin Natural Flavouring",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sugar",
+                            "children": []
+                        },
+                        {
+                            "name": "Raspberry Jam",
+                            "children": [
+                                {
+                                    "name": "Glucose Fructose Syrup",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Raspberry Puree",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Sugar",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Raspberry Crumb",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Gelling Agent Pectin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Acidity Regulators Citric Acid",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Tri Sodium Citrate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Colour Anthocyanin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Natural Flavouring",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Icing Sugar",
+                            "children": []
+                        },
+                        {
+                            "name": "Dark Chocolate",
+                            "children": [
+                                {
+                                    "name": "Sugar",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Cocoa Mass",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Cocoa Butter",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Fat Reduced Cocoa Powder",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Emulsifier Soya Lecithin",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Vanilla Extract",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Golden Syrup",
+                            "children": []
+                        },
+                        {
+                            "name": "Cocoa Powder",
+                            "children": []
+                        },
+                        {
+                            "name": "Water",
+                            "children": []
+                        },
+                        {
+                            "name": "Lemon Juice",
+                            "children": []
+                        },
+                        {
+                            "name": "Baking Powder",
+                            "children": [
+                                {
+                                    "name": "Raising Agents Disodium Diphosphate",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Potassium Hydrogen Carbonate Wheat Flour",
+                                    "children": [
+                                        {
+                                            "name": "Wheat Flour",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Calcium Carbonate",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Iron",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Niacin",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Thiamin",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Freeze Dried Raspberries",
+                            "children": [
+                                {
+                                    "name": "1",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Malted Barley Extract",
+                            "children": []
+                        },
+                        {
+                            "name": "Glucose Syrup",
+                            "children": []
+                        },
+                        {
+                            "name": "Raising Agent Sodium Bicarbonate",
+                            "children": []
+                        },
+                        {
+                            "name": "Preservative Potassium Sorbate",
+                            "children": []
+                        },
+                        {
+                            "name": "Natural Vanilla Flavouring",
+                            "children": []
+                        },
+                        {
+                            "name": "Coffee Extract",
+                            "children": []
+                        },
+                        {
+                            "name": "Thickening Agent Xanthan Gum",
+                            "children": []
+                        },
+                        {
+                            "name": "Acidity Regulator Citric Acid",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

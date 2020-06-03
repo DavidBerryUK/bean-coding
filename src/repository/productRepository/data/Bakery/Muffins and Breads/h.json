@@ -1,0 +1,225 @@
+{
+    "products": [
+        {
+            "starCost": null,
+            "name": "Luxury Fruit Toast",
+            "formCode": "Single",
+            "productNumber": 620,
+            "productType": "food",
+            "description": "Add a dash of decadence to your breakfast. Swap your usual routine for a slice or two of luxury fruit bread. Made with cranberries, raisins and sultanas, it’s toasted to perfection and best enjoyed with butter and jam. A friendly warning: this could be habit-forming.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": "https://globalassets.starbucks.com/assets/bac8f75d648046e48db5fff50f5b7030.jpg"
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/fe4b94c741664e709cbca31a8659056a.jpg"
+                }
+            },
+            "productOptions": [
+                {
+                    "categoryNumber": 224,
+                    "name": "Jams and Spreads",
+                    "attributes": {
+                        "unitOfMeasure": null
+                    },
+                    "products": [
+                        {
+                            "productNumber": 1189,
+                            "form": {
+                                "name": "Butter",
+                                "formCode": "qty",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Butter",
+                                        "sku": "546500"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "productNumber": 2121964,
+                            "form": {
+                                "name": "Jam",
+                                "formCode": "qty",
+                                "availability": "Available",
+                                "sizes": [
+                                    {
+                                        "sizeCode": "add",
+                                        "name": "Jam",
+                                        "sku": "546501"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "children": []
+                }
+            ],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": [
+                            {
+                                "productOption": {
+                                    "productNumber": 2121964
+                                },
+                                "formCode": "qty",
+                                "quantity": 0,
+                                "sizeCode": "add",
+                                "skuName": "Jam"
+                            },
+                            {
+                                "productOption": {
+                                    "productNumber": 1189
+                                },
+                                "formCode": "qty",
+                                "quantity": 0,
+                                "sizeCode": "add",
+                                "skuName": "Butter"
+                            }
+                        ]
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 145 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": " 481 kcal"
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": " 0 kcal"
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Fat",
+                                "unitOfMeasure": "g",
+                                "value": 11.6,
+                                "dailyPercentValue": 0.1487,
+                                "saturatedFat": {
+                                    "displayName": "of which saturates",
+                                    "unitOfMeasure": "g",
+                                    "value": 5.2,
+                                    "dailyPercentValue": 0.26
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 11.6 g",
+                                "dailyValue": "15%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "of which saturates",
+                                        "unitOfMeasure": "g",
+                                        "value": 5.2,
+                                        "dailyPercentValue": 0.26,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 5.2 g",
+                                        "dailyValue": "26%"
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "cholesterol",
+                                "displayValue": " 0 mg",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Salt",
+                                "unitOfMeasure": "g",
+                                "value": 0.2,
+                                "dailyPercentValue": 0.0001,
+                                "id": "sodium",
+                                "displayValue": " 0.2 g",
+                                "dailyValue": "0%"
+                            },
+                            {
+                                "displayName": "Carbohydrate",
+                                "unitOfMeasure": "g",
+                                "value": 80.8,
+                                "dailyPercentValue": 0.2938,
+                                "dietaryFiber": {
+                                    "displayName": "Fibre",
+                                    "unitOfMeasure": "g",
+                                    "value": 4.93,
+                                    "dailyPercentValue": 0.1761
+                                },
+                                "sugars": {
+                                    "displayName": "of which sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 39,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 80.8 g",
+                                "dailyValue": "29%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Fibre",
+                                        "unitOfMeasure": "g",
+                                        "value": 4.93,
+                                        "dailyPercentValue": 0.1761,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 4.93 g",
+                                        "dailyValue": "18%"
+                                    },
+                                    {
+                                        "displayName": "of which sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 39,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 39 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 10.9,
+                                "dailyPercentValue": 0.218,
+                                "id": "protein",
+                                "displayValue": " 10.9 g",
+                                "dailyValue": "22%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "476927",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": "Egg, Milk, Wheat"
+                    },
+                    "ingredients": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { blue } from '@material-ui/core/colors';
 
 export const ClassStyleDefinition = makeStyles(theme => ({
 
@@ -14,6 +15,13 @@ export const ClassStyleDefinition = makeStyles(theme => ({
     color: 'red',
     fontSize: 40
   },
+
+  componentName: {
+    backgroundColor:blue[300],
+    borderRadius: 6,
+    padding: 4,
+    marginLeft:20
+  }
 
 })
 );

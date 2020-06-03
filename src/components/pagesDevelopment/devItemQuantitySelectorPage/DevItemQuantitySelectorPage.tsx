@@ -52,6 +52,7 @@ const DevItemQuantitySelectorPage: React.FC = () => {
         <DevelopmentMasterPageWrapper
             title="Item Quantity Selector"
             description="UI Component to select quantities"
+            componentName="<ItemQuantitySelector/>"
             footerElement = {
                 <Paper className={classStyles.box}>
                 <Typography variant="subtitle1" color="textSecondary">Parameters</Typography>

@@ -1,0 +1,41 @@
+{
+    "products": [
+        {
+            "starCost": null,
+            "name": "Funfetti Cupcake",
+            "formCode": "Single",
+            "productNumber": 2123204,
+            "productType": "food",
+            "description": "Vanilla sponge with raspberry jam and a whipped white chocolate and mallow buttercream, decorated with colourful sprinkles.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": null
+                    }
+                },
+                "fullSize": {
+                    "uri": null
+                }
+            },
+            "productOptions": [],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": []
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": null,
+                    "sizeCode": "1 Piece",
+                    "sku": "011117076",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": null
+                    },
+                    "ingredients": null
+                }
+            ]
+        }
+    ]
+}

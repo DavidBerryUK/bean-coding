@@ -11,7 +11,8 @@ const DevMenuSliderDevelopmentPage: React.FC = () => {
     return (
         <DevelopmentMasterPageWrapper
             title="Menu Slider Development Page"
-            description="Prototype menu slider mechanism, rough and ready, exploring how to cleanly seperate menu contents / components from the high level management of menus">
+            description="Prototype menu slider mechanism, rough and ready, exploring how to cleanly seperate menu contents / components from the high level management of menus"
+            componentName="<MenuSliderMechanism>">
             <div className={clsx(classStyles.menuContainer, classStyles.solidBackground, classStyles.constrainMenu)}>
                 <MenuSliderMechanism />
             </div>

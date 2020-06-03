@@ -1,0 +1,165 @@
+{
+    "products": [
+        {
+            "starCost": null,
+            "name": "Hickory Ham & cheese Toastie",
+            "formCode": "Single",
+            "productNumber": 2122660,
+            "productType": "food",
+            "description": "Starbucks® signature cheese topped sourdough filled with a Hickory smoked ham, a blend of 5 cheeses, béchamel sauce and American style mustard.",
+            "assets": {
+                "thumbnail": {
+                    "large": {
+                        "uri": "https://globalassets.starbucks.com/assets/d2782c0eb6ea41b4818aeac7ba689b65.jpg"
+                    }
+                },
+                "fullSize": {
+                    "uri": "https://globalassets.starbucks.com/assets/dab499b4baf0415ea71ebfa84d42c448.jpg"
+                }
+            },
+            "productOptions": [],
+            "sizes": [
+                {
+                    "name": "1 Piece",
+                    "recipe": {
+                        "default": []
+                    },
+                    "defaultOptionValues": [],
+                    "nutrition": {
+                        "servingSize": {
+                            "displayName": "Serving Size",
+                            "displayValue": " 204 g"
+                        },
+                        "calories": {
+                            "displayName": "Calories",
+                            "displayValue": " 479 kcal"
+                        },
+                        "caloriesFromFat": {
+                            "displayName": "Calories from Fat",
+                            "displayValue": " 0 kcal"
+                        },
+                        "additionalFacts": [
+                            {
+                                "displayName": "Fat",
+                                "unitOfMeasure": "g",
+                                "value": 19,
+                                "dailyPercentValue": 0.2436,
+                                "saturatedFat": {
+                                    "displayName": "of which saturates",
+                                    "unitOfMeasure": "g",
+                                    "value": 12,
+                                    "dailyPercentValue": 0.6
+                                },
+                                "transFat": {
+                                    "displayName": "Trans Fat",
+                                    "unitOfMeasure": "g",
+                                    "value": 0,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalFat",
+                                "displayValue": " 19 g",
+                                "dailyValue": "24%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "of which saturates",
+                                        "unitOfMeasure": "g",
+                                        "value": 12,
+                                        "dailyPercentValue": 0.6,
+                                        "id": "saturatedFat",
+                                        "displayValue": " 12 g",
+                                        "dailyValue": "60%"
+                                    },
+                                    {
+                                        "displayName": "Trans Fat",
+                                        "unitOfMeasure": "g",
+                                        "value": 0,
+                                        "dailyPercentValue": null,
+                                        "id": "transFat",
+                                        "displayValue": " 0 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Cholesterol",
+                                "unitOfMeasure": "mg",
+                                "value": 0,
+                                "dailyPercentValue": 0,
+                                "id": "cholesterol",
+                                "displayValue": " 0 mg",
+                                "dailyValue": null
+                            },
+                            {
+                                "displayName": "Salt",
+                                "unitOfMeasure": "g",
+                                "value": 2.5,
+                                "dailyPercentValue": 0.0011,
+                                "id": "sodium",
+                                "displayValue": " 2.5 g",
+                                "dailyValue": "0%"
+                            },
+                            {
+                                "displayName": "Carbohydrate",
+                                "unitOfMeasure": "g",
+                                "value": 48,
+                                "dailyPercentValue": 0.1745,
+                                "dietaryFiber": {
+                                    "displayName": "Fibre",
+                                    "unitOfMeasure": "g",
+                                    "value": 3.5,
+                                    "dailyPercentValue": 0.125
+                                },
+                                "sugars": {
+                                    "displayName": "of which sugars",
+                                    "unitOfMeasure": "g",
+                                    "value": 2.2,
+                                    "dailyPercentValue": null
+                                },
+                                "id": "totalCarbs",
+                                "displayValue": " 48 g",
+                                "dailyValue": "17%",
+                                "subfacts": [
+                                    {
+                                        "displayName": "Fibre",
+                                        "unitOfMeasure": "g",
+                                        "value": 3.5,
+                                        "dailyPercentValue": 0.125,
+                                        "id": "dietaryFiber",
+                                        "displayValue": " 3.5 g",
+                                        "dailyValue": "13%"
+                                    },
+                                    {
+                                        "displayName": "of which sugars",
+                                        "unitOfMeasure": "g",
+                                        "value": 2.2,
+                                        "dailyPercentValue": null,
+                                        "id": "sugars",
+                                        "displayValue": " 2.2 g",
+                                        "dailyValue": null
+                                    }
+                                ]
+                            },
+                            {
+                                "displayName": "Protein",
+                                "unitOfMeasure": "g",
+                                "value": 27,
+                                "dailyPercentValue": 0.54,
+                                "id": "protein",
+                                "displayValue": " 27 g",
+                                "dailyValue": "54%"
+                            }
+                        ]
+                    },
+                    "sizeCode": "1 Piece",
+                    "sku": "11103809",
+                    "default": true,
+                    "allergens": {
+                        "shouldDisplay": true,
+                        "text": "Gluten, Milk, Mustard, Wheat"
+                    },
+                    "ingredients": []
+                }
+            ]
+        }
+    ]
+}
