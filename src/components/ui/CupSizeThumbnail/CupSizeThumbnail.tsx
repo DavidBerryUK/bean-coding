@@ -3,7 +3,7 @@ import { Typography }                           from '@material-ui/core';
 import LocalCafeOutlinedIcon                    from '@material-ui/icons/LocalCafeOutlined';
 import React                                    from 'react';
 
-interface IProperties {
+export interface IProperties {
     sizeName: string,
     volumeDescription: string,
     scalePercentage: number

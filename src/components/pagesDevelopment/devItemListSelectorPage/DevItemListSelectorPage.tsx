@@ -1,17 +1,19 @@
-import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { EnumCupSize }                          from "../../../Services/CupSize/EnumCupSize";
-import { Paper }                                from '@material-ui/core';
-import { Typography }                           from '@material-ui/core';
+import { IProperties as ICupSizeProperties }    from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
+import { ReactElement }                         from 'react';
+import { useContext }                           from 'react';
+import CommandAddToAudit                        from "../../context/developerContext/actions/CommandAddToAudit";
 import CupSizeModel                             from "../../../Services/CupSize/CupSizeModel";
 import CupSizeService                           from "../../../Services/CupSize/CupSizeService";
 import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
+import DeveloperContext                         from "../../context/developerContext/DeveloperContext";
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import ItemListSelector                         from "../../ui/itemListSelector/ItemListSelector";
 import React                                    from 'react';
 
 const DevItemListSelectorPage: React.FC = () => {
    
-    const classStyles = ClassStyleDefinition();    
+    const dispatch = useContext(DeveloperContext).dispatch;
 
     const cupModels : Array<CupSizeModel> = [
         CupSizeService.cupSizeModelfactory(EnumCupSize.Solo),
@@ -29,17 +31,17 @@ const DevItemListSelectorPage: React.FC = () => {
         <CupSizeThumbnail sizeName={cup.name} volumeDescription={cup.volume} scalePercentage={cup.iconScale}/>
     );
 
+    const handleItemSelected = (item: React.ReactElement) => { 
+        const properties = item.props as ICupSizeProperties;
+        console.log(properties.sizeName);
+        dispatch(new CommandAddToAudit(`Selected ${properties.sizeName} ${properties.volumeDescription}`));
+    }
+
     return (
         <DevelopmentMasterPageWrapper 
             title="Item List Selected"
-            description="UI Component to select an item from a list of components, this example shows a list of <CupSizeThumbnail> elements"
-            headerElement= {
-                <Paper className={classStyles.paper}>
-                    <Typography variant="subtitle1" color="textSecondary">Example component using an array of cup thumbnails</Typography>
-                </Paper>
-            }
-            >                                    
-            <ItemListSelector elements={cupThumbnailsElements}/>            
+            description="UI Component to select an item from a list of components, this example shows a list of <CupSizeThumbnail> elements">                                    
+            <ItemListSelector elements={cupThumbnailsElements} onItemSelected={(item:ReactElement)=>{ handleItemSelected(item)}}/>            
             </DevelopmentMasterPageWrapper>
     );
 }

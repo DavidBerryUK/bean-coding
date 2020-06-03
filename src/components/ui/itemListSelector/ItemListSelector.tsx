@@ -6,6 +6,7 @@ import React                                    from 'react';
 
 interface IProperties {
     elements: Array<React.ReactElement>
+    onItemSelected?: (item: React.ReactElement) => void
 }
 
 const ItemListSelector: React.FC<IProperties> = (props) => {
@@ -16,6 +17,9 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
 
     const handleItemSelected = (element: React.ReactElement) => {
         setSelectedItem(element);
+        if ( props.onItemSelected ) {
+            props.onItemSelected(element);
+        }
     }
 
     const getClassNames = (index: number): string => {

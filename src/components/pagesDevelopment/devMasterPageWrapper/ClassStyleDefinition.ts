@@ -12,7 +12,7 @@ export const ClassStyleDefinition = makeStyles(theme => ({
   experimentIcon: {
     padding: 0,
     color: 'red',
-    fontSize: 50
+    fontSize: 40
   },
 
 })

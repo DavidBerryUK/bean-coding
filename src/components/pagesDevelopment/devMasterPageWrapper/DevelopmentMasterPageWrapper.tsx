@@ -22,7 +22,8 @@ const DevelopmentMasterPageWrapper: React.FC<IProperties> = (props) => {
         <>
             <Box display='flex' mt={2} ml={2}>
                 <Box flex={1}>
-                    <Typography variant="h5">{props.title}</Typography>
+                    <Typography variant="h4" component="h4">Component Development: {props.title}</Typography>
+                    <Typography variant="body1" color="textSecondary" >This page is used to preview components under development in isolation</Typography>                    
                 </Box>
                 {
                     props.isExperimental === true ?
@@ -36,10 +37,10 @@ const DevelopmentMasterPageWrapper: React.FC<IProperties> = (props) => {
                 }
             
             </Box>
-            <Box ml={2}>
+            <Box ml={2} pb={1}>
                 <Typography variant="body1">{props.description}</Typography>
-            </Box>            
-            {props.headerElement}
+                {props.headerElement}
+            </Box>
             <GraphPaper>
                 {props.children}
             </GraphPaper>
