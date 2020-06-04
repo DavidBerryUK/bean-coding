@@ -7,7 +7,7 @@ import * as sandwhichesF from '../data/Lunch/Sandwhiches/f.json';
 import * as sandwhichesG from '../data/Lunch/Sandwhiches/g.json';
 import * as sandwhichesH from '../data/Lunch/Sandwhiches/h.json';
 
-export default class JsonLoader {
+export default class JsonLoaderSandwhiches {
 
     public static load() : Array<any> {
         return [ 

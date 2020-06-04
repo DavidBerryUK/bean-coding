@@ -23,7 +23,19 @@ export default class ProductParser {
         return products;
     }
 
-    parseJsonFile(json : any) : Array<ProductModel> {
+    parseJsonArray(jsonArray: Array<object>) : Array<ProductModel> {
+
+        var productsList = new Array<ProductModel>();
+
+        jsonArray.forEach(jsonItem => {            
+            const products = this.parseJsonItem(jsonItem);                
+            productsList = productsList.concat(products);
+
+        });
+        return productsList;
+    }
+
+    parseJsonItem(json : any) : Array<ProductModel> {
         var products = new Array<ProductModel>();
 
         json.products.forEach((productJson: any) => {

@@ -14,7 +14,7 @@ it('extract product json to strong model', () => {
     const sizes = product.sizes;
     const recipe = product.sizes[0].recipe;
 
-    expect(product.name).toBe("Caff� Americano");
+    expect(product.name).toBe("Caffe Americano");
     expect(product.description).toBe("Espresso shots are topped with hot water to produce a light layer of crema in true European style.");
     expect(product.filenameThumbnail).toBe('1e021d70f2a744cdb7585ad5976f9816.jpg');
     expect(product.filenameLarge).toBe('02e313dd98204b7380730e96f8d50c38.jpg');
@@ -40,7 +40,7 @@ it('extract product json to strong model', () => {
     expect(r1.name).toBe("Shots");
     expect(r1.sizeCode).toBe("add");
     expect(r1.quantity).toBe(1);
-    expect(r1.formCode).toBe("qty");
+    expect(r1.formCode).toBe("quantity");
 
     expect(r2.productNumber).toBe(42);
     expect(r2.name).toBe("Water");
