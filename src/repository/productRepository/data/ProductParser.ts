@@ -23,11 +23,10 @@ export default class ProductParser {
         return products;
     }
 
-    parseJsonArray(jsonArray: Array<object>) : Array<ProductModel> {
-
+    parseJsonArray(jsonArray: Array<object>) : Array<ProductModel> {        
         var productsList = new Array<ProductModel>();
 
-        jsonArray.forEach(jsonItem => {            
+        jsonArray.forEach(jsonItem => { 
             const products = this.parseJsonItem(jsonItem);                
             productsList = productsList.concat(products);
 
@@ -38,7 +37,7 @@ export default class ProductParser {
     parseJsonItem(json : any) : Array<ProductModel> {
         var products = new Array<ProductModel>();
 
-        json.products.forEach((productJson: any) => {
+        json.forEach((productJson: any) => {
             var product = this.extractProduct(productJson);
             products.push(product);
         });
@@ -52,7 +51,9 @@ export default class ProductParser {
         product.productNumber = json.productNumber;
         product.description = json.description;
         product.filenameThumbnail = json.assets.thumbnail.large.filename;
-        product.filenameLarge = json.assets.fullSize.filename;
+        if ( json.assets.fullSize) {
+            product.filenameLarge = json.assets.fullSize.filename;
+        }
         product.sizes = this.extractProductSizeNodeList(json.sizes);
         product.options = this.extractProductOptionNodeList(json.productOptions)        
 

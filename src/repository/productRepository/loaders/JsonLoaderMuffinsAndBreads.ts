@@ -12,15 +12,15 @@ export default class JsonLoaderMuffinsAndBreads {
 
     public static load() : Array<any> {
         return [
-            muffinsAndBreadsA,
-            muffinsAndBreadsB,
-            muffinsAndBreadsC,
-            muffinsAndBreadsD,
-            muffinsAndBreadsE,
-            muffinsAndBreadsF,
-            muffinsAndBreadsG,
-            muffinsAndBreadsH,
-            muffinsAndBreadsI
+            muffinsAndBreadsA.products,
+            muffinsAndBreadsB.products,
+            muffinsAndBreadsC.products,
+            muffinsAndBreadsD.products,
+            muffinsAndBreadsE.products,
+            muffinsAndBreadsF.products,
+            muffinsAndBreadsG.products,
+            muffinsAndBreadsH.products,
+            muffinsAndBreadsI.products
         ];
     }
 }

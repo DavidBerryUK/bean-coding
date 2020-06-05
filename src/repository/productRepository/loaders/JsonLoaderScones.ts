@@ -5,8 +5,8 @@ export default class JsonLoaderScones {
 
     public static load() : Array<any> {
         return [
-            sconesA,
-            sconesB
+            sconesA.products,
+            sconesB.products
         ];
     }
 }

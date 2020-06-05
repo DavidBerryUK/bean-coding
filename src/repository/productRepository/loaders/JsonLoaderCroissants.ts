@@ -8,11 +8,11 @@ export default class JsonLoaderCroissants {
 
     public static load() : Array<any> {
         return [
-            croissantsA,
-            croissantsB,
-            croissantsC,
-            croissantsD,
-            croissantsE
+            croissantsA.products,
+            croissantsB.products,
+            croissantsC.products,
+            croissantsD.products,
+            croissantsE.products
         ];
     }
 

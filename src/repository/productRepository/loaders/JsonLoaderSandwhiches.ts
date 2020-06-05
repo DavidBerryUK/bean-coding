@@ -11,14 +11,14 @@ export default class JsonLoaderSandwhiches {
 
     public static load() : Array<any> {
         return [ 
-            sandwhichesA,
-            sandwhichesB,
-            sandwhichesC,
-            sandwhichesD,
-            sandwhichesE,
-            sandwhichesF,
-            sandwhichesG,
-            sandwhichesH
+            sandwhichesA.products,
+            sandwhichesB.products,
+            sandwhichesC.products,
+            sandwhichesD.products,
+            sandwhichesE.products,
+            sandwhichesF.products,
+            sandwhichesG.products,
+            sandwhichesH.products
         ];
     }
 }

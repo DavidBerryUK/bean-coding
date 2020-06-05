@@ -6,9 +6,9 @@ export default class JsonLoaderLatte {
 
     public static load() : Array<any> {
         return [
-            latteA,
-            latteB,
-            latteC
+            latteA.products,
+            latteB.products,
+            latteC.products
         ];
     }
 }

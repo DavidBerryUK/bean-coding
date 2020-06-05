@@ -13,16 +13,16 @@ export default class JsonLoaderBrewedTea {
 
     public static load() : Array<any> {
         return [ 
-            brewedTeaA,
-            brewedTeaB,
-            brewedTeaC,
-            brewedTeaD,
-            brewedTeaE,
-            brewedTeaF,
-            brewedTeaG,
-            brewedTeaH,
-            brewedTeaI,
-            brewedTeaJ
+            brewedTeaA.products,
+            brewedTeaB.products,
+            brewedTeaC.products,
+            brewedTeaD.products,
+            brewedTeaE.products,
+            brewedTeaF.products,
+            brewedTeaG.products,
+            brewedTeaH.products,
+            brewedTeaI.products,
+            brewedTeaJ.products
         ];
     }
 }

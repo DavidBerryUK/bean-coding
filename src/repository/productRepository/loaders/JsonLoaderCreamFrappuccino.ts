@@ -12,15 +12,15 @@ export default class JsonLoaderCreamFrappuccino {
 
     public static load() : Array<any> {
         return [
-            creamFrappuccinoA,
-            creamFrappuccinoB,
-            creamFrappuccinoC,
-            creamFrappuccinoD,
-            creamFrappuccinoE,
-            creamFrappuccinoF,
-            creamFrappuccinoG,
-            creamFrappuccinoH,
-            creamFrappuccinoI
+            creamFrappuccinoA.products,
+            creamFrappuccinoB.products,
+            creamFrappuccinoC.products,
+            creamFrappuccinoD.products,
+            creamFrappuccinoE.products,
+            creamFrappuccinoF.products,
+            creamFrappuccinoG.products,
+            creamFrappuccinoH.products,
+            creamFrappuccinoI.products
         ];
     }
 }

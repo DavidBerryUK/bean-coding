@@ -7,10 +7,10 @@ export default class JsonLoaderEspresso {
 
     public static load() : Array<any> {
         return [ 
-            espressoA,
-            espressoB,
-            espressoC,
-            espressoD
+            espressoA.products,
+            espressoB.products,
+            espressoC.products,
+            espressoD.products
         ];
     }
 }

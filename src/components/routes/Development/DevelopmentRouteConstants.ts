@@ -9,4 +9,5 @@ export enum EnumDevelopmentRoutes  {
     MenuhierarchicalList = '/development/menuHierarchicalList',
     MenuList = '/development/menuList',
     MenuSliderMechanism = '/development/menuslidermechanism',
+    MenuCategories = '/development/menucategories',
 }

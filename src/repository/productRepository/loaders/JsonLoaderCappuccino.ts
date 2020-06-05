@@ -6,9 +6,9 @@ export default class JsonLoaderCappuccino {
 
     public static load() : Array<any> {
         return [ 
-            cappuccinoA,
-            cappuccinoB,
-            cappuccinoC
+            cappuccinoA.products,
+            cappuccinoB.products,
+            cappuccinoC.products
         ];
     }
 }

@@ -6,6 +6,7 @@ import DevCupSizeThumbnailPage                  from '../../pagesDevelopment/dev
 import DevFrostedGlassPage                      from '../../pagesDevelopment/devFrostedGlassPage/DevFrostedGlassPage';
 import DevItemListSelectorPage                  from '../../pagesDevelopment/devItemListSelectorPage/DevItemListSelectorPage';
 import DevItemQuantitySelectorPage              from '../../pagesDevelopment/devItemQuantitySelectorPage/DevItemQuantitySelectorPage';
+import DevMenuCategoriesPage                    from '../../pagesDevelopment/devMenuCategoriesPage/DevMenuCategoriesPage';
 import DevMenuHierarchicalListPage              from '../../pagesDevelopment/devMenuHierarchicalListPage/DevMenuHierarchicalListPage';
 import DevMenuListPage                          from '../../pagesDevelopment/devMenuListPage/DevMenuListPage';
 import DevMenuSliderDevelopmentPage             from '../../pagesDevelopment/devMenuSliderDevelopmentPage/DevMenuSliderDevelopmentPage';
@@ -22,11 +23,12 @@ const DevelopmentRoutes: React.SFC = () => {
       <Route path={EnumDevelopmentRoutes.FrostedGlass} component={DevFrostedGlassPage} />
       <Route path={EnumDevelopmentRoutes.ItemList} component={DevItemListSelectorPage} />
       <Route path={EnumDevelopmentRoutes.ItemQuantity} component={DevItemQuantitySelectorPage} />
-      <Route path={EnumDevelopmentRoutes.Muted} component={DevMutedImagePage} />
-      <Route path={EnumDevelopmentRoutes.ShotCount} component={DevShotCountSelectorPage} />
+      <Route path={EnumDevelopmentRoutes.MenuCategories} component={DevMenuCategoriesPage}  />
       <Route path={EnumDevelopmentRoutes.MenuhierarchicalList} component={DevMenuHierarchicalListPage} />
       <Route path={EnumDevelopmentRoutes.MenuList} component={DevMenuListPage}  />
       <Route path={EnumDevelopmentRoutes.MenuSliderMechanism} component={DevMenuSliderDevelopmentPage}  />
+      <Route path={EnumDevelopmentRoutes.Muted} component={DevMutedImagePage} />
+      <Route path={EnumDevelopmentRoutes.ShotCount} component={DevShotCountSelectorPage} />
       
     </Switch>
   )

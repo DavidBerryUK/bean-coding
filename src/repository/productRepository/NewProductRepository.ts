@@ -19,6 +19,10 @@ import JsonLoaderWraps                          from "./loaders/JsonLoaderWraps"
 import ProductModel                             from "./models/ProductModel";
 import ProductParser                            from "./data/ProductParser";
 
+/**
+ *  Fake Repository - ideally all this would be on server / database,
+ *  but this makes it easy to experiment
+ */
 export default class NewProductRepository {
 
     private productParser = new ProductParser();
@@ -31,7 +35,7 @@ export default class NewProductRepository {
         products = products.concat(this.getBagels());
         products = products.concat(this.getBrewedTea());
         products = products.concat(this.getCakesAndPies());
-        products = products.concat(this.getCappuccino()));
+        products = products.concat(this.getCappuccino());
         products = products.concat(this.getCoffeeFrappuccino());
         products = products.concat(this.getrCookiesAndBrownies());
         products = products.concat(this.getCreamFrappuccino());
