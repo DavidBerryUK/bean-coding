@@ -5,7 +5,9 @@ export const ClassStyleDefinition = makeStyles(theme => ({
 
     menuContainer: {      
         width:300,
-        height:400,        
+        height:400,       
+        float:'left',
+        margin:8, 
       }
 })
 );

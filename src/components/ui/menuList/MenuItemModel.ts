@@ -20,5 +20,5 @@ export default class MenuItemModel {
 
     add(menu : MenuItemModel) {
         this.children.push(menu);
-    }
+    }    
 }

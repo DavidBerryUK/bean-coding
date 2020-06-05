@@ -17,6 +17,34 @@ export default class MenuCategoryRepository {
         return rootCategory;
     }
 
+    /**
+     * This is not ideal, this should just be a simple database call,
+     * This is mock up to support the main reason of the app which is
+     * front end development.
+     * @param id 
+     */
+    getCategoryById(id: string): MenuCategoryModel | null {
+        const all = this.getAll();
+        let response: MenuCategoryModel | null = null;
+        all.categories.forEach(subCategoryA => {
+            if (subCategoryA.categoryId === id) {
+                response = subCategoryA;
+            }
+            subCategoryA.categories.forEach(subCategoryB => {
+                if (subCategoryB.categoryId === id) {
+                    response = subCategoryB;
+                }
+                subCategoryB.categories.forEach(subCategoryC => {
+                    if (subCategoryC.categoryId === id) {
+                        response = subCategoryC;
+                    }
+                })
+            })
+        });
+
+        return response;
+    }
+
     getBakeryCategory(): MenuCategoryModel {
         const category = new MenuCategoryModel("bakery", "Bakery");
         category.categories.push(this.getBagelsCategory());
