@@ -11,6 +11,7 @@ import DevMenuHierarchicalListPage              from '../../pagesDevelopment/dev
 import DevMenuListPage                          from '../../pagesDevelopment/devMenuListPage/DevMenuListPage';
 import DevMenuSliderDevelopmentPage             from '../../pagesDevelopment/devMenuSliderDevelopmentPage/DevMenuSliderDevelopmentPage';
 import DevMutedImagePage                        from '../../pagesDevelopment/devMutedImagePage/DevMutedImagePage';
+import DevProductInfoPage                       from '../../pagesDevelopment/devProductInfo/DevProductInfoPage';
 import DevShotCountSelectorPage                 from '../../pagesDevelopment/devShotCountSelectorPage/DevShotCountSelectorPage';
 import React                                    from 'react';
 
@@ -28,6 +29,7 @@ const DevelopmentRoutes: React.SFC = () => {
       <Route path={EnumDevelopmentRoutes.MenuList} component={DevMenuListPage}  />
       <Route path={EnumDevelopmentRoutes.MenuSliderMechanism} component={DevMenuSliderDevelopmentPage}  />
       <Route path={EnumDevelopmentRoutes.Muted} component={DevMutedImagePage} />
+      <Route path={EnumDevelopmentRoutes.ProductInfo} component={DevProductInfoPage} />
       <Route path={EnumDevelopmentRoutes.ShotCount} component={DevShotCountSelectorPage} />
       
     </Switch>
