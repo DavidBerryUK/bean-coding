@@ -9,6 +9,7 @@ import ProductModel                             from '../../../repository/produc
 import ProductOptionsList                       from '../../widgets/productOptionsList/ProductOptionsList';
 import ProductSizeSelector                      from '../../widgets/productSizeSelector/ProductSizeSelector';
 import React                                    from 'react';
+import ProductNutrition                         from '../../widgets/productNutrition/ProductNutrition';
 
 const DevProductInfoPage: React.FC = () => {
 
@@ -32,43 +33,53 @@ const DevProductInfoPage: React.FC = () => {
 
             <Box display="flex">
 
-            <Box className={classStyles.productSelector}>
-            <MenuCategoryProductPicker
-                onCategorySelected={(category: MenuCategoryModel) => { handleCategorySelected(category) }}
-                onProductSelected={(product: ProductModel) => { handleProductSelected(product) }}
-            />
-            </Box>
-            <Box>
-            
-                {productState !== undefined ?
-                    <Paper className={classStyles.productInfo}>
-                        <div className={classStyles.textLabel}>Name</div>
-                        <div className={classStyles.textData}>{productState?.name}</div>
+                <Box className={classStyles.productSelector}>
+                    <MenuCategoryProductPicker
+                        onCategorySelected={(category: MenuCategoryModel) => { handleCategorySelected(category) }}
+                        onProductSelected={(product: ProductModel) => { handleProductSelected(product) }}
+                    />
+                </Box>
+                <Box>
 
-                        <div className={classStyles.textLabel}>Description</div>
-                        <div className={classStyles.textData}>{productState?.description}</div>
+                    {productState !== undefined ?
+                        <>
+                        <Paper className={classStyles.productInfo}>
+                            <div className={classStyles.textLabel}>Name</div>
+                            <div className={classStyles.textData}>{productState?.name}</div>
 
-                        <div className={classStyles.textLabel}>Product Number</div>
-                        <div className={classStyles.textData}>{productState?.productNumber}</div>
+                            <div className={classStyles.textLabel}>Description</div>
+                            <div className={classStyles.textData}>{productState?.description}</div>
 
-                        <div className={classStyles.textLabel}>Filename thumbnail</div>
-                        <div className={classStyles.textData}>{productState?.filenameThumbnail}</div>
+                            <div className={classStyles.textLabel}>Product Number</div>
+                            <div className={classStyles.textData}>{productState?.productNumber}</div>
 
-                        <div className={classStyles.textLabel}>Filename large</div>
-                        <div className={classStyles.textData}>{productState?.filenameLarge}</div>
+                            <div className={classStyles.textLabel}>Filename thumbnail</div>
+                            <div className={classStyles.textData}>{productState?.filenameThumbnail}</div>
 
-                        <div className={classStyles.textLabel}>Sizes ({productState?.sizes.length})</div>                        
-                        <ProductSizeSelector product={productState}/>
-                        
-                        <div className={classStyles.textLabel}>Options Count ({productState?.options.length})</div>
-                        <ProductOptionsList product={productState}/>
+                            <div className={classStyles.textLabel}>Filename large</div>
+                            <div className={classStyles.textData}>{productState?.filenameLarge}</div>
 
-                        
-                    </Paper>
-                    : null }
-            </Box>
+                        </Paper>
+                        <Paper className={classStyles.productInfo}>
+
+                            <div className={classStyles.textLabel}>Sizes ({productState?.sizes.length})</div>
+                            <ProductSizeSelector product={productState} />
+
+                            </Paper>
+                            <Paper className={classStyles.productInfo}>
+
+                            <div className={classStyles.textLabel}>Options Count ({productState?.options.length})</div>
+                            <ProductOptionsList product={productState}/>
 
 
+                        </Paper>                        
+                    
+                        <Paper className={classStyles.productInfo}>
+                            <ProductNutrition nutrition={productState.sizes[0].nutrition} />
+                        </Paper>
+                        </>
+                        : null}
+                </Box>
             </Box>
         </DevelopmentMasterPageWrapper>
     );

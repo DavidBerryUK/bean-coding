@@ -50,12 +50,21 @@ export default class ProductParser {
         product.name = json.name;
         product.productNumber = json.productNumber;
         product.description = json.description;
-        product.filenameThumbnail = json.assets.thumbnail.large.filename;
+        
+        product.filenameThumbnail = json.assets.thumbnail.large.uri;
         if ( json.assets.fullSize) {
-            product.filenameLarge = json.assets.fullSize.filename;
+            product.filenameLarge = json.assets.fullSize.uri;
         }
         product.sizes = this.extractProductSizeNodeList(json.sizes);
         product.options = this.extractProductOptionNodeList(json.productOptions)        
+
+
+        if (product.filenameThumbnail) {
+            product.filenameThumbnail = product.filenameThumbnail.replace('https://globalassets.starbucks.com/assets/','');
+        }
+        if (product.filenameLarge) {
+            product.filenameLarge = product.filenameLarge.replace('https://globalassets.starbucks.com/assets/','');
+        }
 
         return product;
     }
