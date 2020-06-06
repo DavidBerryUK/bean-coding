@@ -1,6 +1,8 @@
 import { Box }                                  from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
+import { EnumLabelSize }                        from '../../ui/elementNameTag/ElementNameTag';
 import { Typography }                           from '@material-ui/core';
+import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
 import GraphPaper                               from '../../ui/graphPaper/GraphPaper';
 import NewReleasesOutlinedIcon                  from '@material-ui/icons/NewReleasesOutlined';
 import React                                    from 'react';
@@ -23,7 +25,7 @@ const DevelopmentMasterPageWrapper: React.FC<IProperties> = (props) => {
         <>
             <Box display='flex' mt={2} ml={2}>
                 <Box flex={1}>
-                    <Typography variant="h4" component="h4">Component: {props.title}<span className={classStyles.componentName}>{props.componentName}</span></Typography>
+                    <Typography variant="h4" component="h4">Component: {props.title} <ElementNameTag size={EnumLabelSize.large} name={props.componentName}/></Typography>
                     <Typography variant="body1" color="textSecondary" >This page is used to preview components under development in isolation</Typography>                    
                 </Box>
                 {

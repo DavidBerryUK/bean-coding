@@ -1,4 +1,6 @@
+import { EnumLabelSize }                        from '../../ui/elementNameTag/ElementNameTag';
 import { useState }                             from 'react';
+import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
 import ProductSizeModel                         from '../../../repository/productRepository/models/ProductSizeModel';
 import React                                    from 'react';
@@ -18,6 +20,10 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
     }
 
     return (
+        <>
+        <div>
+        <ElementNameTag size={EnumLabelSize.medium} name="ProductSizeSelector"/>
+        </div>
         <ToggleButtonGroup
             exclusive
             value={selectedSize}
@@ -29,6 +35,7 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
                 <ToggleButton key={item.name} value={item.name}>{item.name}</ToggleButton>
             ))}
         </ToggleButtonGroup>
+        </>
     )
 }
 
