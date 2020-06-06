@@ -33,7 +33,7 @@ export default class ApplicationMenuFactory {
         var item =  new MenuItemModel('4', "Development", "", React.createElement(BuildOutlinedIcon));
         item.add(new MenuItemModel('4:1', "Menu List", EnumDevelopmentRoutes.MenuList, React.createElement(MenuIcon)));
         item.add(new MenuItemModel('4:2', "Menu Hierachical List", EnumDevelopmentRoutes.MenuhierarchicalList, React.createElement(MenuIcon)));
-        item.add(new MenuItemModel('4:11', "Menu Categories", EnumDevelopmentRoutes.MenuCategories, React.createElement(AppsOutlinedIcon)));
+        item.add(new MenuItemModel('4:11', "Menu Category Product Picker", EnumDevelopmentRoutes.MenuCategoryMenuPicker, React.createElement(AppsOutlinedIcon)));
         item.add(new MenuItemModel('4:3', "Menu Slider", EnumDevelopmentRoutes.MenuSliderMechanism, React.createElement(BuildOutlinedIcon)));
         item.add(new MenuItemModel('4:4', "Cup Thumbnail", EnumDevelopmentRoutes.CupSizeThumbnail, React.createElement(CropOriginalOutlinedIcon)));
         item.add(new MenuItemModel('4:5', "Item List", EnumDevelopmentRoutes.ItemList, React.createElement(ListAltIcon)));

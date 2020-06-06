@@ -24,18 +24,14 @@ export default class ProductRepository {
     }
 
     async getProductsForCategory(category: CategoryModel): Promise<Array<ProductModel>> {
-
-        var promise = new Promise<Array<ProductModel>>((resolve, reject) => {
-            
+        var promise = new Promise<Array<ProductModel>>((resolve, reject) => {            
             var allProducts = this.getAllProducts();
             var filteredProducts = allProducts.filter((item) => { return category.products.indexOf(item.productNumber) >= 0   });
-
             // return data after simulated API delay
             setTimeout(() => {
                 resolve(filteredProducts)
             }, repositoryDelayMs);
         });
-
         return promise;
     }
 

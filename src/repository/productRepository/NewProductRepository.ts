@@ -53,6 +53,17 @@ export default class NewProductRepository {
         return products;
     }
 
+    // this would be a direct database calls, again this is 
+    // just to support the rest of the front end application
+    public getProductbyId(productId: number) : ProductModel| null {
+        var all = this.loadAll();
+        var products = all.filter((item) => item.productNumber === productId);
+        if ( products.length >= 1) {
+            return products[0];
+        }
+        return null;
+    }
+
     public getCappuccino(): Array<ProductModel> {
         return this.productParser.parseJsonArray(JsonLoaderCappuccino.load())
     }
