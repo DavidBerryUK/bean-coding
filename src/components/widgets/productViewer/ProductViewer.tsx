@@ -31,7 +31,7 @@ const ProductViewer: React.FC<IProperties> = (props) => {
                     <ProductSizeSelector product={props.product} />
                 </Grid>
                 <Grid item xs={12}>
-                    <ProductOptionsList product={props.product} />
+                    <ProductOptionsList product={props.product} options={props.product.options} />
                 </Grid>
             </Grid>
             {/* <img

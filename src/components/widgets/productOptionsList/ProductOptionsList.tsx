@@ -7,23 +7,18 @@ import ProductOptionModel                       from '../../../repository/produc
 import React                                    from 'react';
 
 interface IProperties {
-    product: ProductModel
+    product: ProductModel,
+    options: Array<ProductOptionModel>
 }
 
 const ProductOptionsList: React.FC<IProperties> = (props) => {
-
-    // var [selectedSize, setSelectedSize] = useState<ProductSizeModel>();
-
-    // const handleSizeSelectedClicked = (event: React.MouseEvent<HTMLElement>, size: ProductSizeModel) => {
-    //     setSelectedSize(size)
-    // }
 
     return (
         <div>
             <Box color="red" border={4}>
             <ElementNameTag size={EnumLabelSize.medium} name="ProductOptionsList"/>
-            {props.product.options.map((item: ProductOptionModel) => (
-                <ProductOption key={item.name} option={item}/>
+            {props.options.map((item: ProductOptionModel) => (
+                <ProductOption key={item.name}  product={props.product}  option={item}/>
             ))}   
             </Box>                 
         </div>

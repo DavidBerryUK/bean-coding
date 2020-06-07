@@ -70,7 +70,7 @@ const DevProductInfoPage: React.FC = () => {
 
                         <Paper className={classStyles.productInfo}>
                             <div className={classStyles.textLabel}>Options Count ({productState?.options.length})</div>
-                            <ProductOptionsList product={productState}/>
+                            <ProductOptionsList product={productState} options={productState.options}/>
                         </Paper>                        
                     
                         <Paper className={classStyles.productInfo}>
