@@ -30,7 +30,9 @@ export default class ProductEnums {
             case 'yes/no':
                 return EnumOptionSelectType.YesOrNo;
         }
+        console.log("************************************************************************");
         console.log(`ProductEnums:EnumOptionSelectType - type not supported = '${value}'`)
+        console.log("************************************************************************");
         return EnumOptionSelectType.Unknown;
     }
 

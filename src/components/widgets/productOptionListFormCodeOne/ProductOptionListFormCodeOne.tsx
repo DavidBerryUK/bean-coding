@@ -3,7 +3,7 @@
 // import ProductOptionTypeOne                     from '../productOptionTypeOne/ProductOptionTypeOne';
 // import ProductOptionTypeQuantity                from '../productOptionTypeQuantity/ProductOptionTypeQuantity';
 // import ProductOptionTypeUnknown                 from '../productOptionTypeUnknown/ProductOptionTypeUnknown';
-import { Box }                                  from '@material-ui/core';
+import { Box, Typography }                                  from '@material-ui/core';
 import { EnumLabelSize }                        from '../../ui/elementNameTag/ElementNameTag';
 import { useState }                             from 'react';
 import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
@@ -25,8 +25,9 @@ const ProductOptionListFormCodeOne: React.FC<IProperties> = (props) => {
     }
 
     return (
-        <Box color="orange" border={4}>
+        <Box color="orange" border={4}>            
             <ElementNameTag size={EnumLabelSize.medium} name="ProductOptionListFormCodeOne" />            
+            <Typography variant="h6">{props.option.name}</Typography>
             <ToggleButtonGroup
                 exclusive
                 value={selectedOption}
