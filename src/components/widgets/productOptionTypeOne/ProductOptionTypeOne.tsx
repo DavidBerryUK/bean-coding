@@ -1,3 +1,5 @@
+import { EnumLabelSize }                        from '../../ui/elementNameTag/ElementNameTag';
+import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
 import ProductOptionModel                       from '../../../repository/productRepository/models/ProductOptionModel';
 import React                                    from 'react';
 
@@ -7,18 +9,26 @@ interface IProperties {
 
 const ProductOptionTypeOne: React.FC<IProperties> = (props) => {
 
-    console.log('-------ONE');
-    console.log(props.option);
-
     return (
         <>
-            <h2>[OPTION-TYPE:ONE]{props.option.name}</h2>
-            { props.option.products.map((item: ProductOptionModel) => (
-                <div key={item.name}>
-                    {item.name}
-                </div>
-            ))}
-
+            <ElementNameTag size={EnumLabelSize.medium} name="ProductOptionTypeOne" />
+            <table>
+                <tr>
+                    <td>name</td><td>{props.option.name}</td>
+                </tr>
+                <tr>
+                    <td>formcode</td><td>{props.option.formCode}</td>
+                </tr>
+                <tr>
+                    <td>sizes count</td><td>{props.option.sizes.length}</td>
+                </tr>
+                <tr>
+                    <td>options count</td><td>{props.option.children.length}</td>
+                </tr>
+                <tr>
+                    <td>product count</td><td>{props.option.products.length}</td>
+                </tr>
+            </table>
         </>
     )
 }
