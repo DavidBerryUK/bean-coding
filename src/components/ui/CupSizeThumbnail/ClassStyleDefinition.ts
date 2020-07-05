@@ -6,7 +6,6 @@ export const ClassStyleDefinition = makeStyles(theme => ({
         width:90,
         height:150,
         position:'relative'
-
     },
     iconContainer : {
         display: 'flex',
