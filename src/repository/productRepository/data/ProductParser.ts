@@ -1,5 +1,4 @@
 import { EnumOptionSelectType }                 from '../enum/ProductEnums';
-import * as productJson                         from './products.json'
 import NutritionAdditionalModel                 from "../models/NutritionAdditionalModel";
 import NutritionModel                           from "../models/NutritionModel";
 import ProductEnums                             from '../enum/ProductEnums';
@@ -12,16 +11,16 @@ import RecipeItemModel                          from "../models/RecipeItemModel"
 
 export default class ProductParser {
 
-    parseProducts(): Array<ProductModel> {
-        var products = new Array<ProductModel>();
+    // parseProducts(): Array<ProductModel> {
+    //     var products = new Array<ProductModel>();
 
-        productJson.products.forEach((productJson) => {
-            var product = this.extractProduct(productJson);
-            products.push(product);
-        });
+    //     productJson.products.forEach((productJson) => {
+    //         var product = this.extractProduct(productJson);
+    //         products.push(product);
+    //     });
 
-        return products;
-    }
+    //     return products;
+    // }
 
     parseJsonArray(jsonArray: Array<object>) : Array<ProductModel> {        
         var productsList = new Array<ProductModel>();

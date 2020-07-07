@@ -8,11 +8,11 @@ export default class JsonLoaderCakesAndPies {
 
     public static load() : Array<any> {
         return [
-            cakesAndPiesA.products,
-            cakesAndPiesB.products,
-            cakesAndPiesC.products,
-            cakesAndPiesD.products,
-            cakesAndPiesE.products
+            cakesAndPiesA,
+            cakesAndPiesB,
+            cakesAndPiesC,
+            cakesAndPiesD,
+            cakesAndPiesE
         ];
     }
 }

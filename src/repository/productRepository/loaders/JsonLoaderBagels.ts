@@ -12,15 +12,15 @@ export default class JsonLoaderBagels {
 
     public static load() : Array<any> {
         return [
-            bagelsA.products,
-            bagelsB.products,
-            bagelsC.products,
-            bagelsD.products,
-            bagelsE.products,
-            bagelsF.products,
-            bagelsG.products,
-            bagelsH.products,
-            bagelsI.products
+            bagelsA,
+            bagelsB,
+            bagelsC,
+            bagelsD,
+            bagelsE,
+            bagelsF,
+            bagelsG,
+            bagelsH,
+            bagelsI
         ];
     }
 }

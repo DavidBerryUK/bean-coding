@@ -1,4 +1,4 @@
-import NewProductRepository from "../NewProductRepository";
+import NewProductRepository from "../ProductRepository";
 
 it('extract product json to strong model', () => {
 

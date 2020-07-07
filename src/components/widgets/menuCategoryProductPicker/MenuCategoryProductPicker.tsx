@@ -8,7 +8,7 @@ import MenuHelperForProducts                    from "../../../Services/MenuHelp
 import MenuHierachicalList                      from '../../ui/menuHierachicalList/MenuHierachicalList';
 import MenuItemModel                            from "../../ui/menuList/MenuItemModel";
 import MenuList                                 from "../../ui/menuList/MenuList";
-import NewProductRepository                     from "../../../repository/productRepository/NewProductRepository";
+import ProductRepository                        from "../../../repository/productRepository/ProductRepository";
 import ProductModel                             from "../../../repository/productRepository/models/ProductModel";
 import React                                    from 'react';
 import MenuCategoryModel                        from "../../../repository/categoryRepository/models/MenuCategoryModel";
@@ -48,7 +48,7 @@ const MenuCategoryProductPicker: React.FC<IProperties> = (props) => {
     }
 
     const handleProductMenuItemSelected = (menuItem: MenuItemModel) => {
-        const productRepository = new NewProductRepository();
+        const productRepository = new ProductRepository();
         const selectedProduct = productRepository.getProductbyId(Number(menuItem.id));
         if ( props.onProductSelected && selectedProduct !== null) {
             props.onProductSelected(selectedProduct)

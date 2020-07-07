@@ -6,9 +6,9 @@ export default class JsonLoaderMacchiato {
 
     public static load() : Array<any> {
         return [
-            macchiatoA.products,
-            macchiatoB.products,
-            macchiatoC.products
+            macchiatoA,
+            macchiatoB,
+            macchiatoC
         ];
     }
 }

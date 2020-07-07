@@ -3,7 +3,7 @@ import { useState }                             from 'react';
 import CategoryModel                            from '../../../repository/categoryRepository/models/CategoryModel';
 import ProductListItem                          from '../productListItem/ProductListItem';
 import ProductModel                             from "../../../repository/productRepository/models/ProductModel";
-import ProductRepository                        from "../../../repository/productRepository/ProductRepository";
+import ProductRepository                        from '../../../repository/productRepository/ProductRepository';
 import React                                    from 'react';
 
 interface IProperties {
@@ -19,9 +19,9 @@ const ProductList: React.FC<IProperties> = (props) => {
     //
     useEffect(() => {
         var productRepository = new ProductRepository();
-        productRepository.getProductsForCategory(props.category).then((productData) => {
-            setProductList(productData);
-        })
+        var productData = productRepository.getProductsForCategory(props.category)
+        setProductList(productData);
+        
     }, [props.category])
 
     const handleProductClicked = (product: ProductModel) => {

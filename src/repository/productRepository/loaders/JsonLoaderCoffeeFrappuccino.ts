@@ -9,12 +9,12 @@ export default class JsonLoaderCoffeeFrappuccino {
 
     public static load() : Array<any> {
         return [ 
-            coffeeFrappuccinoA.products,
-            coffeeFrappuccinoB.products,
-            coffeeFrappuccinoC.products,
-            coffeeFrappuccinoD.products,
-            coffeeFrappuccinoE.products,
-            coffeeFrappuccinoF.products
+            coffeeFrappuccinoA,
+            coffeeFrappuccinoB,
+            coffeeFrappuccinoC,
+            coffeeFrappuccinoD,
+            coffeeFrappuccinoE,
+            coffeeFrappuccinoF
         ];
     }
 }

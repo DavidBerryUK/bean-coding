@@ -5,8 +5,8 @@ export default class JsonLoaderWraps {
 
     public static load() : Array<any> {
         return [ 
-            wrapsA.products,
-            wrapsB.products
+            wrapsA,
+            wrapsB
         ];
     }
 }

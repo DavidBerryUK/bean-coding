@@ -1,5 +1,5 @@
 import MenuCategoryModel                        from "./models/MenuCategoryModel";
-import NewProductRepository                     from '../productRepository/NewProductRepository'
+import ProductRepository                     from '../productRepository/ProductRepository'
 
 /**
  *  Fake Repository - ideally all this would be on server / database,
@@ -7,7 +7,7 @@ import NewProductRepository                     from '../productRepository/NewPr
  */
 export default class MenuCategoryRepository {
 
-    private productRepository = new NewProductRepository();
+    private productRepository = new ProductRepository();
 
     getAll(): MenuCategoryModel {
         const rootCategory = new MenuCategoryModel("root", "Menu");

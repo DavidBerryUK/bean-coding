@@ -6,9 +6,9 @@ export default class JsonLoaderCookiesAndBrownies {
 
     public static load() : Array<any> {
         return [
-            CookiesAndBrowniesA.products,
-            CookiesAndBrowniesB.products,
-            CookiesAndBrowniesC.products
+            CookiesAndBrowniesA,
+            CookiesAndBrowniesB,
+            CookiesAndBrowniesC
         ];
     }
 }

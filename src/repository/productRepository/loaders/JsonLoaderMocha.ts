@@ -7,10 +7,10 @@ export default class JsonLoaderMocha {
 
     public static load() : Array<any> {
         return [ 
-            mochaA.products,
-            mochaB.products,
-            mochaC.products,
-            mochaD.products
+            mochaA,
+            mochaB,
+            mochaC,
+            mochaD
         ];
     }
 }

@@ -5,8 +5,8 @@ export default class JsonLoaderAmericano {
 
     public static load() : Array<any> {
         return [ 
-            americanoA.products,
-            americanoB.products
+            americanoA,
+            americanoB
         ];        
     }
 }
