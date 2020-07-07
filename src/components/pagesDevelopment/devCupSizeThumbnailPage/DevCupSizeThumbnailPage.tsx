@@ -1,6 +1,6 @@
-import { EnumCupSize }                          from "../../../Services/CupSize/EnumCupSize";
-import CupSizeModel                             from "../../../Services/CupSize/CupSizeModel";
-import CupSizeService                           from "../../../Services/CupSize/CupSizeService";
+import { EnumCupSize }                          from "../../../Services/cupSize/EnumCupSize";
+import CupSizeModel                             from "../../../Services/cupSize/CupSizeModel";
+import CupSizeService                           from "../../../Services/cupSize/CupSizeService";
 import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import React                                    from 'react';

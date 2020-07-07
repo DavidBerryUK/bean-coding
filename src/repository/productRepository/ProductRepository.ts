@@ -17,7 +17,7 @@ import JsonLoaderSandwhiches                    from "./loaders/JsonLoaderSandwh
 import JsonLoaderScones                         from "./loaders/JsonLoaderScones";
 import JsonLoaderWraps                          from "./loaders/JsonLoaderWraps";
 import ProductModel                             from "./models/ProductModel";
-import ProductParser                            from "./data/ProductParser";
+import ProductParser                            from "../../Services/productParser/ProductParser";
 import CategoryModel from "../categoryRepository/models/CategoryModel";
 
 /**

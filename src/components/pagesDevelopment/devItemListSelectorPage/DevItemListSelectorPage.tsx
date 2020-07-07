@@ -1,10 +1,10 @@
-import { EnumCupSize }                          from "../../../Services/CupSize/EnumCupSize";
+import { EnumCupSize }                          from "../../../Services/cupSize/EnumCupSize";
 import { IProperties as ICupSizeProperties }    from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
 import { ReactElement }                         from 'react';
 import { useContext }                           from 'react';
 import CommandAddToAudit                        from "../../context/developerContext/actions/CommandAddToAudit";
-import CupSizeModel                             from "../../../Services/CupSize/CupSizeModel";
-import CupSizeService                           from "../../../Services/CupSize/CupSizeService";
+import CupSizeModel                             from "../../../Services/cupSize/CupSizeModel";
+import CupSizeService                           from "../../../Services/cupSize/CupSizeService";
 import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
 import DeveloperContext                         from "../../context/developerContext/DeveloperContext";
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
