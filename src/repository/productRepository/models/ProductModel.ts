@@ -1,4 +1,3 @@
-import ProductOptionModel                       from "./ProductOptionModel";
 import ProductSizeModel                         from "./ProductSizeModel";
 
 export default class ProductModel {
@@ -9,6 +8,6 @@ export default class ProductModel {
     filenameLarge: string = "";
 
     sizes : Array<ProductSizeModel> = new Array<ProductSizeModel>();
-    options : Array<ProductOptionModel> = new Array<ProductOptionModel>();
+   
     
 }

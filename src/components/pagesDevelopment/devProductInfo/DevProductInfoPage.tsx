@@ -8,8 +8,6 @@ import ElementNameTag                           from '../../ui/elementNameTag/El
 import MenuCategoryModel                        from '../../../repository/categoryRepository/models/MenuCategoryModel';
 import MenuCategoryProductPicker                from "../../widgets/menuCategoryProductPicker/MenuCategoryProductPicker";
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
-import ProductNutrition                         from '../../widgets/productNutrition/ProductNutrition';
-import ProductOptionsList                       from '../../widgets/productOptionsList/ProductOptionsList';
 import ProductSizeSelector                      from '../../widgets/productSizeSelector/ProductSizeSelector';
 import React                                    from 'react';
 
@@ -68,14 +66,8 @@ const DevProductInfoPage: React.FC = () => {
                             <ProductSizeSelector product={productState} />
                         </Paper>
 
-                        <Paper className={classStyles.productInfo}>
-                            <div className={classStyles.textLabel}>Options Count ({productState?.options.length})</div>
-                            <ProductOptionsList product={productState} options={productState.options}/>
-                        </Paper>                        
-                    
-                        <Paper className={classStyles.productInfo}>
-                            <ProductNutrition nutrition={productState.sizes[0].nutrition} />
-                        </Paper>
+               
+                
                         </>
                         : null}
                 </Box>

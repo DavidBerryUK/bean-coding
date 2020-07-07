@@ -3,7 +3,7 @@ import NewProductRepository from "../ProductRepository";
 it('extract product json to strong model', () => {
 
     const productRepository = new NewProductRepository();
-    var productList = productRepository.loadAllProducts();
+    var productList = productRepository.getAmericano();
 
     
     // test that the products were read

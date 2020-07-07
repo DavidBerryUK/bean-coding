@@ -3,7 +3,6 @@ import { Grid }                                 from '@material-ui/core';
 import { Paper }                                from '@material-ui/core';
 import { Typography }                           from '@material-ui/core';
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
-import ProductOptionsList                       from "../productOptionsList/ProductOptionsList";
 import ProductSizeSelector                      from "../productSizeSelector/ProductSizeSelector";
 import React                                    from 'react';
 
@@ -29,10 +28,7 @@ const ProductViewer: React.FC<IProperties> = (props) => {
                 </Grid>
                 <Grid item xs={8}>
                     <ProductSizeSelector product={props.product} />
-                </Grid>
-                <Grid item xs={12}>
-                    <ProductOptionsList product={props.product} options={props.product.options} />
-                </Grid>
+                </Grid>           
             </Grid>
             {/* <img
                 alt={props.product.name} 
