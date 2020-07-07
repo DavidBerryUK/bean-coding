@@ -6,14 +6,14 @@ export default class ProductParser {
         var productsList = new Array<ProductModel>();
 
         jsonArray.forEach(jsonItem => {
-            const products = this.parseJsonItem(jsonItem);
+            const products = this.parseJsonItems(jsonItem);
             productsList = productsList.concat(products);
 
         });
         return productsList;
     }
 
-    parseJsonItem(json: any): Array<ProductModel> {
+    parseJsonItems(json: any): Array<ProductModel> {
         var products = new Array<ProductModel>();
 
         json.forEach((productJson: any) => {
@@ -27,12 +27,12 @@ export default class ProductParser {
     private extractProduct(json: any): ProductModel {
         var product = new ProductModel();
         product.name = json.name;
-        product.productNumber = json.productNumber;
+        product.ProductId = json.ProductId;
         product.description = json.description;
 
-        product.filenameThumbnail = json.assets.thumbnail.large.uri;
+        product.ImageThumbnailUri = json.assets.thumbnail.large.uri;
         if (json.assets.fullSize) {
-            product.filenameLarge = json.assets.fullSize.uri;
+            product.ImageFullSizeUri = json.assets.fullSize.uri;
         }
 
         return product;

@@ -5,9 +5,13 @@ it('extract product json to strong model', () => {
 
     const productRepository = new ProductRepository();
     const americanoList = productRepository.getAmericano();
-    const americano = americanoList[0];
 
-    var parser = new ProductParser();    
-    var products = parser.parseJsonItem(americano)
+    const parser = new ProductParser();    
+    const products = parser.parseJsonItems(americanoList);
+    const product = products[0];
+
+
+    expect(product.ProductId).toBe(406);
+    expect(product.name).toBe("Caffe Americano");
         
 });

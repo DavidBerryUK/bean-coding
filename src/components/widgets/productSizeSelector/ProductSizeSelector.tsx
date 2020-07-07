@@ -2,7 +2,7 @@ import { EnumLabelSize }                        from '../../ui/elementNameTag/El
 import { useState }                             from 'react';
 import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
-import ProductSizeModel                         from '../../../repository/productRepository/models/ProductSizeModel';
+import ProductSizeModel                         from '../../../repository/productRepository/models/SizeModel';
 import React                                    from 'react';
 import ToggleButton                             from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup                        from '@material-ui/lab/ToggleButtonGroup';

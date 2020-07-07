@@ -25,7 +25,7 @@ const ProductListItem: React.FC<IProperties> = (props) => {
             <CardActionArea>
                 <CardMedia
                     className={classStyles.media}
-                    image={`/images/products/${props.product.filenameThumbnail}`}
+                    image={`/images/products/${props.product.ImageThumbnailUri}`}
                     title={props.product.name}
                 />
                 <CardContent className={classStyles.cardContent}>

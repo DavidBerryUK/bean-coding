@@ -52,13 +52,13 @@ const DevProductInfoPage: React.FC = () => {
                             <div className={classStyles.textData}>{productState?.description}</div>
 
                             <div className={classStyles.textLabel}>Product Number</div>
-                            <div className={classStyles.textData}>{productState?.productNumber}</div>
+                            <div className={classStyles.textData}>{productState?.ProductId}</div>
 
                             <div className={classStyles.textLabel}>Filename thumbnail</div>
-                            <div className={classStyles.textData}>{productState?.filenameThumbnail}</div>
+                            <div className={classStyles.textData}>{productState?.ImageThumbnailUri}</div>
 
                             <div className={classStyles.textLabel}>Filename large</div>
-                            <div className={classStyles.textData}>{productState?.filenameLarge}</div>
+                            <div className={classStyles.textData}>{productState?.ImageFullSizeUri}</div>
 
                         </Paper>
                         <Paper className={classStyles.productInfo}>                            

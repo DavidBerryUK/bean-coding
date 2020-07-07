@@ -18,7 +18,7 @@ import JsonLoaderScones                         from "./loaders/JsonLoaderScones
 import JsonLoaderWraps                          from "./loaders/JsonLoaderWraps";
 import ProductModel                             from "./models/ProductModel";
 import ProductParser                            from "../../Services/productParser/ProductParser";
-import CategoryModel from "../categoryRepository/models/CategoryModel";
+import CategoryModel                            from "../categoryRepository/models/CategoryModel";
 
 /**
  *  Fake Repository - ideally all this would be on server / database,
@@ -58,7 +58,7 @@ export default class ProductRepository {
     // just to support the rest of the front end application
     public getProductbyId(productId: number) : ProductModel| null {
         var all = this.loadAll();
-        var products = all.filter((item) => item.productNumber === productId);
+        var products = all.filter((item) => item.ProductId === productId);
         if ( products.length >= 1) {
             return products[0];
         }

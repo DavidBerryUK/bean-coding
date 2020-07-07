@@ -9,7 +9,7 @@ export default class MenuHelperForProducts {
         const root = new MenuItemModel('root','root','')
 
         products.forEach((product) => {
-            root.children.push( new MenuItemModel(`${product.productNumber}`,product.name,'',React.createElement(RadioButtonUncheckedOutlinedIcon)));
+            root.children.push( new MenuItemModel(`${product.ProductId}`,product.name,'',React.createElement(RadioButtonUncheckedOutlinedIcon)));
         });
 
         return root;

@@ -34,7 +34,7 @@ const ProductList: React.FC<IProperties> = (props) => {
         <div>
             {productList.map((product: ProductModel) => (
                 <ProductListItem 
-                    key={product.productNumber} 
+                    key={product.ProductId} 
                     product={product}
                     onProductSelected={(product)=>{ handleProductClicked(product)}}/>
             ))}
