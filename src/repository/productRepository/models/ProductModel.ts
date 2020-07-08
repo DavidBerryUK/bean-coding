@@ -1,4 +1,4 @@
-import OptionModel                              from "./OptionModel";
+import OptionModel                              from "./options/OptionBaseModel";
 import ProductSizeModel                         from "./SizeModel";
 
 export default class ProductModel {

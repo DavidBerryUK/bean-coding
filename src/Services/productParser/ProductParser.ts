@@ -1,4 +1,6 @@
 import ProductModel from "../../repository/productRepository/models/ProductModel";
+import ParseSize from "./ParseSize";
+import ParseOptions from "./options/ParseOptions";
 
 export default class ProductParser {
 
@@ -6,35 +8,32 @@ export default class ProductParser {
         var productsList = new Array<ProductModel>();
 
         jsonArray.forEach(jsonItem => {
-            const products = this.parseJsonItems(jsonItem);
+            const products = this.parseCollection(jsonItem);
             productsList = productsList.concat(products);
 
         });
         return productsList;
     }
 
-    parseJsonItems(json: any): Array<ProductModel> {
-        var products = new Array<ProductModel>();
-
+    parseCollection(json: any): Array<ProductModel> {
+        var collection = new Array<ProductModel>();
         json.forEach((productJson: any) => {
-            var product = this.extractProduct(productJson);
-            products.push(product);
+            var product = this.parseItem(productJson);
+            collection.push(product);
         });
-
-        return products;
+        return collection;
     }
 
-    private extractProduct(json: any): ProductModel {
-        var product = new ProductModel();
-        product.name = json.name;
-        product.ProductId = json.ProductId;
-        product.description = json.description;
+    parseItem(json: any): ProductModel {
+        var item = new ProductModel();
+        item.name = json.Name;
+        item.ProductId = json.ProductId;
+        item.description = json.Description;
+        item.ImageThumbnailUri = json.ImageThumbnailUri;
+        item.ImageFullSizeUri = json.ImageFullSizeUri;
+        item.sizes = ParseSize.parseCollection (json.Sizes);
+        item.options = ParseOptions.parseCollection(json.Options);
+        return item;
+    }    
 
-        product.ImageThumbnailUri = json.assets.thumbnail.large.uri;
-        if (json.assets.fullSize) {
-            product.ImageFullSizeUri = json.assets.fullSize.uri;
-        }
-
-        return product;
-    }
 }
