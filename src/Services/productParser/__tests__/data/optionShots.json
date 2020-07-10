@@ -1,0 +1,34 @@
+{
+   "Options": [
+      {
+         "OptionsGroup": {
+            "GroupItems": [
+               {
+                  "IsMandatory": true,
+                  "Name": "Blonde or Decaf Espresso",
+                  "CollectionItems": [
+                     {
+                        "Value": "1/2 Decaf",
+                        "ProductNumber": 87
+                     },
+                     {
+                        "Value": "Blonde Espresso",
+                        "ProductNumber": 2122222
+                     },
+                     {
+                        "Value": "Decaf",
+                        "ProductNumber": 86
+                     }
+                  ]
+               }
+            ]
+         },
+         "OptionsItem": {
+            "ProductNumber": 82,
+            "Name": "Shots"
+         },
+         "Name": "Shot Options",
+         "OptionType": "Shots"
+      }
+   ]
+}

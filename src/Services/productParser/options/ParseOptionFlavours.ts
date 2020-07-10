@@ -2,9 +2,7 @@ import OptionFlavoursModel from "../../../repository/productRepository/models/op
 
 export default class ParseOptionFlavours {
     static parse(json: any) : OptionFlavoursModel {
-        const item = new OptionFlavoursModel();
-        item.name = json.Name;
-        item.optionType = json.OptionType;
+        const item = new OptionFlavoursModel(json.Name);
         return item;
     }
 }

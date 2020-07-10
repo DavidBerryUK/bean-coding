@@ -1,5 +1,6 @@
 import ProductParser from "../ProductParser";
 import americanoA from './data/americano.json';
+import { enumOptionType } from "../../../repository/productRepository/models/options/OptionBaseModel";
 
 it('extract product json to strong model', () => {
     
@@ -21,13 +22,13 @@ it('extract product json to strong model', () => {
     const option4 = product.options[3];
 
     expect(option1.name).toBe("Shot Options");
-    expect(option1.optionType).toBe("Shots");
+    expect(option1.optionType).toBe(enumOptionType.Shots);
     expect(option2.name).toBe("Add-ins");
-    expect(option2.optionType).toBe("AddIn");
+    expect(option2.optionType).toBe(enumOptionType.AddIn);
     expect(option3.name).toBe("Flavours");
-    expect(option3.optionType).toBe("Flavours");
+    expect(option3.optionType).toBe(enumOptionType.Flavours);
     expect(option4.name).toBe("Toppings");
-    expect(option4.optionType).toBe("Toppings");
+    expect(option4.optionType).toBe(enumOptionType.Toppings);
 
     //sizes
     expect(product.sizes.length).toBe(4);

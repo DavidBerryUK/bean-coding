@@ -2,9 +2,7 @@ import OptionAddInModel from "../../../repository/productRepository/models/optio
 
 export default class ParseOptionAddIn {
     static parse(json: any) : OptionAddInModel {
-        const item = new OptionAddInModel();
-        item.name = json.Name;
-        item.optionType = json.OptionType;
+        const item = new OptionAddInModel(json.Name);
         return item;
     }
 }
