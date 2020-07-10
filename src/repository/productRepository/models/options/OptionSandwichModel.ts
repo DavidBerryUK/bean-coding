@@ -2,13 +2,12 @@ import { enumOptionType }                       from "./OptionBaseModel"
 import DataItemCollectionQuantityGroups         from "../DataModels/selectList/DataItemCollectionQuantityGroups";
 import OptionBaseModel                          from "./OptionBaseModel"
 
-export default class OptionFlavoursModel extends OptionBaseModel {
+export default class OptionSandwichModel extends OptionBaseModel {
 
-    optionsGroup: DataItemCollectionQuantityGroups;
+    optionGroups : DataItemCollectionQuantityGroups;
 
     constructor(name: string) {
-        super(name, enumOptionType.Flavours);
-        this.optionsGroup = new DataItemCollectionQuantityGroups()
+        super(name, enumOptionType.Sandwich);
+        this.optionGroups = new DataItemCollectionQuantityGroups();
     }
-
 }
