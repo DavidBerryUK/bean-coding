@@ -1,6 +1,6 @@
 import ProductModel from "../../repository/productRepository/models/ProductModel";
 import ParseSize from "./ParseSize";
-import ParseOptions from "./options/ParseOptions";
+import ParseOptions from "./optionParsers/ParseOptions";
 
 export default class ProductParser {
 
