@@ -1,0 +1,22 @@
+{
+   "Options": [
+     {
+         "OptionsCollection": {
+             "IsMandatory": true,
+             "Name": "Warming",
+             "CollectionItems": [
+                 {
+                     "Value": "Not Warmed",
+                     "ProductNumber": 1193
+                 },
+                 {
+                     "Value": "Warmed",
+                     "ProductNumber": 1179
+                 }
+             ]
+         },
+         "Name": "Warming",
+         "OptionType": "Warming"
+     }
+   ]
+}

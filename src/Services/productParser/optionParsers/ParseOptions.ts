@@ -3,6 +3,7 @@ import ParseOptionAddIn                         from "./ParseOptionAddIn";
 import ParseOptionFlavours                      from "./ParseOptionFlavours";
 import ParseOptionShots                         from "./ParseOptionShots";
 import ParseOptionToppings                      from "./ParseOptionToppings";
+import ParseOptionWarming                       from "./ParseOptionWarming";
 
 export default class ParseOptions {
 
@@ -26,6 +27,8 @@ export default class ParseOptions {
                 return ParseOptionShots.parse(json);                        
             case 'Toppings':
                 return ParseOptionToppings.parse(json);
+            case 'Warming':
+                return ParseOptionWarming.parse(json);
         }
 
         throw new Error(`****  option type ${json.OptionType} not parsed  ****`);
