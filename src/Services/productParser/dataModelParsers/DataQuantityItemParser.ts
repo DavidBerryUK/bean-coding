@@ -1,9 +1,9 @@
-import DataQuantityItem from "../../../repository/productRepository/models/DataModels/itemAndQuantity/DataQuantityItem";
-import ItemQuantitySelector from "../../../components/ui/itemQuantitySelector/ItemQuantitySelector";
+import DataQuantityItem                         from "../../../repository/productRepository/models/DataModels/itemAndQuantity/DataQuantityItem";
 
 export default class DataQuantityItemParser {
 
-    static parse(json: any) : DataQuantityItem {
+    static parse(json: any): DataQuantityItem {
+
         const item = new DataQuantityItem();
         
         item.productNumber = Number(json.ProductNumber);
@@ -12,5 +12,4 @@ export default class DataQuantityItemParser {
 
         return item;
     }
-
 }

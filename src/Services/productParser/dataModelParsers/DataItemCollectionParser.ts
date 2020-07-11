@@ -4,7 +4,7 @@ import DataItemParser                           from "./DataItemParser";
 export default class DataItemCollectionParser {
 
     static parse(json: any) : DataItemCollection {
-
+        
         const data = new DataItemCollection();
 
         data.isMandatory = json.IsMandatory;

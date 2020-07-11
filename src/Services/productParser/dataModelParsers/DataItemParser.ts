@@ -3,24 +3,25 @@ import DataItem                                 from "../../../repository/produc
 export default class DataItemParser {
 
     static parse(json: any): DataItem {
-        const item = new DataItem();
 
-        item.value = json.Value
-        item.productNumber = Number(json.ProductNumber);
+        const data = new DataItem();
 
-        return item;
+        data.value = json.Value
+        if ( json.ProductNumber ) {
+            data.productNumber = Number(json.ProductNumber);
+        }
+        return data;
     }
 
     static parseArray(json: any): Array<DataItem> {
-        const array = new Array<DataItem>();
 
+        const data = new Array<DataItem>();
+        
         json.forEach((item: any) => {
-
-            array.push(this.parse(item));
+            data.push(this.parse(item));
         });
 
-
-        return array;
+        return data;
     }
 
 }

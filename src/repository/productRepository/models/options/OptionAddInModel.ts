@@ -1,14 +1,14 @@
 import { enumOptionType }                       from "./OptionBaseModel"
-import DataQuantityItemCollectionGroup          from "../DataModels/itemAndQuantity/DataQuantityItemCollectionGroup"
 import OptionBaseModel                          from "./OptionBaseModel"
+import DataItemCollectionGroup                  from "../DataModels/selectList/DataItemCollectionGroup";
 
 export default class OptionAddInModel extends OptionBaseModel {
 
-    optionsGroup: DataQuantityItemCollectionGroup;
+    optionsGroup: DataItemCollectionGroup;
 
     constructor(name: string) {
         super(name, enumOptionType.AddIn)
-        this.optionsGroup = new DataQuantityItemCollectionGroup();
+        this.optionsGroup = new DataItemCollectionGroup();
     }
 
 }
