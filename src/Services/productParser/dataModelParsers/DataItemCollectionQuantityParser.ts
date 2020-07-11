@@ -18,15 +18,15 @@ export default class DataItemCollectionQuantityParser {
         if (json.isMandatory) {
             data.isMandatory = json.isMandatory;
         }
-        
+                
         data.items = DataItemParser.parseArray(json.Items);
 
         return data;
     }
 
-    static parseArray(json: any): Array<DataItemCollectionQuantity> {        
+    static parseArray(json: any): Array<DataItemCollectionQuantity> {                
 
-        const data = new Array<DataItemCollectionQuantity>();        
+        const data = new Array<DataItemCollectionQuantity>();
 
         json.forEach((jsonItem: any) => {
             const dataItem = this.parse(jsonItem);

@@ -34,11 +34,6 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
         if (index === selectedIndex) {
             className = `${className} ${classStyles.selected}`;
         }
-        // console.log('------------------------------');
-        //console.log(props.elements[index].props.name);
-        // console.log(selectedItem);
-        // console.log( props.elements[index] === selectedItem);
-        // console.log(className);
         return className;
     }
 

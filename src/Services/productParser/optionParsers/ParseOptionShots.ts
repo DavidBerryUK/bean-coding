@@ -8,7 +8,7 @@ export default class ParseOptionShots {
 
         const data = new OptionShotsModel(json.Name);
         data.optionsItem = DataQuantityItemParser .parse(json.OptionsItem);
-        data.optionGroup = DataItemCollectionGroupParser.parse(json.OptionsGroup.GroupItems);
+        data.optionGroup = DataItemCollectionGroupParser.parse(json.OptionsGroup);
 
         return data;
     }

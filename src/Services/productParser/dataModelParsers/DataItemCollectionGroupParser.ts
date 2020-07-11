@@ -1,14 +1,17 @@
-import DataItemCollectionGroup                  from "../../../repository/productRepository/models/DataModels/selectList/DataItemCollectionGroup";
-import DataItemCollectionParser                 from "./DataItemCollectionParser";
+import DataItemCollectionGroup from "../../../repository/productRepository/models/DataModels/selectList/DataItemCollectionGroup";
+import DataItemCollectionParser from "./DataItemCollectionParser";
 
 export default class DataItemCollectionGroupParser {
 
-    static parse(json: any) : DataItemCollectionGroup {
+    static parse(json: any): DataItemCollectionGroup {
 
         const data = new DataItemCollectionGroup();
-        data.name = "";
-        
-        json.forEach((item:any) => {
+
+        if (json.Name) {
+            data.name = json.Name;
+        }
+
+        json.GroupItems.forEach((item: any) => {
             const arrayItem = DataItemCollectionParser.parse(item);
             data.groupItems.push(arrayItem);
         });

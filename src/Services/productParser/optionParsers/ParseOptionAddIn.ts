@@ -4,7 +4,7 @@ import OptionAddInModel                         from "../../../repository/produc
 export default class ParseOptionAddIn {
     static parse(json: any): OptionAddInModel {
         const item = new OptionAddInModel(json.Name);        
-        item.optionsGroup = DataItemCollectionGroupParser.parse(json.OptionsGroup.GroupItems);
+        item.optionsGroup = DataItemCollectionGroupParser.parse(json.OptionsGroup);
         return item;
     }
 }

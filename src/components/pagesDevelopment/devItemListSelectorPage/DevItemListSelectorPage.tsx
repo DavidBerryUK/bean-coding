@@ -33,7 +33,6 @@ const DevItemListSelectorPage: React.FC = () => {
 
     const handleItemSelected = (item: React.ReactElement) => { 
         const properties = item.props as ICupSizeProperties;
-        console.log(properties.sizeName);
         dispatch(new CommandAddToAudit(`Selected ${properties.sizeName} ${properties.volumeDescription}`));
     }
 
