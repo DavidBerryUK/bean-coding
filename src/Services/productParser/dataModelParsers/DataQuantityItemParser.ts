@@ -4,12 +4,24 @@ export default class DataQuantityItemParser {
 
     static parse(json: any): DataQuantityItem {
 
-        const item = new DataQuantityItem();
+        const data = new DataQuantityItem();
         
-        item.productNumber = Number(json.ProductNumber);
-        item.name = json.Name;
-        item.quantity = 0;
+        data.productNumber = Number(json.ProductNumber);
+        data.name = json.Name;
+        data.quantity = 0;
 
-        return item;
+        return data;
+    }
+
+    static parseArray(jsonArray: any): Array<DataQuantityItem> {
+
+        const data = new Array<DataQuantityItem>();
+        
+        jsonArray.forEach((jsonItem: any) => {
+            const dataItem = this.parse(jsonItem);
+            data.push(dataItem);
+        });
+
+        return data;
     }
 }

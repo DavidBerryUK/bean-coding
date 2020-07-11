@@ -1,0 +1,20 @@
+{
+    "Options": [
+        {
+            "OptionsCollection": {
+                "CollectionItems": [
+                    {
+                        "ProductNumber": 1189,
+                        "Name": "Butter"
+                    },
+                    {
+                        "ProductNumber": 1190,
+                        "Name": "Plain Cream Cheese"
+                    }
+                ]
+            },
+            "Name": "Butter & Spreads",
+            "OptionType": "ButterAndSpreads"
+        }
+    ]
+}

@@ -1,5 +1,6 @@
 import OptionBaseModel                          from "../../../repository/productRepository/models/options/OptionBaseModel";
 import ParseOptionAddIn                         from "./ParseOptionAddIn";
+import ParseOptionButterAndSpreads              from "./ParseOptionButterAndSpreads";
 import ParseOptionFlavours                      from "./ParseOptionFlavours";
 import ParseOptionShots                         from "./ParseOptionShots";
 import ParseOptionToppings                      from "./ParseOptionToppings";
@@ -29,6 +30,8 @@ export default class ParseOptions {
                 return ParseOptionToppings.parse(json);
             case 'Warming':
                 return ParseOptionWarming.parse(json);
+            case 'ButterAndSpreads':
+                return ParseOptionButterAndSpreads.parse(json);
         }
 
         throw new Error(`****  option type ${json.OptionType} not parsed  ****`);
