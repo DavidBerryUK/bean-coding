@@ -51,6 +51,24 @@ it('parse options with add-ins model', () => {
     expect(a1.name).toBe("Splash of Semi-Skimmed Milk");
     expect(a1.productNumber).toBe(50);
     expect(a1.collectionItems.length).toBe(3);
+    expect(a1.collectionItems[0].value).toBe("Extra Splash of Semi-Skimmed Milk");
+    expect(a1.collectionItems[1].value).toBe("Light Splash of Semi-Skimmed Milk");
+    expect(a1.collectionItems[2].value).toBe("Splash of Semi-Skimmed Milk");
 
+    expect(a2.name).toBe("Splash of Almond Drink");
+    expect(a2.productNumber).toBe(2121966);
+    expect(a2.collectionItems.length).toBe(3);
+    expect(a2.collectionItems[0].value).toBe("Extra Splash of Almond Drink");
+    expect(a2.collectionItems[1].value).toBe("Light Splash of Almond Drink");
+    expect(a2.collectionItems[2].value).toBe("Splash of Almond Drink");
+
+    expect(a3.name).toBe("Splash of Coconut");
+    expect(a3.productNumber).toBe(873068665);
+    expect(a3.collectionItems.length).toBe(5);
+    expect(a3.collectionItems[0].value).toBe("Extra Splash of Coconut");
+    expect(a3.collectionItems[1].value).toBe("Light Splash of Coconut");
+    expect(a3.collectionItems[2].value).toBe("No Splash of Coconut");
+    expect(a3.collectionItems[3].value).toBe("Splash of Coconut");
+    expect(a3.collectionItems[4].value).toBe("Substitute Splash of Coconut");
 
 });

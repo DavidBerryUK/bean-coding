@@ -10,6 +10,7 @@ export default class DataItemParser {
         if ( json.ProductNumber ) {
             data.productNumber = Number(json.ProductNumber);
         }
+
         return data;
     }
 
@@ -17,8 +18,9 @@ export default class DataItemParser {
 
         const data = new Array<DataItem>();
         
-        json.forEach((item: any) => {
-            data.push(this.parse(item));
+        json.forEach((itemJson: any) => {
+            const dataItem = this.parse(itemJson);
+            data.push(dataItem);
         });
 
         return data;

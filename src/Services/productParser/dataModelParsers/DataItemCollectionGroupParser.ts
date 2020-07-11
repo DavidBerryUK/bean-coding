@@ -4,7 +4,7 @@ import DataItemCollectionParser                 from "./DataItemCollectionParser
 export default class DataItemCollectionGroupParser {
 
     static parse(json: any) : DataItemCollectionGroup {
-        
+
         const data = new DataItemCollectionGroup();
         data.name = "";
         
