@@ -4,11 +4,11 @@ import OptionBaseModel                          from "./OptionBaseModel"
 
 export default class OptionFlavoursModel extends OptionBaseModel {
 
-    optionsGroup: DataItemCollectionQuantityGroups;
+    optionsGroups: DataItemCollectionQuantityGroups;
 
     constructor(name: string) {
         super(name, enumOptionType.Flavours);
-        this.optionsGroup = new DataItemCollectionQuantityGroups()
+        this.optionsGroups = new DataItemCollectionQuantityGroups()
     }
 
 }

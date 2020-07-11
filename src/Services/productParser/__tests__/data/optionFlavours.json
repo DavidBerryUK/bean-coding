@@ -1,0 +1,205 @@
+{
+   "Options": [
+      {
+         "OptionsGroups": {
+            "Groups": [
+               {
+                  "Name": "Syrups",
+                  "GroupItems": [
+                     {
+                        "Name": "Almond Syrup",
+                        "ProductNumber": 2121360,
+                        "Items": [
+                           {
+                              "Value": "Almond Syrup"
+                           },
+                           {
+                              "Value": "Substitute Almond Syrup"
+                           },
+                           {
+                              "Value": "No Almond Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Caramel Syrup",
+                        "ProductNumber": 91,
+                        "Items": [
+                           {
+                              "Value": "Caramel Syrup"
+                           },
+                           {
+                              "Value": "Substitute Caramel Syrup"
+                           },
+                           {
+                              "Value": "No Caramel Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Sugar Free Caramel Syrup",
+                        "ProductNumber": 1211,
+                        "Items": [
+                           {
+                              "Value": "Sugar Free Caramel Syrup"
+                           },
+                           {
+                              "Value": "Substitute Sugar Free Caramel Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Cinnamon Dolce Syrup",
+                        "ProductNumber": 93,
+                        "Items": [
+                           {
+                              "Value": "Cinnamon Dolce Syrup"
+                           },
+                           {
+                              "Value": "Substitute Cinnamon Dolce Syrup"
+                           },
+                           {
+                              "Value": "No Cinnamon Dolce Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Simple Syrup",
+                        "ProductNumber": 94,
+                        "Items": [
+                           {
+                              "Value": "Simple Syrup"
+                           },
+                           {
+                              "Value": "Substitute Simple Syrup"
+                           },
+                           {
+                              "Value": "No Simple Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Hazelnut Syrup",
+                        "ProductNumber": 96,
+                        "Items": [
+                           {
+                              "Value": "Hazelnut Syrup"
+                           },
+                           {
+                              "Value": "Substitute Hazelnut Syrup"
+                           },
+                           {
+                              "Value": "No Hazelnut Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Sugar Free Hazelnut Syrup",
+                        "ProductNumber": 107,
+                        "Items": [
+                           {
+                              "Value": "Sugar Free Hazelnut Syrup"
+                           },
+                           {
+                              "Value": "Substitute Sugar Free Hazelnut Syrup"
+                           },
+                           {
+                              "Value": "No Sugar Free Hazelnut Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Mango Syrup",
+                        "ProductNumber": 2121333,
+                        "Items": [
+                           {
+                              "Value": "Mango Syrup"
+                           },
+                           {
+                              "Value": "Substitute Mango Syrup"
+                           },
+                           {
+                              "Value": "No Mango Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Peppermint Syrup",
+                        "ProductNumber": 100,
+                        "Items": [
+                           {
+                              "Value": "Peppermint Syrup"
+                           },
+                           {
+                              "Value": "Substitute Peppermint Syrup"
+                           },
+                           {
+                              "Value": "No Peppermint Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Vanilla Syrup",
+                        "ProductNumber": 111,
+                        "Items": [
+                           {
+                              "Value": "Vanilla Syrup"
+                           },
+                           {
+                              "Value": "Substitute Vanilla Syrup"
+                           },
+                           {
+                              "Value": "No Vanilla Syrup"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Sugar Free Vanilla Syrup",
+                        "ProductNumber": 109,
+                        "Items": [
+                           {
+                              "Value": "Sugar Free Vanilla Syrup"
+                           },
+                           {
+                              "Value": "Substitute Sugar Free Vanilla Syrup"
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "Name": "Sauces",
+                  "GroupItems": [
+                     {
+                        "Name": "Mocha Sauce",
+                        "ProductNumber": 650,
+                        "Items": [
+                           {
+                              "Value": "Mocha Sauce"
+                           },
+                           {
+                              "Value": "Substitute Mocha Sauce"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "White Chocolate Mocha Sauce",
+                        "ProductNumber": 112,
+                        "Items": [
+                           {
+                              "Value": "White Chocolate Mocha Sauce"
+                           },
+                           {
+                              "Value": "Substitute White Chocolate Mocha Sauce"
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         "Name": "Flavours",
+         "OptionType": "Flavours"
+      }
+   ]
+}
