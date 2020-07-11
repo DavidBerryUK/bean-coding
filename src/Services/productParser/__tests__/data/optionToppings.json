@@ -1,0 +1,58 @@
+{
+   "Options": [
+      {
+         "OptionsGroups": {
+            "Groups": [
+               {
+                  "Name": "Drizzle",
+                  "GroupItems": [
+                     {
+                        "Name": "Caramel Drizzle",
+                        "ProductNumber": 126,
+                        "CollectionItems": [
+                           {
+                              "Value": "No Caramel Drizzle"
+                           },
+                           {
+                              "Value": "Caramel Drizzle"
+                           }
+                        ]
+                     },
+                     {
+                        "Name": "Mocha Drizzle",
+                        "ProductNumber": 127,
+                        "CollectionItems": [
+                           {
+                              "Value": "No Mocha Drizzle"
+                           },
+                           {
+                              "Value": "Mocha Drizzle"
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "Name": "Whipped Cream",
+                  "GroupItems": [
+                     {
+                        "Name": "Whipped Cream",
+                        "ProductNumber": 125,
+                        "CollectionItems": [
+                           {
+                              "Value": "with No Whipped Cream"
+                           },
+                           {
+                              "Value": "with Whipped Cream"
+                           }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         },
+         "Name": "Toppings",
+         "OptionType": "Toppings"
+      }
+   ]
+}
