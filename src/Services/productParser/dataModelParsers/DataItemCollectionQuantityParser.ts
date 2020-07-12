@@ -15,8 +15,8 @@ export default class DataItemCollectionQuantityParser {
         if (json.QuantityRequired) {
             data.quantityRequired = json.QuantityRequired;
         }
-        if (json.isMandatory) {
-            data.isMandatory = json.isMandatory;
+        if (json.IsMandatory) {
+            data.isMandatory = json.IsMandatory;
         }
                 
         data.items = DataItemParser.parseArray(json.Items);

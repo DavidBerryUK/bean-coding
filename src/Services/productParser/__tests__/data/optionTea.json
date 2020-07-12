@@ -1,0 +1,21 @@
+{
+   "Options": [
+      {
+         "OptionsItem": {
+            "Name": "Chai",
+            "IsMandatory": true,
+            "ProductNumber": 92,
+            "Items": [
+               {
+                  "Value": "Chai"
+               },
+               {
+                  "Value": "Substitute Chai"
+               }
+            ]
+         },
+         "Name": "Tea",
+         "OptionType": "Tea"
+      }
+   ]
+}
