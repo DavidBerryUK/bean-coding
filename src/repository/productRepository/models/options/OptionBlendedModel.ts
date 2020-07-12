@@ -7,7 +7,7 @@ export default class OptionBlendedModel extends OptionBaseModel  {
     optionsGroup : DataQuantityItemCollectionGroup;
 
     constructor(name: string) {
-        super(name, enumOptionType.Flavours)
+        super(name, enumOptionType.Blended)
         this.optionsGroup = new DataQuantityItemCollectionGroup();
     }
 

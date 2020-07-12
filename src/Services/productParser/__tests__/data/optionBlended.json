@@ -1,0 +1,30 @@
+{
+   "Options": [
+      {
+         "OptionsGroup": {
+            "GroupItems": [
+               {
+                  "Name": "Blended Add-Ins",
+                  "CollectionItems": [
+                     {
+                        "ProductNumber": 46,
+                        "Name": "Java Chips"
+                     }
+                  ]
+               },
+               {
+                  "Name": "Frappuccino Roast",
+                  "CollectionItems": [
+                     {
+                        "ProductNumber": 184,
+                        "Name": "Frappuccino Roast"
+                     }
+                  ]
+               }
+            ]
+         },
+         "Name": "Blended Options",
+         "OptionType": "Blended"
+      }
+   ]
+}

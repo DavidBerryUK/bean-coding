@@ -1,5 +1,6 @@
 import OptionBaseModel                          from "../../../repository/productRepository/models/options/OptionBaseModel";
 import ParseOptionAddIn                         from "./ParseOptionAddIn";
+import ParseOptionBlended                       from "./ParseOptionBlended";
 import ParseOptionButterAndSpreads              from "./ParseOptionButterAndSpreads";
 import ParseOptionDairyAlternatives             from "./ParseOptionDairyAlternatives";
 import ParseOptionFlavours                      from "./ParseOptionFlavours";
@@ -24,6 +25,8 @@ export default class ParseOptions {
         switch (json.OptionType) {
             case 'AddIn':
                 return ParseOptionAddIn.parse(json);
+            case 'Blended':
+                return ParseOptionBlended.parse(json);
             case 'ButterAndSpreads':
                 return ParseOptionButterAndSpreads.parse(json);
             case 'DairyAlternatives':
