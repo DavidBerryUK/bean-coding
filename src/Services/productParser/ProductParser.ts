@@ -1,19 +1,8 @@
-import ProductModel from "../../repository/productRepository/models/ProductModel";
-import ParseSize from "./ParseSize";
-import ParseOptions from "./optionParsers/ParseOptions";
+import ParseOptions                             from "./optionParsers/ParseOptions";
+import ParseSize                                from "./ParseSize";
+import ProductModel                             from "../../repository/productRepository/models/ProductModel";
 
 export default class ProductParser {
-
-    parseJsonArray(jsonArray: Array<object>): Array<ProductModel> {
-        var productsList = new Array<ProductModel>();
-
-        jsonArray.forEach(jsonItem => {
-            const products = this.parseCollection(jsonItem);
-            productsList = productsList.concat(products);
-
-        });
-        return productsList;
-    }
 
     parseCollection(json: any): Array<ProductModel> {
         var collection = new Array<ProductModel>();
@@ -31,9 +20,8 @@ export default class ProductParser {
         item.description = json.Description;
         item.ImageThumbnailUri = json.ImageThumbnailUri;
         item.ImageFullSizeUri = json.ImageFullSizeUri;
-        item.sizes = ParseSize.parseCollection (json.Sizes);
+        item.sizes = ParseSize.parseCollection(json.Sizes);
         item.options = ParseOptions.parseCollection(json.Options);
         return item;
-    }    
-
+    }
 }

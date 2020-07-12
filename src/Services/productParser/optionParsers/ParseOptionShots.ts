@@ -7,7 +7,7 @@ export default class ParseOptionShots {
     static parse(json: any): OptionShotsModel {    
 
         const data = new OptionShotsModel(json.Name);
-        data.optionsItem = DataQuantityItemParser .parse(json.OptionsItem);
+        data.optionsItem = DataQuantityItemParser.parse(json.OptionsItem);
         data.optionGroup = DataItemCollectionGroupParser.parse(json.OptionsGroup);
 
         return data;

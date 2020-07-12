@@ -1,5 +1,4 @@
-import DataQuantityItemCollectionGroup          from "../itemAndQuantity/DataQuantityItemCollectionGroup";
-import DataItemCollectionGroup from "./DataItemCollectionGroup";
+import DataItemCollectionGroup                  from "./DataItemCollectionGroup";
 
 export default class DataItemCollectionGroups {
 

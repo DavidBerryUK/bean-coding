@@ -66,79 +66,79 @@ export default class ProductRepository {
     }
 
     public getProductsForCategory(category: CategoryModel): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderCappuccino.load())
+        return this.productParser.parseCollection(JsonLoaderCappuccino.load())
     }
 
     public getCappuccino(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderCappuccino.load())
+        return this.productParser.parseCollection(JsonLoaderCappuccino.load())
     }
 
     public getCoffeeFrappuccino(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderCoffeeFrappuccino.load())
+        return this.productParser.parseCollection(JsonLoaderCoffeeFrappuccino.load())
     }
 
     public getrCookiesAndBrownies(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderCookiesAndBrownies.load())
+        return this.productParser.parseCollection(JsonLoaderCookiesAndBrownies.load())
     }
 
     public getCreamFrappuccino(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderCreamFrappuccino.load())
+        return this.productParser.parseCollection(JsonLoaderCreamFrappuccino.load())
     }
 
     public getCroissants(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderCroissants.load())
+        return this.productParser.parseCollection(JsonLoaderCroissants.load())
     }
 
     public getEspresso(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderEspresso.load())
+        return this.productParser.parseCollection(JsonLoaderEspresso.load())
     }
 
     public getLatte(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderLatte.load())
+        return this.productParser.parseCollection(JsonLoaderLatte.load())
     }
 
     public getMacchiato(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderMacchiato.load())
+        return this.productParser.parseCollection(JsonLoaderMacchiato.load())
     }
 
     public getMocha(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderMocha.load())
+        return this.productParser.parseCollection(JsonLoaderMocha.load())
     }
 
     public getMuffinsAndBreads(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderMuffinsAndBreads.load())
+        return this.productParser.parseCollection(JsonLoaderMuffinsAndBreads.load())
     }
 
     public getSalads(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderSalads.load())
+        return this.productParser.parseCollection(JsonLoaderSalads.load())
     }
 
     public getSandwhiches(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderSandwhiches.load())
+        return this.productParser.parseCollection(JsonLoaderSandwhiches.load())
     }
 
     public getScones(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderScones.load())
+        return this.productParser.parseCollection(JsonLoaderScones.load())
     }
 
     public getWraps(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderWraps.load())
+        return this.productParser.parseCollection(JsonLoaderWraps.load())
     }
 
     public getBrewedTea(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderBrewedTea.load())
+        return this.productParser.parseCollection(JsonLoaderBrewedTea.load())
     }
 
     public getAmericano(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderAmericano.load());
+        return this.productParser.parseCollection(JsonLoaderAmericano.load());
     }
 
     public getBagels(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderBagels.load());
+        return this.productParser.parseCollection(JsonLoaderBagels.load());
     }
 
     public getCakesAndPies(): Array<ProductModel> {
-        return this.productParser.parseJsonArray(JsonLoaderCakesAndPies.load());
+        return this.productParser.parseCollection(JsonLoaderCakesAndPies.load());
     }
 
 }
