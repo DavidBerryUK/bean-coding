@@ -5,6 +5,7 @@ export default class DataItemCollectionGroupParser {
 
     static parse(json: any): DataItemCollectionGroup {
 
+        
         const data = new DataItemCollectionGroup();
 
         if (json.Name) {

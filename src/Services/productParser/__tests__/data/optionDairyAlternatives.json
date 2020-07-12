@@ -1,0 +1,62 @@
+{
+    "Options": [
+        {
+            "OptionsGroup": {
+                "GroupItems": [
+                    {
+                        "Name": "Milk & Dairy Alternatives",
+                        "CollectionItems": [
+                            {
+                                "Value": "Semi-Skimmed Milk",
+                                "ProductNumber": 63
+                            },
+                            {
+                                "Value": "Coconut",
+                                "ProductNumber": 1306
+                            },
+                            {
+                                "Value": "Skimmed Milk",
+                                "ProductNumber": 61
+                            },
+                            {
+                                "Value": "Oat Drink",
+                                "ProductNumber": 2122556
+                            },
+                            {
+                                "Value": "Soya",
+                                "ProductNumber": 64
+                            },
+                            {
+                                "Value": "Whole Milk",
+                                "ProductNumber": 67
+                            },
+                            {
+                                "Value": "Almond",
+                                "ProductNumber": 2121965
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Temp",
+                        "CollectionItems": [
+                            {
+                                "Value": "Extra Hot",
+                                "ProductNumber": 72
+                            },
+                            {
+                                "Value": "Steamed",
+                                "ProductNumber": 71
+                            },
+                            {
+                                "Value": "Warm",
+                                "ProductNumber": 70
+                            }
+                        ]
+                    }
+                ]
+            },
+            "Name": "Milk & Dairy Alternatives",
+            "OptionType": "DairyAlternatives"
+        }
+    ]
+}
