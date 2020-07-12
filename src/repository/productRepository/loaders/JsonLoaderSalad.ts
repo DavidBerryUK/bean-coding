@@ -1,4 +1,4 @@
-import * as saladA from '../data/Lunch/Salad/a.json';
+import saladA from '../data/Lunch/Salad/a.json';
 
 export default class JsonLoaderSalads {
 

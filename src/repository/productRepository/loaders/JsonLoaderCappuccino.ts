@@ -1,6 +1,6 @@
-import * as cappuccinoA from '../data/Drinks/Cappuccino/a.json';
-import * as cappuccinoB from '../data/Drinks/Cappuccino/b.json';
-import * as cappuccinoC from '../data/Drinks/Cappuccino/c.json';
+import cappuccinoA from '../data/Drinks/Cappuccino/a.json';
+import cappuccinoB from '../data/Drinks/Cappuccino/b.json';
+import cappuccinoC from '../data/Drinks/Cappuccino/c.json';
 
 export default class JsonLoaderCappuccino {
 

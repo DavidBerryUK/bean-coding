@@ -3,6 +3,9 @@ import ProductRepository from "../../../repository/productRepository/ProductRepo
 it('get bagles', () => {
 
     const productRepository = new ProductRepository();
-    // const bagles = productRepository.getBagels();
+
+    console.log("about to get bagles");
+
+    const bagles = productRepository.getBagels();
     
 });

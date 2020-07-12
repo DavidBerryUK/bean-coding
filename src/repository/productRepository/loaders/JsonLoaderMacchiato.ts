@@ -1,6 +1,6 @@
-import * as macchiatoA from '../data/Drinks/Macchiato/a.json';
-import * as macchiatoB from '../data/Drinks/Macchiato/b.json';
-import * as macchiatoC from '../data/Drinks/Macchiato/c.json';
+import macchiatoA from '../data/Drinks/Macchiato/a.json';
+import macchiatoB from '../data/Drinks/Macchiato/b.json';
+import macchiatoC from '../data/Drinks/Macchiato/c.json';
 
 export default class JsonLoaderMacchiato {
 

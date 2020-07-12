@@ -1,17 +1,17 @@
-import * as bagelsA from '../data/Bakery/Bagels/a.json'
-import * as bagelsB from '../data/Bakery/Bagels/b.json';
-import * as bagelsC from '../data/Bakery/Bagels/c.json';
-import * as bagelsD from '../data/Bakery/Bagels/d.json';
-import * as bagelsE from '../data/Bakery/Bagels/e.json';
-import * as bagelsF from '../data/Bakery/Bagels/f.json';
-import * as bagelsG from '../data/Bakery/Bagels/g.json';
-import * as bagelsH from '../data/Bakery/Bagels/h.json';
-import * as bagelsI from '../data/Bakery/Bagels/i.json';
+import bagelsA from '../data/Bakery/Bagels/a.json'
+import bagelsB from '../data/Bakery/Bagels/b.json';
+import bagelsC from '../data/Bakery/Bagels/c.json';
+import bagelsD from '../data/Bakery/Bagels/d.json';
+import bagelsE from '../data/Bakery/Bagels/e.json';
+import bagelsF from '../data/Bakery/Bagels/f.json';
+import bagelsG from '../data/Bakery/Bagels/g.json';
+import bagelsH from '../data/Bakery/Bagels/h.json';
+import bagelsI from '../data/Bakery/Bagels/i.json';
 
 export default class JsonLoaderBagels {
 
     public static load() : Array<any> {
-        return [
+        const products = [
             bagelsA,
             bagelsB,
             bagelsC,
@@ -22,5 +22,7 @@ export default class JsonLoaderBagels {
             bagelsH,
             bagelsI
         ];
+
+        return products;
     }
 }

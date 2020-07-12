@@ -5,6 +5,10 @@ export default class ParseRecipe {
     static parseCollection(json: any): Array<RecipeModel> {
         var collection = new Array<RecipeModel>();
 
+        if ( json === undefined || json === null) {
+            return collection;
+        }
+
         json.forEach((itemJson: any) => {
             const size = this.parseItem(itemJson);
             collection.push(size);

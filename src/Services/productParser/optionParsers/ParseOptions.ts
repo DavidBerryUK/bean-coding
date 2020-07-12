@@ -12,7 +12,12 @@ import ParseOptionWarming                       from "./ParseOptionWarming";
 export default class ParseOptions {
 
     static parseCollection(json: any): Array<OptionBaseModel> {
+
         var collection = new Array<OptionBaseModel>();
+
+        if ( json === undefined || json === null) {
+            return collection;
+        }        
 
         json.forEach((itemJson: any) => {
             const size = this.parseItem(itemJson);

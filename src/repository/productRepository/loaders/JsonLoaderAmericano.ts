@@ -1,5 +1,5 @@
-import * as americanoA from '../data/Drinks/Americano/a.json';
-import * as americanoB from '../data/Drinks/Americano/b.json';
+import americanoA from '../data/Drinks/Americano/a.json';
+import americanoB from '../data/Drinks/Americano/b.json';
 
 export default class JsonLoaderAmericano {
 

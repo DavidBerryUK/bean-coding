@@ -1,5 +1,5 @@
-import * as sconesA from '../data/Bakery/Scones/a.json';
-import * as sconesB from '../data/Bakery/Scones/b.json';
+import sconesA from '../data/Bakery/Scones/a.json';
+import sconesB from '../data/Bakery/Scones/b.json';
 
 export default class JsonLoaderScones {
 

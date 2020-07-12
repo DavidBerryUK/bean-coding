@@ -4,9 +4,12 @@ import ProductModel                             from "../../repository/productRe
 
 export default class ProductParser {
 
-    parseCollection(json: any): Array<ProductModel> {
+    parseCollection(jsonArray: any): Array<ProductModel> {
         var collection = new Array<ProductModel>();
-        json.forEach((productJson: any) => {
+
+        console.log(jsonArray);
+
+        jsonArray.forEach((productJson: any) => {
             var product = this.parseItem(productJson);
             collection.push(product);
         });

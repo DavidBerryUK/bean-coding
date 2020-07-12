@@ -1,10 +1,10 @@
-import * as sandwhichesA from '../data/Lunch/Sandwhiches/a.json';
-import * as sandwhichesB from '../data/Lunch/Sandwhiches/b.json';
-import * as sandwhichesC from '../data/Lunch/Sandwhiches/c.json';
-import * as sandwhichesD from '../data/Lunch/Sandwhiches/d.json';
-import * as sandwhichesE from '../data/Lunch/Sandwhiches/e.json';
-import * as sandwhichesF from '../data/Lunch/Sandwhiches/f.json';
-import * as sandwhichesG from '../data/Lunch/Sandwhiches/g.json';
+import sandwhichesA from '../data/Lunch/Sandwhiches/a.json';
+import sandwhichesB from '../data/Lunch/Sandwhiches/b.json';
+import sandwhichesC from '../data/Lunch/Sandwhiches/c.json';
+import sandwhichesD from '../data/Lunch/Sandwhiches/d.json';
+import sandwhichesE from '../data/Lunch/Sandwhiches/e.json';
+import sandwhichesF from '../data/Lunch/Sandwhiches/f.json';
+import sandwhichesG from '../data/Lunch/Sandwhiches/g.json';
 
 export default class JsonLoaderSandwhiches {
 

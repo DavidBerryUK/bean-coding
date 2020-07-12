@@ -1,5 +1,5 @@
-import * as wrapsA from '../data/Lunch/Wraps/a.json';
-import * as wrapsB from '../data/Lunch/Wraps/b.json';
+import wrapsA from '../data/Lunch/Wraps/a.json';
+import wrapsB from '../data/Lunch/Wraps/b.json';
 
 export default class JsonLoaderWraps {
 
