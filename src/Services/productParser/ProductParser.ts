@@ -7,8 +7,6 @@ export default class ProductParser {
     parseCollection(jsonArray: any): Array<ProductModel> {
         var collection = new Array<ProductModel>();
 
-        console.log(jsonArray);
-
         jsonArray.forEach((productJson: any) => {
             var product = this.parseItem(productJson);
             collection.push(product);

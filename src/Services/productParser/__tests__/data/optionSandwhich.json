@@ -1,0 +1,33 @@
+{
+    "Options": [
+        {
+            "OptionsGroups": {
+                "Groups": [
+                    {
+                        "Name": "Sauces",
+                        "GroupItems": [
+                            {
+                                "Name": "HP Sauce",
+                                "Items": [
+                                    {
+                                        "Value": "HP Sauce"
+                                    }
+                                ]
+                            },
+                            {
+                                "Name": "Ketchup",
+                                "Items": [
+                                    {
+                                        "Value": "Ketchup"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "Name": "Sandwich Options",
+            "OptionType": "Sandwich"
+        }
+    ]
+}

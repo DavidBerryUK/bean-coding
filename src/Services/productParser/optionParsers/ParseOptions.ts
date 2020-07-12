@@ -4,6 +4,7 @@ import ParseOptionBlended                       from "./ParseOptionBlended";
 import ParseOptionButterAndSpreads              from "./ParseOptionButterAndSpreads";
 import ParseOptionDairyAlternatives             from "./ParseOptionDairyAlternatives";
 import ParseOptionFlavours                      from "./ParseOptionFlavours";
+import ParseOptionSandwich                      from "./ParseOptionSandwich";
 import ParseOptionShots                         from "./ParseOptionShots";
 import ParseOptionTea                           from "./ParseOptionTea";
 import ParseOptionToppings                      from "./ParseOptionToppings";
@@ -38,6 +39,8 @@ export default class ParseOptions {
                 return ParseOptionDairyAlternatives.parse(json);
             case 'Flavours':
                 return ParseOptionFlavours.parse(json);
+            case "Sandwich":
+                return ParseOptionSandwich.parse(json);
             case 'Shots':
                 return ParseOptionShots.parse(json);                        
             case 'Toppings':
