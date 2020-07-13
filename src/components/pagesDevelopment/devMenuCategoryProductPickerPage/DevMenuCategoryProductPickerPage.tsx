@@ -23,7 +23,7 @@ const DevMenuCategoryProductPickerPage: React.FC = () => {
         <DevelopmentMasterPageWrapper
             title="Show Menu Category Product Picker"
             description='Show Menu Categories in a drill down menu, created to facilitate testing of other components, the component can be placed on a page to allow the developer to select a product for testing.'
-            componentName="<MenuCategoryProductPicker/>">
+            componentName="MenuCategoryProductPicker">
                         
             <MenuCategoryProductPicker
                onCategorySelected = {(category: MenuCategoryModel)=> { handleCategorySelected(category) }}

@@ -1,6 +1,6 @@
 import MenuItemModel                            from "../../components/ui/menuList/MenuItemModel";
 import ProductModel                             from '../../repository/productRepository/models/ProductModel';
-import RadioButtonUncheckedOutlinedIcon         from '@material-ui/icons/RadioButtonUncheckedOutlined';
+import InfoOutlinedIcon                         from '@material-ui/icons/InfoOutlined';
 import React                                    from 'react';
 
 export default class MenuHelperForProducts {
@@ -9,7 +9,7 @@ export default class MenuHelperForProducts {
         const root = new MenuItemModel('root','root','')
 
         products.forEach((product) => {
-            root.children.push( new MenuItemModel(`${product.ProductId}`,product.name,'',React.createElement(RadioButtonUncheckedOutlinedIcon)));
+            root.children.push( new MenuItemModel(`${product.ProductId}`,product.name,'',React.createElement(InfoOutlinedIcon)));
         });
 
         return root;

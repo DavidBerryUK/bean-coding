@@ -11,6 +11,11 @@ export default class CupSizeService {
             CupSizeService.enumCupSizeToIconScale(cupSize));
     }
 
+    static cupSizeModelFactoryByName(size: string) : CupSizeModel {
+        const enumValue = this.stringToEnumCupSize(size);
+        return this.cupSizeModelfactory(enumValue);
+    }
+
     static stringToEnumCupSize(cupSize: string): EnumCupSize {
 
         switch (cupSize.toLowerCase()) {
