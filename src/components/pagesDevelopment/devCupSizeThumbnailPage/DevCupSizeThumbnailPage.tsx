@@ -1,23 +1,23 @@
-import { EnumCupSize }                          from "../../../Services/cupSize/EnumCupSize";
-import CupSizeModel                             from "../../../Services/cupSize/CupSizeModel";
-import CupSizeService                           from "../../../Services/cupSize/CupSizeService";
-import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
+import { EnumProductSize }                          from "../../../Services/productSize/EnumProductEnums";
+import ProductSizeModel                             from "../../../Services/productSize/ProductSizeModel";
+import ProductSizeService                           from "../../../Services/productSize/ProductSizeService";
+import ProductSizeThumbnail                         from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import React                                    from 'react';
 
 const DevCupSizeThumbnailPage: React.FC = () => {
 
 
-    const cups : Array<CupSizeModel> = [
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Solo),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Doppio),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Demo),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Triple),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Quad),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Short),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Tall),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Grande),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Venti)
+    const cups : Array<ProductSizeModel> = [
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Solo),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Doppio),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Demo),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Triple),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Quad),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Short),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Tall),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Grande),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Venti)
     ]
 
 
@@ -28,8 +28,8 @@ const DevCupSizeThumbnailPage: React.FC = () => {
             componentName="CupSizeThumbnail">            
                         
                 {
-                    cups.map((cup: CupSizeModel, index) => (
-                        <CupSizeThumbnail key={index} sizeName={cup.name} volumeDescription={cup.volume}  scalePercentage={cup.iconScale}/>
+                    cups.map((size: ProductSizeModel, index) => (
+                        <ProductSizeThumbnail key={index} size={size}/>
                     ))
                 }               
             

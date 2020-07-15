@@ -18,7 +18,7 @@ export const ClassStyleDefinition = makeStyles(theme => ({
     shot: {
         width:50,
         height:60,
-        background:'url("/glass.svg") no-repeat center ',
+        background:'url("/svg/glass.svg") no-repeat center ',
         backgroundSize: "40px 50px",
     },
     count: {

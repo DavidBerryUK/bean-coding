@@ -1,15 +1,14 @@
 import { EnumLabelSize }                        from '../../ui/elementNameTag/ElementNameTag';
-import { IProperties as ICupSizeProperties }    from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
+import { IProperties as ICupSizeProperties }    from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import { ReactElement }                         from 'react';
 import { useMemo }                              from 'react';
 import { useState }                             from 'react';
-import CupSizeModel                             from '../../../Services/cupSize/CupSizeModel';
-import CupSizeService                           from '../../../Services/cupSize/CupSizeService';
-import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
 import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
 import ItemListSelector                         from '../../ui/itemListSelector/ItemListSelector';
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
-import ProductSizeModel                         from '../../../repository/productRepository/models/SizeModel';
+import ProductSizeModel                         from '../../../Services/productSize/ProductSizeModel';
+import ProductSizeService                       from '../../../Services/productSize/ProductSizeService';
+import ProductSizeThumbnail                     from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import React                                    from 'react';
 
 interface IProperties {
@@ -18,17 +17,18 @@ interface IProperties {
 
 const ProductSizeSelector: React.FC<IProperties> = (props) => {
 
+    //eslint-disable-next-line
     var [selectedSize, setSelectedSize] = useState<ProductSizeModel>();
 
-    const [sizeCollectionState, setSizeCollectionState] = useState<Array<CupSizeModel>>(new Array<CupSizeModel>());
+    const [sizeCollectionState, setSizeCollectionState] = useState<Array<ProductSizeModel>>(new Array<ProductSizeModel>());
 
     useMemo(() => {
 
-        const sizes = new Array<CupSizeModel>();
+        const sizes = new Array<ProductSizeModel>();
 
         props.product.sizes.forEach((size) => {
 
-           const model = CupSizeService.cupSizeModelFactoryByName(size.name);
+           const model = ProductSizeService.productSizeModelFactoryByName(size.name);
            sizes.push(model);
         });
 
@@ -36,6 +36,7 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
 
     },[props.product.sizes]);
 
+    //eslint-disable-next-line
     const handleSizeSelectedClicked = (event: React.MouseEvent<HTMLElement>, size: ProductSizeModel) => {
         setSelectedSize(size)
     }
@@ -45,31 +46,17 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
         console.log(properties);
     }
 
-    const cupThumbnailsElements = sizeCollectionState.map((cup) => 
-        <CupSizeThumbnail sizeName={cup.name} volumeDescription={cup.volume} scalePercentage={cup.iconScale}/>
+    const productThumbnailsElements = sizeCollectionState.map((size) => 
+        <ProductSizeThumbnail size={size}/>
     );
 
     return (
         <>
         <div>
-        <ElementNameTag size={EnumLabelSize.medium} name="ProductSizeSelector"/>
+            <ElementNameTag size={EnumLabelSize.medium} name="ProductSizeSelector"/>
         </div>
-
-
-        <ItemListSelector elements={cupThumbnailsElements} 
-        onItemSelected={(item:ReactElement)=>{ handleItemSelected(item)}}/>            
-
-        {/* <ToggleButtonGroup
-            exclusive
-            value={selectedSize}
-            onChange={handleSizeSelectedClicked}
-            color="primary"
-            size="medium">
-
-            {props.product.sizes.map((item) => (
-                <ToggleButton key={item.name} value={item.name}>{item.name}</ToggleButton>
-            ))}
-        </ToggleButtonGroup> */}
+        <ItemListSelector elements={productThumbnailsElements} 
+            onItemSelected={(item:ReactElement)=>{ handleItemSelected(item)}}/>            
         </>
     )
 }

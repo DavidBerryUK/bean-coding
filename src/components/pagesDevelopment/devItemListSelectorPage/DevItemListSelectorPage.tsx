@@ -1,11 +1,11 @@
-import { EnumCupSize }                          from "../../../Services/cupSize/EnumCupSize";
-import { IProperties as ICupSizeProperties }    from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
+import { EnumProductSize }                      from "../../../Services/productSize/EnumProductEnums";
+import { IProperties as ICupSizeProperties }    from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import { ReactElement }                         from 'react';
 import { useContext }                           from 'react';
 import CommandAddToAudit                        from "../../context/developerContext/actions/CommandAddToAudit";
-import CupSizeModel                             from "../../../Services/cupSize/CupSizeModel";
-import CupSizeService                           from "../../../Services/cupSize/CupSizeService";
-import CupSizeThumbnail                         from "../../ui/CupSizeThumbnail/CupSizeThumbnail";
+import ProductSizeModel                         from "../../../Services/productSize/ProductSizeModel";
+import ProductSizeService                       from "../../../Services/productSize/ProductSizeService";
+import ProductSizeThumbnail                     from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import DeveloperContext                         from "../../context/developerContext/DeveloperContext";
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import ItemListSelector                         from "../../ui/itemListSelector/ItemListSelector";
@@ -15,25 +15,25 @@ const DevItemListSelectorPage: React.FC = () => {
    
     const dispatch = useContext(DeveloperContext).dispatch;
 
-    const cupModels : Array<CupSizeModel> = [
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Solo),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Doppio),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Demo),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Triple),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Quad),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Short),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Tall),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Grande),
-        CupSizeService.cupSizeModelfactory(EnumCupSize.Venti)
+    const cupModels : Array<ProductSizeModel> = [
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Solo),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Doppio),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Demo),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Triple),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Quad),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Short),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Tall),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Grande),
+        ProductSizeService.productSizeModelfactory(EnumProductSize.Venti)
     ]
 
-    const cupThumbnailsElements = cupModels.map((cup) => 
-        <CupSizeThumbnail sizeName={cup.name} volumeDescription={cup.volume} scalePercentage={cup.iconScale}/>
+    const cupThumbnailsElements = cupModels.map((size) => 
+        <ProductSizeThumbnail size={size} />
     );
 
     const handleItemSelected = (item: React.ReactElement) => { 
         const properties = item.props as ICupSizeProperties;
-        dispatch(new CommandAddToAudit(`Selected ${properties.sizeName} ${properties.volumeDescription}`));
+        dispatch(new CommandAddToAudit(`Selected ${properties.size.name} ${properties.size.volume}`));
     }
 
     return (
