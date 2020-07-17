@@ -26,7 +26,6 @@ const DevMenuListPage: React.FC = () => {
 
     const rootMenu = DemoMenuFactory.getMenu();
     
-
     const handleMenuItemSelected = (menuItem: MenuItemModel) => {
         dispatch(new CommandAddToAudit(`Item Selected [id:${menuItem.id}] ${menuItem.name}`));
     }

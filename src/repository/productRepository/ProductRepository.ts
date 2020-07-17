@@ -1,3 +1,4 @@
+import CategoryModel                            from "../categoryRepository/models/CategoryModel";
 import JsonLoaderAmericano                      from "./loaders/JsonLoaderAmericano";
 import JsonLoaderBagels                         from "./loaders/JsonLoaderBagels";
 import JsonLoaderBrewedTea                      from "./loaders/JsonLoaderBrewedTea";
@@ -18,7 +19,6 @@ import JsonLoaderScones                         from "./loaders/JsonLoaderScones
 import JsonLoaderWraps                          from "./loaders/JsonLoaderWraps";
 import ProductModel                             from "./models/ProductModel";
 import ProductParser                            from "../../Services/productParser/ProductParser";
-import CategoryModel                            from "../categoryRepository/models/CategoryModel";
 
 /**
  *  Fake Repository - ideally all this would be on server / database,
@@ -27,31 +27,36 @@ import CategoryModel                            from "../categoryRepository/mode
 export default class ProductRepository {
 
     private productParser = new ProductParser();
+    private static cachedProducts : Array<ProductModel> = new Array<ProductModel>();
 
     public loadAll() {
 
-        var products = new Array<ProductModel>();
+        if ( ProductRepository.cachedProducts.length === 0) {
 
-        products = products.concat(this.getAmericano());
-        products = products.concat(this.getBagels());
-        products = products.concat(this.getBrewedTea());
-        products = products.concat(this.getCakesAndPies());
-        products = products.concat(this.getCappuccino());
-        products = products.concat(this.getCoffeeFrappuccino());
-        products = products.concat(this.getrCookiesAndBrownies());
-        products = products.concat(this.getCreamFrappuccino());
-        products = products.concat(this.getCroissants());
-        products = products.concat(this.getEspresso());
-        products = products.concat(this.getLatte());
-        products = products.concat(this.getMacchiato());
-        products = products.concat(this.getMocha());
-        products = products.concat(this.getMuffinsAndBreads());
-        products = products.concat(this.getSalads());
-        products = products.concat(this.getSandwhiches());
-        products = products.concat(this.getScones());
-        products = products.concat(this.getWraps());
+            var products = new Array<ProductModel>();
+            products = products.concat(this.getAmericano());
+            products = products.concat(this.getBagels());
+            products = products.concat(this.getBrewedTea());
+            products = products.concat(this.getCakesAndPies());
+            products = products.concat(this.getCappuccino());
+            products = products.concat(this.getCoffeeFrappuccino());
+            products = products.concat(this.getrCookiesAndBrownies());
+            products = products.concat(this.getCreamFrappuccino());
+            products = products.concat(this.getCroissants());
+            products = products.concat(this.getEspresso());
+            products = products.concat(this.getLatte());
+            products = products.concat(this.getMacchiato());
+            products = products.concat(this.getMocha());
+            products = products.concat(this.getMuffinsAndBreads());
+            products = products.concat(this.getSalads());
+            products = products.concat(this.getSandwhiches());
+            products = products.concat(this.getScones());
+            products = products.concat(this.getWraps());
 
-        return products;
+            ProductRepository.cachedProducts = products;
+        }        
+
+        return ProductRepository.cachedProducts;
     }
 
     // this would be a direct database calls, again this is 

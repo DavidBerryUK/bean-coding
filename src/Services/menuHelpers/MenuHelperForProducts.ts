@@ -6,10 +6,10 @@ import React                                    from 'react';
 export default class MenuHelperForProducts {
 
     public static toMenuObjects(products: Array<ProductModel>): MenuItemModel {
-        const root = new MenuItemModel('root','root','')
+        const root = new MenuItemModel('root','root','root','')
 
         products.forEach((product) => {
-            root.children.push( new MenuItemModel(`${product.ProductId}`,product.name,'',React.createElement(InfoOutlinedIcon)));
+            root.children.push( new MenuItemModel('product',`${product.ProductId}`,product.name,'',React.createElement(InfoOutlinedIcon)));
         });
 
         return root;
