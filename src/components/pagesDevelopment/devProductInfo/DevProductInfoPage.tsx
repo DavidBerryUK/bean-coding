@@ -10,6 +10,7 @@ import MenuCategoryProductPicker                from "../../widgets/menuCategory
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
 import ProductSizeSelector                      from '../../widgets/productSizeSelector/ProductSizeSelector';
 import React                                    from 'react';
+import ProductOptionsSelector from '../../widgets/productOptionsSelector/ProductOptionsSelector';
 
 const DevProductInfoPage: React.FC = () => {
 
@@ -64,6 +65,9 @@ const DevProductInfoPage: React.FC = () => {
                         <Paper className={classStyles.productInfo}>                            
                             <div className={classStyles.textLabel}>Sizes ({productState?.sizes.length})</div>
                             <ProductSizeSelector product={productState} />
+                        </Paper>
+                        <Paper>
+                            <ProductOptionsSelector product = {productState}/>
                         </Paper>
 
                

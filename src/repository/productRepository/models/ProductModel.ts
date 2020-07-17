@@ -1,4 +1,4 @@
-import OptionModel                              from "./options/OptionBaseModel";
+import OptionBaseModel                          from "./options/OptionBaseModel";
 import ProductSizeModel                         from "./SizeModel";
 
 export default class ProductModel {
@@ -7,6 +7,6 @@ export default class ProductModel {
     description: string = "";
     ImageThumbnailUri: string = "";
     ImageFullSizeUri: string = "";
-    options: Array<OptionModel> = new Array<OptionModel>();
+    options: Array<OptionBaseModel> = new Array<OptionBaseModel>();
     sizes: Array<ProductSizeModel> = new Array<ProductSizeModel>();
 }
