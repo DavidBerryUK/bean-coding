@@ -1,6 +1,6 @@
 import { enumOptionType }                       from "./OptionBaseModel"
 import OptionBaseModel                          from "./OptionBaseModel"
-import DataItemCollectionGroup                  from "../DataModelss/selectList/DataItemCollectionGroup";
+import DataItemCollectionGroup                  from "../DataModels/selectList/DataItemCollectionGroup";
 
 export default class OptionAddInModel extends OptionBaseModel {
 

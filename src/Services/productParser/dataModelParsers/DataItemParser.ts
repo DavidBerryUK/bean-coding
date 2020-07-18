@@ -1,4 +1,4 @@
-import DataItem                                 from "../../../repository/productRepository/models/DataModelss/selectList/DataItem";
+import DataItem                                 from "../../../repository/productRepository/models/DataModels/selectList/DataItem";
 
 export default class DataItemParser {
 
