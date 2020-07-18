@@ -10,9 +10,11 @@ import ProductSizeModel                         from '../../../Services/productS
 import ProductSizeService                       from '../../../Services/productSize/ProductSizeService';
 import ProductSizeThumbnail                     from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import React                                    from 'react';
+import SizeModel                                from '../../../repository/productRepository/models/SizeModel';
 
 interface IProperties {
-    product: ProductModel
+    product: ProductModel,
+    onSizeSelected? : (size: SizeModel) => void
 }
 
 const ProductSizeSelector: React.FC<IProperties> = (props) => {
@@ -42,8 +44,13 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
     }
 
     const handleItemSelected = (item: React.ReactElement) => { 
-        const properties = item.props as ICupSizeProperties;        
-        console.log(properties);
+        const properties = item.props as ICupSizeProperties;                
+        if ( props.onSizeSelected ) {
+            const sizeModel = props.product.sizes.find((item) => item.name === properties.size.name);
+            if ( sizeModel ) {
+                props.onSizeSelected(sizeModel);
+            }
+        }
     }
 
     const productThumbnailsElements = sizeCollectionState.map((size) => 
