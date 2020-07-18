@@ -1,51 +1,62 @@
 import { EnumLabelSize }                        from '../../ui/elementNameTag/ElementNameTag';
+import { IProperties as ICupSizeProperties }    from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
+import { ReactElement }                         from 'react';
+import { useMemo }                              from 'react';
 import { useState }                             from 'react';
 import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
+import ItemListSelector                         from '../../ui/itemListSelector/ItemListSelector';
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
-import SizeModel                                from '../../../repository/productRepository/models/SizeModel';
+import ProductSizeModel                         from '../../../Services/productSize/ProductSizeModel';
+import ProductSizeService                       from '../../../Services/productSize/ProductSizeService';
+import ProductSizeThumbnail                     from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import React                                    from 'react';
-import ToggleButton                             from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup                        from '@material-ui/lab/ToggleButtonGroup';
 
 interface IProperties {
-    product: ProductModel,
-    onSizeSelected?: (size: SizeModel) => void
+    product: ProductModel
 }
 
 const ProductSizeSelector: React.FC<IProperties> = (props) => {
 
-    var [selectedSize, setSelectedSize] = useState<SizeModel>();
+    //eslint-disable-next-line
+    var [selectedSize, setSelectedSize] = useState<ProductSizeModel>();
 
-    const handleSizeSelectedClicked = (event: React.MouseEvent<HTMLElement>, sizeText: string) => {
-        console.log("ProductSizeSelector - item selected");
-        console.log(sizeText);
+    const [sizeCollectionState, setSizeCollectionState] = useState<Array<ProductSizeModel>>(new Array<ProductSizeModel>());
 
-        const sizeModel = props.product.sizes.find((item) => item.name === sizeText);
+    useMemo(() => {
 
-        if ( sizeModel ) {
-            setSelectedSize(sizeModel)
-            if (props.onSizeSelected) {
-                props.onSizeSelected(sizeModel);
-            }
-        }
+        const sizes = new Array<ProductSizeModel>();
+
+        props.product.sizes.forEach((size) => {
+
+           const model = ProductSizeService.productSizeModelFactoryByName(size.name);
+           sizes.push(model);
+        });
+
+        setSizeCollectionState(sizes);
+
+    },[props.product.sizes]);
+
+    //eslint-disable-next-line
+    const handleSizeSelectedClicked = (event: React.MouseEvent<HTMLElement>, size: ProductSizeModel) => {
+        setSelectedSize(size)
     }
+
+    const handleItemSelected = (item: React.ReactElement) => { 
+        const properties = item.props as ICupSizeProperties;        
+        console.log(properties);
+    }
+
+    const productThumbnailsElements = sizeCollectionState.map((size) => 
+        <ProductSizeThumbnail size={size}/>
+    );
 
     return (
         <>
-            <div>
-                <ElementNameTag size={EnumLabelSize.medium} name="ProductSizeSelector" />
-            </div>
-            <ToggleButtonGroup
-                exclusive
-                value={selectedSize}
-                onChange={handleSizeSelectedClicked}
-                color="primary"
-                size="medium">
-
-                {props.product.sizes.map((item) => (
-                    <ToggleButton key={item.name} value={item.name}>{item.name}</ToggleButton>
-                ))}
-            </ToggleButtonGroup>
+        <div>
+            <ElementNameTag size={EnumLabelSize.medium} name="ProductSizeSelector"/>
+        </div>
+        <ItemListSelector elements={productThumbnailsElements} 
+            onItemSelected={(item:ReactElement)=>{ handleItemSelected(item)}}/>            
         </>
     )
 }

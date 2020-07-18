@@ -26,7 +26,6 @@ const DevMenuListPage: React.FC = () => {
 
     const rootMenu = DemoMenuFactory.getMenu();
     
-
     const handleMenuItemSelected = (menuItem: MenuItemModel) => {
         dispatch(new CommandAddToAudit(`Item Selected [id:${menuItem.id}] ${menuItem.name}`));
     }
@@ -43,7 +42,7 @@ const DevMenuListPage: React.FC = () => {
         <DevelopmentMasterPageWrapper
             title="Menu List"
             description= 'UI Component present a consistent menu list, an array of MenuItemModel objects are provided as a property, the menu will either auto navigate if a route is provided, or raise a onMenuItemSelected event.'
-            componentName="<MenuList/>"
+            componentName="MenuList"
             footerElement={
                 <Paper>
                     <Box m={2} p={2}>

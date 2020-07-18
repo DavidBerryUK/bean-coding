@@ -73,7 +73,8 @@ const DevProductInfoPage: React.FC = () => {
                         </Paper>
                         <Paper className={classStyles.productInfo}>                            
                             <div className={classStyles.textLabel}>Sizes ({productState?.sizes.length})</div>
-                            <ProductSizeSelector product={productState} onSizeSelected={(size: SizeModel) => handleProductSizeSelected(size)} />
+                            {/* <ProductSizeSelector product={productState} onSizeSelected={(size: SizeModel) => handleProductSizeSelected(size)} /> */}
+                        <ProductSizeSelector product={productState} />
                         </Paper>
                         <Paper className={classStyles.productInfo}>                            
                             <div className={classStyles.textLabel}>Product Recipe</div>

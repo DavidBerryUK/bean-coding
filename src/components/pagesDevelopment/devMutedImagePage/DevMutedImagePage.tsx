@@ -34,7 +34,7 @@ const DevMutedImagePage: React.FC = () => {
         <DevelopmentMasterPageWrapper 
             title="Muted Glass"
             description="Experiment with muted overlay, not supported in Firefox"
-            componentName="<MutedImagePanel/>"
+            componentName="MutedImagePanel"
             isExperimental
             headerElement={
                 <SampleImageList onImageSelected={handleImageSelected} />

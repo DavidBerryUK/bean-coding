@@ -1,4 +1,5 @@
-export enum EnumCupSize {
+
+export enum EnumProductSize {
     Demo = "Demo",
     Doppio = "Doppio",
     Grande = "Grande",
@@ -8,5 +9,11 @@ export enum EnumCupSize {
     Tall = "Tall",
     Triple = "Triple",
     Venti = "Venti",
+    OnePiece = "1 Piece",
     Unknown = "Unknown"
+}
+
+export enum EnumProductType {
+    cup,
+    item
 }

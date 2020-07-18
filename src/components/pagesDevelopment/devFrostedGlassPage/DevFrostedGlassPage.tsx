@@ -32,7 +32,7 @@ const DevFrostedGlassPage: React.FC = () => {
         <DevelopmentMasterPageWrapper 
             title="Frosted Glass"
             description="Experiment with frosted glass overlay, not supported in Firefox"
-            componentName="<FrostedGlassPanel/>"
+            componentName="FrostedGlassPanel"
             isExperimental
             headerElement= {<SampleImageList onImageSelected={handleImageSelected} />}
             >                        

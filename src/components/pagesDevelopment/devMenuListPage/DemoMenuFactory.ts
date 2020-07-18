@@ -17,16 +17,16 @@ export default class DemoMenuFactory {
     static getMenu(): MenuItemRootModel {
 
         const rootMenu = new MenuItemRootModel("Supermarket");
-        rootMenu.add(new MenuItemModel('1', "Fresh Food", "", React.createElement(FastfoodIcon)));
-        rootMenu.add(new MenuItemModel('2', "Chilled Food", "", React.createElement(KitchenOutlinedIcon)));
-        rootMenu.add(new MenuItemModel('3', "Frozen Food", "", React.createElement(AcUnitIcon)));
-        rootMenu.add(new MenuItemModel('4', "Vegan", "", React.createElement(SpaOutlinedIcon)));
-        rootMenu.add(new MenuItemModel('5', "Drinks", "", React.createElement(EmojiFoodBeverageOutlinedIcon)));
-        rootMenu.add(new MenuItemModel('6', "Health & Beauty", "", React.createElement(BathtubOutlinedIcon)));
-        rootMenu.add(new MenuItemModel('7', "Laundry & Household", "", React.createElement(HomeOutlinedIcon)));
-        rootMenu.add(new MenuItemModel('8', "Pets", "", React.createElement(PetsOutlinedIcon)));
-        rootMenu.add(new MenuItemModel('9', "Entertainment", "", React.createElement(SportsEsportsOutlinedIcon)));
-        rootMenu.add(new MenuItemModel('10', "Baby", "", React.createElement(ChildCareOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','1', "Fresh Food", "", React.createElement(FastfoodIcon)));
+        rootMenu.add(new MenuItemModel('category','2', "Chilled Food", "", React.createElement(KitchenOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','3', "Frozen Food", "", React.createElement(AcUnitIcon)));
+        rootMenu.add(new MenuItemModel('category','4', "Vegan", "", React.createElement(SpaOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','5', "Drinks", "", React.createElement(EmojiFoodBeverageOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','6', "Health & Beauty", "", React.createElement(BathtubOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','7', "Laundry & Household", "", React.createElement(HomeOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','8', "Pets", "", React.createElement(PetsOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','9', "Entertainment", "", React.createElement(SportsEsportsOutlinedIcon)));
+        rootMenu.add(new MenuItemModel('category','10', "Baby", "", React.createElement(ChildCareOutlinedIcon)));
 
         return rootMenu;
     }

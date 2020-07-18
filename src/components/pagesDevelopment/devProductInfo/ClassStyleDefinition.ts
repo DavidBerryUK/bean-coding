@@ -3,8 +3,7 @@ import { makeStyles }                           from '@material-ui/core/styles';
 
 export const ClassStyleDefinition = makeStyles(theme => ({
 
-    productSelector: {
-      minWidth:640
+    productSelector: {      
     },
     productInfo: {                      
         margin:8, 
