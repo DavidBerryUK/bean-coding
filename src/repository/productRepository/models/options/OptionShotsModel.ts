@@ -1,6 +1,6 @@
 import { enumOptionType }                       from "./OptionBaseModel"
-import DataItemCollectionGroup                  from "../DataModels/selectList/DataItemCollectionGroup";
-import DataQuantityItem                         from "../DataModels/itemAndQuantity/DataQuantityItem";
+import DataItemCollectionGroup                  from "../DataModelss/selectList/DataItemCollectionGroup";
+import DataQuantityItem                         from "../DataModelss/itemAndQuantity/DataQuantityItem";
 import OptionBaseModel                          from "./OptionBaseModel"
 
 export default class OptionShotsModel extends OptionBaseModel {

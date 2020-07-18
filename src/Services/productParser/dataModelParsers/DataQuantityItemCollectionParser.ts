@@ -1,4 +1,4 @@
-import DataQuantityItemCollection               from "../../../repository/productRepository/models/DataModels/itemAndQuantity/DataQuantityItemCollection";
+import DataQuantityItemCollection               from "../../../repository/productRepository/models/DataModelss/itemAndQuantity/DataQuantityItemCollection";
 import DataQuantityItemParser                   from "./DataQuantityItemParser";
 
 export default class DataQuantityItemCollectionParser {

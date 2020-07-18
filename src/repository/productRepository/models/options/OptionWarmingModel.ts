@@ -1,5 +1,5 @@
 import { enumOptionType }                       from "./OptionBaseModel"
-import DataItemCollection                       from "../DataModels/selectList/DataItemCollection";
+import DataItemCollection                       from "../DataModelss/selectList/DataItemCollection";
 import OptionBaseModel                          from "./OptionBaseModel";
 
 export default class OptionWarmingModel extends OptionBaseModel {

@@ -1,0 +1,58 @@
+{
+    "Nutrition": {
+        "ServiceSize": "354 ml",
+        "Calories": " 252 kcal",
+        "CaloriesFromFat": "0",
+        "Facts": [
+            {
+                "Name": "Fat",
+                "Value": "12.4 g",
+                "DailyValue": "16 %",
+                "SubFacts": [
+                    {
+                        "Name": "of which saturates",
+                        "Value": "7.3 g",
+                        "DailyPercentage": "36.5 %"
+                    },
+                    {
+                        "Name": "Trans Fat",
+                        "Value": "0 g"
+                    }
+                ]
+            },
+            {
+                "Name": "Cholesterol",
+                "Value": "0 mg"
+            },
+            {
+                "Name": "Salt",
+                "Value": "0 g"
+            },
+            {
+                "Name": "Carbohydrate",
+                "Value": "31.5 g",
+                "DailyValue": "11 %",
+                "SubFacts": [
+                    {
+                        "Name": "Fibre",
+                        "Value": "0 g",
+                        "DailyPercentage": "0 %"
+                    },
+                    {
+                        "Name": "of which sugars",
+                        "Value": "31.3 g"
+                    }
+                ]
+            },
+            {
+                "Name": "Protein",
+                "Value": "3.3 g",
+                "DailyValue": "7 %"
+            },
+            {
+                "Name": "Caffeine",
+                "Value": "0 mg"
+            }
+        ]
+    },
+}

@@ -1,5 +1,5 @@
 import { enumOptionType }                       from "./OptionBaseModel"
-import DataQuantityItemCollectionGroup          from "../DataModels/itemAndQuantity/DataQuantityItemCollectionGroup"
+import DataQuantityItemCollectionGroup          from "../DataModelss/itemAndQuantity/DataQuantityItemCollectionGroup"
 import OptionBaseModel                          from "./OptionBaseModel"
 
 export default class OptionBlendedModel extends OptionBaseModel  {

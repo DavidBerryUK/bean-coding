@@ -1,4 +1,4 @@
-import DataItemCollectionQuantityGroup          from "../../../repository/productRepository/models/DataModels/selectList/DataItemCollectionQuantityGroup";
+import DataItemCollectionQuantityGroup          from "../../../repository/productRepository/models/DataModelss/selectList/DataItemCollectionQuantityGroup";
 import DataItemCollectionQuantityParser         from "./DataItemCollectionQuantityParser";
 
 export default class DataItemCollectionQuantityGroupParser {

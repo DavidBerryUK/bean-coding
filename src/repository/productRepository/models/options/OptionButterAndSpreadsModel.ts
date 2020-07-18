@@ -1,5 +1,5 @@
 import { enumOptionType }                       from "./OptionBaseModel"
-import DataQuantityItemCollection               from "../DataModels/itemAndQuantity/DataQuantityItemCollection"
+import DataQuantityItemCollection               from "../DataModelss/itemAndQuantity/DataQuantityItemCollection"
 import OptionBaseModel                          from "./OptionBaseModel"
 
 export default class OptionButterAndSpreadsModel extends OptionBaseModel {
