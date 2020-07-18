@@ -8,13 +8,17 @@ import ElementNameTag                           from '../../ui/elementNameTag/El
 import MenuCategoryModel                        from '../../../repository/categoryRepository/models/MenuCategoryModel';
 import MenuCategoryProductPicker                from "../../widgets/menuCategoryProductPicker/MenuCategoryProductPicker";
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
+import ProductNutrition                         from '../../widgets/productNutrition/ProductNutrition';
 import ProductSizeSelector                      from '../../widgets/productSizeSelector/ProductSizeSelector';
 import React                                    from 'react';
+import SizeModel                                from '../../../repository/productRepository/models/SizeModel';
+import ProductRecipe from '../../widgets/productRecipe/ProductRecipe';
 
 const DevProductInfoPage: React.FC = () => {
 
     const classStyles = ClassStyleDefinition();
     const [productState, setProductState] = useState<ProductModel>();
+    const [sizeState, setSizeState] = useState<SizeModel>();
 
     const handleCategorySelected = (category: MenuCategoryModel) => {
 
@@ -22,6 +26,12 @@ const DevProductInfoPage: React.FC = () => {
 
     const handleProductSelected = (product: ProductModel) => {
         setProductState(product)
+    }
+
+    const handleProductSizeSelected = (size: SizeModel) => {
+        console.log("Size Selected");
+        console.log(size);
+        setSizeState(size);
     }
 
     return (
@@ -63,7 +73,15 @@ const DevProductInfoPage: React.FC = () => {
                         </Paper>
                         <Paper className={classStyles.productInfo}>                            
                             <div className={classStyles.textLabel}>Sizes ({productState?.sizes.length})</div>
-                            <ProductSizeSelector product={productState} />
+                            <ProductSizeSelector product={productState} onSizeSelected={(size: SizeModel) => handleProductSizeSelected(size)} />
+                        </Paper>
+                        <Paper className={classStyles.productInfo}>                            
+                            <div className={classStyles.textLabel}>Product Recipe</div>
+                            <ProductRecipe size={sizeState} />
+                        </Paper>
+                        <Paper className={classStyles.productInfo}>                            
+                            <div className={classStyles.textLabel}>Product Nutrition</div>
+                            <ProductNutrition size={sizeState} />
                         </Paper>
 
                
