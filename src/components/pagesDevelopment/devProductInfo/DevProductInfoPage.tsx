@@ -28,9 +28,7 @@ const DevProductInfoPage: React.FC = () => {
         setProductState(product)
     }
 
-    const handleProductSizeSelected = (size: SizeModel) => {
-        console.log("Size Selected");
-        console.log(size);
+    const handleProductSizeSelected = (size: SizeModel) => {        
         setSizeState(size);
     }
 

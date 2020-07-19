@@ -35,10 +35,7 @@ export default class MenuHelperForCategories {
         });
 
         category.categories.forEach((childCategory) => {
-
-            console.log(`** adding category ${childCategory.name}`);
             menuCategory.children.push(this.convert(childCategory));
-
         })
         return menuCategory;
     }

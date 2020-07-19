@@ -1,5 +1,6 @@
 import SizeModel from "../../repository/productRepository/models/SizeModel";
 import ParseRecipe from "./ParseRecipe";
+import ParseNutrition from "./ParseNutrition";
 
 export default class ParseSize {
 
@@ -18,6 +19,7 @@ export default class ParseSize {
         item.name = json.Name;
         item.price = Number(json.Price);
         item.recipeList = ParseRecipe.parseCollection(json.Recipe);
+        item.nutrition = ParseNutrition.parse(json.Nutrition);
         return item;
     }
 }

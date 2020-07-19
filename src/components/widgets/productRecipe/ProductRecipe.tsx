@@ -6,9 +6,6 @@ interface IProperties {
 }
 
 const ProductRecipe: React.FC<IProperties> = (props) => {
-
-    console.log(props.size);
-
     if ( props.size === undefined) return (<></>);
 
     return (

@@ -1,7 +1,7 @@
 {
     "Nutrition": {
         "ServiceSize": "354 ml",
-        "Calories": " 252 kcal",
+        "Calories": "252 kcal",
         "CaloriesFromFat": "0",
         "Facts": [
             {
@@ -54,5 +54,5 @@
                 "Value": "0 mg"
             }
         ]
-    },
+    }
 }
