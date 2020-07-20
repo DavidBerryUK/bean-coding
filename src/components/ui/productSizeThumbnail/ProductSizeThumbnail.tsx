@@ -1,8 +1,8 @@
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
-import { EnumProductType }                      from "../../../Services/productSize/EnumProductEnums";
+import { EnumProductType }                      from "../../../Services/productParser/productSize/EnumProductEnums";
 import { Typography }                           from '@material-ui/core';
 import LocalCafeOutlinedIcon                    from '@material-ui/icons/LocalCafeOutlined';
-import ProductSizeModel                         from "../../../Services/productSize/ProductSizeModel";
+import ProductSizeModel                         from "../../../Services/productParser/productSize/ProductSizeModel";
 import React                                    from 'react';
 
 export interface IProperties {

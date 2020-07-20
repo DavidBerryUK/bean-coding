@@ -1,1 +1,16 @@
-{"ProductId":2123204,"Name":"Funfetti Cupcake","Description":"Vanilla sponge with raspberry jam and a whipped white chocolate and mallow buttercream, decorated with colourful sprinkles.","ImageThumbnailUri":"","ImageFullSizeUri":"6ab43c2371c24068a9881171e14c3016.jpg","Sizes":[{"Name":"1 Piece","Nutrition":{"Facts":[]},"Price":2.45}]}
+{
+    "ProductId": 2123204,
+    "Name": "Funfetti Cupcake",
+    "Description": "Vanilla sponge with raspberry jam and a whipped white chocolate and mallow buttercream, decorated with colourful sprinkles.",
+    "ImageThumbnailUri": "",
+    "ImageFullSizeUri": "6ab43c2371c24068a9881171e14c3016.jpg",
+    "Sizes": [
+        {
+            "Name": "1 Piece",
+            "Nutrition": {
+                "Facts": []
+            },
+            "Price": 2.45
+        }
+    ]
+}

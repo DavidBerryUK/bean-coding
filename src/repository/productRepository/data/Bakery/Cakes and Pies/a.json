@@ -1,1 +1,224 @@
-{"ProductId":1021,"Name":"Classic Coffee Cake","Description":"Our ever-popular coffee cake—with its swirled cinnamon-sugar blend and finished with a crunchy streusel topping—pairs well with your favorite beverage and a few quiet moments. We're big fans!","ImageThumbnailUri":"7135f5c7b49349d4b009ddf5aea777c6.jpg","ImageFullSizeUri":"619acfafacf24ace899c1293b3d6d75c.jpg","Options":[{"OptionsCollection":{"IsMandatory":true,"Name":"Warming","CollectionItems":[{"Value":"Not Warmed","ProductNumber":1193},{"Value":"Warmed","ProductNumber":1179}]},"Name":"Warming","OptionType":"Warming"}],"Sizes":[{"Name":"1 Piece","Ingredients":[{"Name":"Enriched Wheat Flour","SubIngredients":[{"Name":"Wheat Flour"},{"Name":"Niacin"},{"Name":"Reduced Iron"},{"Name":"Thiamine Mononitrate"},{"Name":"Riboflavin"},{"Name":"Folic Acid"}]},{"Name":"Sugar"},{"Name":"Light Brown Sugar"},{"Name":"Unsalted Butter","SubIngredients":[{"Name":"Cream"},{"Name":"Natural Flavor","SubIngredients":[]}]},{"Name":"Sour Cream","SubIngredients":[{"Name":"Milk"},{"Name":"Cream"},{"Name":"Non Fat Dry Milk"},{"Name":"Modified Food Starch"},{"Name":"Gum Acacia"},{"Name":"Guar Gum"},{"Name":"Locust Bean Gum"},{"Name":"Carrageenan"},{"Name":"Whey"},{"Name":"Lactic Acid"}]},{"Name":"Whole Eggs"},{"Name":"Whole Milk"},{"Name":"Soybean Oil"},{"Name":"Cinnamon"},{"Name":"Baking Powder","SubIngredients":[{"Name":"Sodium Acid Pyrophosphate"},{"Name":"Sodium Bicarbonate"},{"Name":"Corn Starch"},{"Name":"Monocalcium Phosphate"}]},{"Name":"Natural Flavor"},{"Name":"Pan Spray","SubIngredients":[{"Name":"Soybean Oil"},{"Name":"Mineral Oil"},{"Name":"Soy Lecithin"},{"Name":"Dimethyl Polysiloxane"}]},{"Name":"Sea Salt"}],"Recipe":[{"Name":"Warmed","Quantity":1,"ProductNumber":1179}],"Nutrition":{"ServiceSize":"109 g","Calories":"330","CaloriesFromFat":"140","Facts":[{"Name":"Total Fat","Value":"15 g","DailyValue":"19 %","SubFacts":[{"Name":"Saturated Fat","Value":"8 g","DailyPercentage":"40 %"},{"Name":"Trans Fat","Value":"0.5 g"}]},{"Name":"Cholesterol","Value":"70 mg","DailyValue":"23 %"},{"Name":"Sodium","Value":"270 mg","DailyValue":"12 %"},{"Name":"Total Carbohydrates","Value":"43 g","DailyValue":"16 %","SubFacts":[{"Name":"Dietary Fiber","Value":"1 g","DailyPercentage":"3 %"},{"Name":"Sugars","Value":"21 g"}]},{"Name":"Protein","Value":"4 g","DailyValue":"8 %"}]},"Price":2.25}]}
+{
+    "ProductId": 1021,
+    "Name": "Classic Coffee Cake",
+    "Description": "Our ever-popular coffee cake—with its swirled cinnamon-sugar blend and finished with a crunchy streusel topping—pairs well with your favorite beverage and a few quiet moments. We're big fans!",
+    "ImageThumbnailUri": "7135f5c7b49349d4b009ddf5aea777c6.jpg",
+    "ImageFullSizeUri": "619acfafacf24ace899c1293b3d6d75c.jpg",
+    "Options": [
+        {
+            "OptionsCollection": {
+                "IsMandatory": true,
+                "Name": "Warming",
+                "CollectionItems": [
+                    {
+                        "Value": "Not Warmed",
+                        "ProductNumber": 1193
+                    },
+                    {
+                        "Value": "Warmed",
+                        "ProductNumber": 1179
+                    }
+                ]
+            },
+            "Name": "Warming",
+            "OptionType": "Warming"
+        }
+    ],
+    "Sizes": [
+        {
+            "Name": "1 Piece",
+            "Ingredients": [
+                {
+                    "Name": "Enriched Wheat Flour",
+                    "SubIngredients": [
+                        {
+                            "Name": "Wheat Flour"
+                        },
+                        {
+                            "Name": "Niacin"
+                        },
+                        {
+                            "Name": "Reduced Iron"
+                        },
+                        {
+                            "Name": "Thiamine Mononitrate"
+                        },
+                        {
+                            "Name": "Riboflavin"
+                        },
+                        {
+                            "Name": "Folic Acid"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Sugar"
+                },
+                {
+                    "Name": "Light Brown Sugar"
+                },
+                {
+                    "Name": "Unsalted Butter",
+                    "SubIngredients": [
+                        {
+                            "Name": "Cream"
+                        },
+                        {
+                            "Name": "Natural Flavor",
+                            "SubIngredients": []
+                        }
+                    ]
+                },
+                {
+                    "Name": "Sour Cream",
+                    "SubIngredients": [
+                        {
+                            "Name": "Milk"
+                        },
+                        {
+                            "Name": "Cream"
+                        },
+                        {
+                            "Name": "Non Fat Dry Milk"
+                        },
+                        {
+                            "Name": "Modified Food Starch"
+                        },
+                        {
+                            "Name": "Gum Acacia"
+                        },
+                        {
+                            "Name": "Guar Gum"
+                        },
+                        {
+                            "Name": "Locust Bean Gum"
+                        },
+                        {
+                            "Name": "Carrageenan"
+                        },
+                        {
+                            "Name": "Whey"
+                        },
+                        {
+                            "Name": "Lactic Acid"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Whole Eggs"
+                },
+                {
+                    "Name": "Whole Milk"
+                },
+                {
+                    "Name": "Soybean Oil"
+                },
+                {
+                    "Name": "Cinnamon"
+                },
+                {
+                    "Name": "Baking Powder",
+                    "SubIngredients": [
+                        {
+                            "Name": "Sodium Acid Pyrophosphate"
+                        },
+                        {
+                            "Name": "Sodium Bicarbonate"
+                        },
+                        {
+                            "Name": "Corn Starch"
+                        },
+                        {
+                            "Name": "Monocalcium Phosphate"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Natural Flavor"
+                },
+                {
+                    "Name": "Pan Spray",
+                    "SubIngredients": [
+                        {
+                            "Name": "Soybean Oil"
+                        },
+                        {
+                            "Name": "Mineral Oil"
+                        },
+                        {
+                            "Name": "Soy Lecithin"
+                        },
+                        {
+                            "Name": "Dimethyl Polysiloxane"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Sea Salt"
+                }
+            ],
+            "Recipe": [
+                {
+                    "Name": "Warmed",
+                    "Quantity": 1,
+                    "ProductNumber": 1179
+                }
+            ],
+            "Nutrition": {
+                "ServiceSize": "109 g",
+                "Calories": "330",
+                "CaloriesFromFat": "140",
+                "Facts": [
+                    {
+                        "Name": "Total Fat",
+                        "Value": "15 g",
+                        "DailyValue": "19 %",
+                        "SubFacts": [
+                            {
+                                "Name": "Saturated Fat",
+                                "Value": "8 g",
+                                "DailyPercentage": "40 %"
+                            },
+                            {
+                                "Name": "Trans Fat",
+                                "Value": "0.5 g"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Cholesterol",
+                        "Value": "70 mg",
+                        "DailyValue": "23 %"
+                    },
+                    {
+                        "Name": "Sodium",
+                        "Value": "270 mg",
+                        "DailyValue": "12 %"
+                    },
+                    {
+                        "Name": "Total Carbohydrates",
+                        "Value": "43 g",
+                        "DailyValue": "16 %",
+                        "SubFacts": [
+                            {
+                                "Name": "Dietary Fiber",
+                                "Value": "1 g",
+                                "DailyPercentage": "3 %"
+                            },
+                            {
+                                "Name": "Sugars",
+                                "Value": "21 g"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Protein",
+                        "Value": "4 g",
+                        "DailyValue": "8 %"
+                    }
+                ]
+            },
+            "Price": 2.25
+        }
+    ]
+}

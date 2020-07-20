@@ -1,10 +1,10 @@
-import { EnumProductSize }                      from "../../../Services/productSize/EnumProductEnums";
+import { EnumProductSize }                      from "../../../Services/productParser/productSize/EnumProductEnums";
 import { IProperties as ICupSizeProperties }    from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import { ReactElement }                         from 'react';
 import { useContext }                           from 'react';
 import CommandAddToAudit                        from "../../context/developerContext/actions/CommandAddToAudit";
-import ProductSizeModel                         from "../../../Services/productSize/ProductSizeModel";
-import ProductSizeService                       from "../../../Services/productSize/ProductSizeService";
+import ProductSizeModel                         from "../../../Services/productParser/productSize/ProductSizeModel";
+import ProductSizeService                       from "../../../Services/productParser/productSize/ProductSizeService";
 import ProductSizeThumbnail                     from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import DeveloperContext                         from "../../context/developerContext/DeveloperContext";
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';

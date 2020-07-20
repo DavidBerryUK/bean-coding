@@ -1,1 +1,66 @@
-{"ProductId":2122987,"Name":"Tomato & Mozzarella panini","Description":"Mozzarella and tomatoes with basil and red pepper pesto on a rustic ciabatta.","ImageThumbnailUri":"bc24c7221baf4cbfb89422117fd82e09.jpg","ImageFullSizeUri":"4582c7edc8b140de9d8391f4693b74ef.jpg","Sizes":[{"Name":"1 Piece","Nutrition":{"ServiceSize":"192 g","Calories":" 409 kcal","CaloriesFromFat":" 0 kcal","Facts":[{"Name":"Fat","Value":"16 g","DailyValue":"21 %","SubFacts":[{"Name":"of which saturates","Value":"6.5 g","DailyPercentage":"32.5 %"},{"Name":"Trans Fat","Value":"0 g"}]},{"Name":"Cholesterol","Value":"0 mg"},{"Name":"Salt","Value":"2.1 g","DailyValue":"0 %"},{"Name":"Carbohydrate","Value":"48 g","DailyValue":"17 %","SubFacts":[{"Name":"Fibre","Value":"2.7 g","DailyPercentage":"9 %"},{"Name":"of which sugars","Value":"2.9 g"}]},{"Name":"Protein","Value":"18 g","DailyValue":"36 %"}]},"Price":3.99}]}
+{
+    "ProductId": 2122987,
+    "Name": "Tomato & Mozzarella panini",
+    "Description": "Mozzarella and tomatoes with basil and red pepper pesto on a rustic ciabatta.",
+    "ImageThumbnailUri": "bc24c7221baf4cbfb89422117fd82e09.jpg",
+    "ImageFullSizeUri": "4582c7edc8b140de9d8391f4693b74ef.jpg",
+    "Sizes": [
+        {
+            "Name": "1 Piece",
+            "Nutrition": {
+                "ServiceSize": "192 g",
+                "Calories": " 409 kcal",
+                "CaloriesFromFat": " 0 kcal",
+                "Facts": [
+                    {
+                        "Name": "Fat",
+                        "Value": "16 g",
+                        "DailyValue": "21 %",
+                        "SubFacts": [
+                            {
+                                "Name": "of which saturates",
+                                "Value": "6.5 g",
+                                "DailyPercentage": "32.5 %"
+                            },
+                            {
+                                "Name": "Trans Fat",
+                                "Value": "0 g"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Cholesterol",
+                        "Value": "0 mg"
+                    },
+                    {
+                        "Name": "Salt",
+                        "Value": "2.1 g",
+                        "DailyValue": "0 %"
+                    },
+                    {
+                        "Name": "Carbohydrate",
+                        "Value": "48 g",
+                        "DailyValue": "17 %",
+                        "SubFacts": [
+                            {
+                                "Name": "Fibre",
+                                "Value": "2.7 g",
+                                "DailyPercentage": "9 %"
+                            },
+                            {
+                                "Name": "of which sugars",
+                                "Value": "2.9 g"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Protein",
+                        "Value": "18 g",
+                        "DailyValue": "36 %"
+                    }
+                ]
+            },
+            "Price": 3.99
+        }
+    ]
+}

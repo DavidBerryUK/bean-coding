@@ -1,6 +1,6 @@
-import { EnumProductSize }                          from "../../../Services/productSize/EnumProductEnums";
-import ProductSizeModel                             from "../../../Services/productSize/ProductSizeModel";
-import ProductSizeService                           from "../../../Services/productSize/ProductSizeService";
+import { EnumProductSize }                          from "../../../Services/productParser/productSize/EnumProductEnums";
+import ProductSizeModel                             from "../../../Services/productParser/productSize/ProductSizeModel";
+import ProductSizeService                           from "../../../Services/productParser/productSize/ProductSizeService";
 import ProductSizeThumbnail                         from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
 import DevelopmentMasterPageWrapper             from '../devMasterPageWrapper/DevelopmentMasterPageWrapper';
 import React                                    from 'react';

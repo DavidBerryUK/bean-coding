@@ -9,8 +9,7 @@ const ProductNutrition: React.FC<IProperties> = (props) => {
 
 
     return (
-        <>
-            
+        <>            
          {props.size?.nutrition.serviceSize}
          {props.size?.nutrition.calories}
          {props.size?.nutrition.caloriesFromFat}

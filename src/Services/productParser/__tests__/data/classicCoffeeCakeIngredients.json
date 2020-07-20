@@ -1,0 +1,132 @@
+{
+    "Ingredients": [
+        {
+            "Name": "Enriched Wheat Flour",
+            "SubIngredients": [
+                {
+                    "Name": "Wheat Flour"
+                },
+                {
+                    "Name": "Niacin"
+                },
+                {
+                    "Name": "Reduced Iron"
+                },
+                {
+                    "Name": "Thiamine Mononitrate"
+                },
+                {
+                    "Name": "Riboflavin"
+                },
+                {
+                    "Name": "Folic Acid"
+                }
+            ]
+        },
+        {
+            "Name": "Sugar"
+        },
+        {
+            "Name": "Light Brown Sugar"
+        },
+        {
+            "Name": "Unsalted Butter",
+            "SubIngredients": [
+                {
+                    "Name": "Cream"
+                },
+                {
+                    "Name": "Natural Flavor",
+                    "SubIngredients": []
+                }
+            ]
+        },
+        {
+            "Name": "Sour Cream",
+            "SubIngredients": [
+                {
+                    "Name": "Milk"
+                },
+                {
+                    "Name": "Cream"
+                },
+                {
+                    "Name": "Non Fat Dry Milk"
+                },
+                {
+                    "Name": "Modified Food Starch"
+                },
+                {
+                    "Name": "Gum Acacia"
+                },
+                {
+                    "Name": "Guar Gum"
+                },
+                {
+                    "Name": "Locust Bean Gum"
+                },
+                {
+                    "Name": "Carrageenan"
+                },
+                {
+                    "Name": "Whey"
+                },
+                {
+                    "Name": "Lactic Acid"
+                }
+            ]
+        },
+        {
+            "Name": "Whole Eggs"
+        },
+        {
+            "Name": "Whole Milk"
+        },
+        {
+            "Name": "Soybean Oil"
+        },
+        {
+            "Name": "Cinnamon"
+        },
+        {
+            "Name": "Baking Powder",
+            "SubIngredients": [
+                {
+                    "Name": "Sodium Acid Pyrophosphate"
+                },
+                {
+                    "Name": "Sodium Bicarbonate"
+                },
+                {
+                    "Name": "Corn Starch"
+                },
+                {
+                    "Name": "Monocalcium Phosphate"
+                }
+            ]
+        },
+        {
+            "Name": "Natural Flavor"
+        },
+        {
+            "Name": "Pan Spray",
+            "SubIngredients": [
+                {
+                    "Name": "Soybean Oil"
+                },
+                {
+                    "Name": "Mineral Oil"
+                },
+                {
+                    "Name": "Soy Lecithin"
+                },
+                {
+                    "Name": "Dimethyl Polysiloxane"
+                }
+            ]
+        },
+        {
+            "Name": "Sea Salt"
+        }
+    ]
+}
