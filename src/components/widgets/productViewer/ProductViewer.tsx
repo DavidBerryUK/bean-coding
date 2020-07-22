@@ -27,7 +27,8 @@ const ProductViewer: React.FC<IProperties> = (props) => {
                     <Typography variant="h5">Size</Typography>
                 </Grid>
                 <Grid item xs={8}>
-                    <ProductSizeSelector product={props.product} />
+                    <ProductSizeSelector 
+                    product={props.product} />
                 </Grid>           
             </Grid>
             {/* <img

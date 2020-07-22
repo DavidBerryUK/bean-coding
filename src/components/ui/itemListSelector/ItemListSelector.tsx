@@ -5,7 +5,8 @@ import { useState }                             from 'react';
 import React                                    from 'react';
 
 interface IProperties {
-    elements: Array<React.ReactElement>
+    elements: Array<React.ReactElement>,
+    selectedItem: React.ReactElement | null,
     onItemSelected?: (item: React.ReactElement) => void
 }
 

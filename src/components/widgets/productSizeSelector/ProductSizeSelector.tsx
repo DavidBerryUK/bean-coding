@@ -14,56 +14,66 @@ import SizeModel                                from '../../../repository/produc
 
 interface IProperties {
     product: ProductModel,
-    onSizeSelected? : (size: SizeModel) => void
+    selectedSize?: SizeModel,
+    onSizeSelected?: (size: SizeModel) => void
 }
 
 const ProductSizeSelector: React.FC<IProperties> = (props) => {
 
-    //eslint-disable-next-line
-    var [selectedSize, setSelectedSize] = useState<ProductSizeModel>();
-
-    const [sizeCollectionState, setSizeCollectionState] = useState<Array<ProductSizeModel>>(new Array<ProductSizeModel>());
+    var [selectedElement, setSelectedElement] = useState<React.ReactElement | null>(null);
+    const [sizeElementsState, setSizeElementsState] = useState<Array<React.ReactElement>>(new Array<React.ReactElement>());
 
     useMemo(() => {
-
-        const sizes = new Array<ProductSizeModel>();
-
+        const sizes = new Array<React.ReactElement>();
         props.product.sizes.forEach((size) => {
-
-           const model = ProductSizeService.productSizeModelFactoryByName(size.name);
-           sizes.push(model);
+            const model = ProductSizeService.productSizeModelFactoryByName(size.name);
+            const element = <ProductSizeThumbnail size={model} />
+            sizes.push(element);
         });
+        setSizeElementsState(sizes);
+    }, [props.product.sizes]);
 
-        setSizeCollectionState(sizes);
-
-    },[props.product.sizes]);
+    useMemo(() => {
+        if (props.selectedSize) {
+            const index = props.product.sizes.indexOf(props.selectedSize);
+            if ( index < 0){
+                setSelectedElement(null);
+            } else {
+                setSelectedElement(sizeElementsState[index]);
+            }
+            
+        }
+    }, [sizeElementsState,props.product.sizes, props.selectedSize])
 
     //eslint-disable-next-line
     const handleSizeSelectedClicked = (event: React.MouseEvent<HTMLElement>, size: ProductSizeModel) => {
-        setSelectedSize(size)
+        if (props.onSizeSelected) {
+            const selectedSize = props.product.sizes.find((item) => item.name === size.name);
+            if (selectedSize) {
+                props.onSizeSelected(selectedSize);
+            }
+        }
     }
 
-    const handleItemSelected = (item: React.ReactElement) => { 
-        const properties = item.props as ICupSizeProperties;                
-        if ( props.onSizeSelected ) {
+    const handleItemSelected = (item: React.ReactElement) => {
+        const properties = item.props as ICupSizeProperties;
+        if (props.onSizeSelected) {
             const sizeModel = props.product.sizes.find((item) => item.name === properties.size.name);
-            if ( sizeModel ) {
+            if (sizeModel) {
                 props.onSizeSelected(sizeModel);
             }
         }
     }
 
-    const productThumbnailsElements = sizeCollectionState.map((size) => 
-        <ProductSizeThumbnail size={size}/>
-    );
-
     return (
         <>
-        <div>
-            <ElementNameTag size={EnumLabelSize.medium} name="ProductSizeSelector"/>
-        </div>
-        <ItemListSelector elements={productThumbnailsElements} 
-            onItemSelected={(item:ReactElement)=>{ handleItemSelected(item)}}/>            
+            <div>
+                <ElementNameTag size={EnumLabelSize.medium} name="ProductSizeSelector" />
+            </div>
+            <ItemListSelector
+                elements={sizeElementsState}
+                selectedItem={selectedElement}
+                onItemSelected={(item: ReactElement) => { handleItemSelected(item) }} />
         </>
     )
 }

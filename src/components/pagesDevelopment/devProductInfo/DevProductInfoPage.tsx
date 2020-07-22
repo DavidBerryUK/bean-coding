@@ -9,10 +9,10 @@ import MenuCategoryModel                        from '../../../repository/catego
 import MenuCategoryProductPicker                from "../../widgets/menuCategoryProductPicker/MenuCategoryProductPicker";
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
 import ProductNutrition                         from '../../widgets/productNutrition/ProductNutrition';
-import ProductSizeSelector                      from '../../widgets/productSizeSelector/ProductSizeSelector';
 import React                                    from 'react';
 import SizeModel                                from '../../../repository/productRepository/models/SizeModel';
-import ProductRecipe from '../../widgets/productRecipe/ProductRecipe';
+import ProductRecipe                            from '../../widgets/productRecipe/ProductRecipe';
+import ProductSizeSelector                      from '../../widgets/productSizeSelector/ProductSizeSelector';
 
 const DevProductInfoPage: React.FC = () => {
 
@@ -28,7 +28,7 @@ const DevProductInfoPage: React.FC = () => {
         setProductState(product)
     }
 
-    const handleProductSizeSelected = (size: SizeModel) => {        
+    const handleProductSizeSelected = (size: SizeModel) => {
         setSizeState(size);
     }
 
@@ -50,39 +50,41 @@ const DevProductInfoPage: React.FC = () => {
                 <Box>
 
                     {productState !== undefined ?
-                        <>                        
-                        <Paper className={classStyles.productInfo}>
-                            <div><ElementNameTag size={EnumLabelSize.medium} name="DevProductInfoPage"/></div>
-                            <div className={classStyles.textLabel}>Name</div>
-                            <div className={classStyles.textData}>{productState?.name}</div>
+                        <>
+                            <Paper className={classStyles.productInfo}>
+                                <div><ElementNameTag size={EnumLabelSize.medium} name="DevProductInfoPage" /></div>
+                                <div className={classStyles.textLabel}>Name</div>
+                                <div className={classStyles.textData}>{productState?.name}</div>
 
-                            <div className={classStyles.textLabel}>Description</div>
-                            <div className={classStyles.textData}>{productState?.description}</div>
+                                <div className={classStyles.textLabel}>Description</div>
+                                <div className={classStyles.textData}>{productState?.description}</div>
 
-                            <div className={classStyles.textLabel}>Product Number</div>
-                            <div className={classStyles.textData}>{productState?.ProductId}</div>
+                                <div className={classStyles.textLabel}>Product Number</div>
+                                <div className={classStyles.textData}>{productState?.ProductId}</div>
 
-                            <div className={classStyles.textLabel}>Filename thumbnail</div>
-                            <div className={classStyles.textData}>{productState?.ImageThumbnailUri}</div>
+                                <div className={classStyles.textLabel}>Filename thumbnail</div>
+                                <div className={classStyles.textData}>{productState?.ImageThumbnailUri}</div>
 
-                            <div className={classStyles.textLabel}>Filename large</div>
-                            <div className={classStyles.textData}>{productState?.ImageFullSizeUri}</div>
+                                <div className={classStyles.textLabel}>Filename large</div>
+                                <div className={classStyles.textData}>{productState?.ImageFullSizeUri}</div>
 
-                        </Paper>
-                        <Paper className={classStyles.productInfo}>                            
-                            <ProductSizeSelector product={productState} onSizeSelected={(size: SizeModel) => handleProductSizeSelected(size)} />                   
-                        </Paper>
-                        <Paper className={classStyles.productInfo}>                            
-                            <div className={classStyles.textLabel}>Product Recipe</div>
-                            <ProductRecipe size={sizeState} />
-                        </Paper>
-                        <Paper className={classStyles.productInfo}>                            
-                            <div className={classStyles.textLabel}>Product Nutrition</div>
-                            <ProductNutrition size={sizeState} />
-                        </Paper>
+                            </Paper>
+                            <Paper className={classStyles.productInfo}>
+                                <ProductSizeSelector
+                                    product={productState}
+                                    onSizeSelected={(size: SizeModel) => handleProductSizeSelected(size)} />
+                            </Paper>
+                            <Paper className={classStyles.productInfo}>
+                                <div className={classStyles.textLabel}>Product Recipe</div>
+                                <ProductRecipe size={sizeState} />
+                            </Paper>
+                            <Paper className={classStyles.productInfo}>
+                                <div className={classStyles.textLabel}>Product Nutrition</div>
+                                <ProductNutrition size={sizeState} />
+                            </Paper>
 
-               
-                
+
+
                         </>
                         : null}
                 </Box>
