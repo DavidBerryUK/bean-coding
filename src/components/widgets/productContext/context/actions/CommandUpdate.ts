@@ -1,5 +1,6 @@
 import { IProductContextDispatchCommand, EnumProductContextAction } from "./IProductContextDispatchCommand";
-import ProductModel from "../../../../repository/productRepository/models/ProductModel";
+import ProductModel from "../../../../../repository/productRepository/models/ProductModel";
+
 
 export default class  CommandUpdate implements IProductContextDispatchCommand
 {

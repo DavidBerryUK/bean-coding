@@ -3,7 +3,7 @@ import { EnumProductContextAction }             from './actions/IProductContextD
 import { IProductContextDispatchCommand}        from './actions/IProductContextDispatchCommand';
 import { Reducer }                              from 'react';
 import CommandUpdate                            from './actions/CommandUpdate';
-import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
+import ProductModel                             from '../../../../repository/productRepository/models/ProductModel';
 import React                                    from 'react';
 
 export interface IDispatchObject {
@@ -28,8 +28,8 @@ const reducer: Reducer<ProductContexttProps, IProductContextDispatchCommand> = (
     switch (command.commandType) {
 
         case EnumProductContextAction.Update:
-            var CommandUpdate = command as CommandUpdate            
-            return { ...state, product: CommandUpdate.product };
+            var commandUpdate = command as CommandUpdate            
+            return { ...state, product: commandUpdate.product };
 
         default:
             return state;
