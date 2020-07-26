@@ -9,4 +9,6 @@ export default class ProductModel {
     ImageFullSizeUri: string = "";
     options: Array<OptionBaseModel> = new Array<OptionBaseModel>();
     sizes: Array<ProductSizeModel> = new Array<ProductSizeModel>();
+
+    selectedSize: ProductSizeModel | undefined;
 }
