@@ -1,5 +1,3 @@
-import { IProperties as ICupSizeProperties }    from "../../../ui/productSizeThumbnail/ProductSizeThumbnail";
-import { ReactElement }                         from 'react';
 import { useContext }                           from 'react';
 import { useMemo }                              from 'react';
 import { useState }                             from 'react';
@@ -13,7 +11,7 @@ import React                                    from 'react';
 const ProductSizeSelector: React.FC = (props) => {
 
     const productContext = useContext(ProductContext);
-    var [selectedElement, setSelectedElement] = useState<React.ReactElement | null>(null);
+    var [selectedIndexState, setSelectedIndexState] = useState<number | undefined>();
 
     const [thumbnailCollectionState, setThumbnailCollectionState] = useState<Array<React.ReactElement>>(new Array<React.ReactElement>());
 
@@ -28,19 +26,18 @@ const ProductSizeSelector: React.FC = (props) => {
     }, [productContext.state.product.sizes]);
 
 
-    const handleItemSelected = (item: React.ReactElement) => {
-        const properties = item.props as ICupSizeProperties;        
-        const sizeModel = productContext.state.product.sizes.find((item) => item.name === properties.size.name);
+    const handleItemSelected = (index: number) => {        
+        setSelectedIndexState(index);
+        const sizeModel = productContext.state.product.sizes[index];    
         productContext.state.product.selectedSize = sizeModel;
         productContext.dispatch( new CommandUpdateProduct(productContext.state.product));
-        
     }
 
     return (
         <ItemListSelector
             elements={thumbnailCollectionState}
-            selectedItem={selectedElement}
-            onItemSelected={(item: ReactElement) => { handleItemSelected(item) }} />
+            selectedIndex={selectedIndexState}
+            onItemSelected={(index: number) => { handleItemSelected(index) }} />
     )
 }
 

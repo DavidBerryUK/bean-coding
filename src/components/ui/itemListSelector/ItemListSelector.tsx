@@ -1,25 +1,21 @@
 import { Button }                               from '@material-ui/core';
 import { ClassStyleDefinition }                 from "./ClassStyleDefinition";
 import { Paper }                                from '@material-ui/core';
-import { useState }                             from 'react';
 import React                                    from 'react';
 
 interface IProperties {
     elements: Array<React.ReactElement>,
-    selectedItem: React.ReactElement | null,
-    onItemSelected?: (item: React.ReactElement) => void
+    selectedIndex: number | undefined,
+    onItemSelected: (index: number) => void
 }
 
 const ItemListSelector: React.FC<IProperties> = (props) => {
 
-    const classStyles = ClassStyleDefinition();
+    const classStyles = ClassStyleDefinition();    
 
-    const [selectedIndex, setSelectedIndex] = useState<number>();
-
-    const handleItemSelected = (index: number, element: React.ReactElement) => {
-        setSelectedIndex(index);
+    const handleItemSelected = (index: number) => {        
         if ( props.onItemSelected ) {
-            props.onItemSelected(element);
+            props.onItemSelected(index);
         }
     }
 
@@ -32,7 +28,7 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
         } else {
             className = `${className} ${classStyles.middle}`;
         }
-        if (index === selectedIndex) {
+        if (index === props.selectedIndex) {
             className = `${className} ${classStyles.selected}`;
         }
         return className;
@@ -46,7 +42,7 @@ const ItemListSelector: React.FC<IProperties> = (props) => {
                     <Button key={index}
                         variant="contained"
                         className={getClassNames(index)}
-                        onClick={() => { handleItemSelected(index,element) }}>
+                        onClick={() => { handleItemSelected(index) }}>
                         {element}
                     </Button>
                 ))

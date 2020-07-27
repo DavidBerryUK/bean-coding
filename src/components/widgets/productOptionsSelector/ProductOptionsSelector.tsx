@@ -13,7 +13,7 @@ interface IProperties {
 
 const ProductOptionsSelector: React.FC<IProperties> = (props) => {
 
-    const [selectedItemState, setSelectedItemState] = useState<React.ReactElement | null>(null)
+    const [selectedIndexState, setSelectedIndexState] = useState<number | undefined>()
     const [optionsState, setOptionsState] = useState<Array<React.ReactElement>>(new Array<React.ReactElement>());
 
     useMemo(() => {
@@ -23,8 +23,8 @@ const ProductOptionsSelector: React.FC<IProperties> = (props) => {
         }
     }, [props.product]);
 
-    const handleItemSelected = (item: React.ReactElement) => {
-        setSelectedItemState(item);
+    const handleItemSelected = (index: number) => {
+        setSelectedIndexState(index);
     }
 
     return (
@@ -33,7 +33,7 @@ const ProductOptionsSelector: React.FC<IProperties> = (props) => {
                 <ElementNameTag size={EnumLabelSize.medium} name="ProductOptionSelector" />
             </div>
             <ItemListSelector
-                selectedItem={selectedItemState}
+                selectedIndex={selectedIndexState}
                 elements={optionsState}
                 onItemSelected={handleItemSelected}
             />

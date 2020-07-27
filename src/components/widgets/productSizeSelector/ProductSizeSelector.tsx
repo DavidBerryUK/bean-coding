@@ -1,6 +1,4 @@
 import { EnumLabelSize }                        from '../../ui/elementNameTag/ElementNameTag';
-import { IProperties as ICupSizeProperties }    from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
-import { ReactElement }                         from 'react';
 import { useMemo }                              from 'react';
 import { useState }                             from 'react';
 import ElementNameTag                           from '../../ui/elementNameTag/ElementNameTag';
@@ -20,7 +18,7 @@ interface IProperties {
 
 const ProductSizeSelector: React.FC<IProperties> = (props) => {
 
-    var [selectedElement, setSelectedElement] = useState<React.ReactElement | null>(null);
+    var [selectedIndexState, setSelectedIndexState] = useState<number | undefined>();
     const [sizeElementsState, setSizeElementsState] = useState<Array<React.ReactElement>>(new Array<React.ReactElement>());
 
     useMemo(() => {
@@ -37,13 +35,13 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
         if (props.selectedSize) {
             const index = props.product.sizes.indexOf(props.selectedSize);
             if ( index < 0){
-                setSelectedElement(null);
+                setSelectedIndexState(undefined);
             } else {
-                setSelectedElement(sizeElementsState[index]);
+                setSelectedIndexState(index);
             }
             
         }
-    }, [sizeElementsState,props.product.sizes, props.selectedSize])
+    }, [props.product.sizes, props.selectedSize])
 
     //eslint-disable-next-line
     const handleSizeSelectedClicked = (event: React.MouseEvent<HTMLElement>, size: ProductSizeModel) => {
@@ -55,10 +53,10 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
         }
     }
 
-    const handleItemSelected = (item: React.ReactElement) => {
-        const properties = item.props as ICupSizeProperties;
+    const handleItemSelected = (index: number) => {
+        
         if (props.onSizeSelected) {
-            const sizeModel = props.product.sizes.find((item) => item.name === properties.size.name);
+            const sizeModel = props.product.sizes[index];
             if (sizeModel) {
                 props.onSizeSelected(sizeModel);
             }
@@ -72,8 +70,8 @@ const ProductSizeSelector: React.FC<IProperties> = (props) => {
             </div>
             <ItemListSelector
                 elements={sizeElementsState}
-                selectedItem={selectedElement}
-                onItemSelected={(item: ReactElement) => { handleItemSelected(item) }} />
+                selectedIndex={selectedIndexState}
+                onItemSelected={(index: number) => { handleItemSelected(index) }} />
         </>
     )
 }

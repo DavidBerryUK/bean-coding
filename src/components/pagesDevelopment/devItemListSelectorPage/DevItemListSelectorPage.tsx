@@ -1,6 +1,4 @@
 import { EnumProductSize }                      from "../../../Services/productParser/productSize/EnumProductEnums";
-import { IProperties as ICupSizeProperties }    from "../../ui/productSizeThumbnail/ProductSizeThumbnail";
-import { ReactElement }                         from 'react';
 import { useContext }                           from 'react';
 import { useState }                             from 'react';
 import CommandAddToAudit                        from "../../context/developerContext/actions/CommandAddToAudit";
@@ -14,7 +12,7 @@ import React                                    from 'react';
 
 const DevItemListSelectorPage: React.FC = () => {
 
-    const [selectedItemState, setSelectedItemState] = useState<React.ReactElement | null>(null)
+    const [selectedIndexState, setSelectedIndexState] = useState<number | undefined>()
     const dispatch = useContext(DeveloperContext).dispatch;
 
     const cupModels: Array<ProductSizeModel> = [
@@ -33,10 +31,10 @@ const DevItemListSelectorPage: React.FC = () => {
         <ProductSizeThumbnail size={size} />
     );
 
-    const handleItemSelected = (item: React.ReactElement) => {
-        setSelectedItemState(item);
-        const properties = item.props as ICupSizeProperties;
-        dispatch(new CommandAddToAudit(`Selected ${properties.size.name} ${properties.size.volume}`));
+    const handleItemSelected = (index: number) => {
+        setSelectedIndexState(index);        
+        const item = cupModels[index];
+        dispatch(new CommandAddToAudit(`Selected ${item.name} ${item.volume}`));
     }
 
     return (
@@ -46,8 +44,8 @@ const DevItemListSelectorPage: React.FC = () => {
             componentName="ItemListSelector">
             <ItemListSelector
                 elements={cupThumbnailsElements}
-                selectedItem={selectedItemState}
-                onItemSelected={(item: ReactElement) => { handleItemSelected(item) }} />
+                selectedIndex={selectedIndexState}
+                onItemSelected={(index: number) => { handleItemSelected(index) }} />
         </DevelopmentMasterPageWrapper>
     );
 }
