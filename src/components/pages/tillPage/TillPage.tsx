@@ -5,7 +5,6 @@ import CategoryModel                            from '../../../repository/catego
 import ProductList                              from '../../widgets/productList/ProductList';
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
 import React                                    from 'react';
-import ProductViewer                            from '../../widgets/productViewer/ProductViewer';
 
 const TillPage: React.FC = () => {
 
@@ -31,12 +30,6 @@ const TillPage: React.FC = () => {
                 { category === undefined 
                 ? null 
                 : <ProductList category={category} onProductSelected={(product) => { handleProductClicked(product) }} /> }
-            </div>
-
-            <div className='region-product-viewer'>
-                { product === undefined 
-                ? null 
-                : <ProductViewer product={product}/> }
             </div>
 
             <div className='region-order-panel'>
