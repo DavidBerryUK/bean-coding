@@ -1,10 +1,13 @@
 import { useContext }                           from 'react';
 import { useEffect }                            from 'react';
-import CommandUpdateProduct                            from './context/actions/CommandUpdate';
+import CommandUpdateProduct                     from './context/actions/CommandUpdate';
 import ProductContext                           from './context/productContext';
-import ProductHeaderDetails                     from './subComponents/ProductHeaderDetails';
+import ProductHeader                            from './subComponents/ProductHeader';
+import ProductIngredients                       from './subComponents/ProductIngredients';
 import ProductModel                             from '../../../repository/productRepository/models/ProductModel';
-import ProductSizeSelector                      from './subComponents/ProductSizeSelector';
+import ProductNutrition                         from './subComponents/ProductNutrition';
+import ProductRecipe                            from './subComponents/ProductRecipe';
+import ProductSize                              from './subComponents/ProductSize';
 import React                                    from 'react';
 
 interface IProperties {
@@ -21,8 +24,11 @@ const ProductViewWidget: React.FC<IProperties> = (props) => {
 
     return (
         <>
-            <ProductHeaderDetails />
-            <ProductSizeSelector/>
+            <ProductHeader />
+            <ProductSize />
+            <ProductRecipe />
+            <ProductNutrition />
+            <ProductIngredients />
         </>
     )
 }

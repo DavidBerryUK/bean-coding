@@ -8,7 +8,7 @@ import ProductSizeService                       from '../../../../Services/produ
 import ProductSizeThumbnail                     from '../../../ui/productSizeThumbnail/ProductSizeThumbnail';
 import React                                    from 'react';
 
-const ProductSizeSelector: React.FC = (props) => {
+const ProductSize: React.FC = () => {
 
     const productContext = useContext(ProductContext);
     var [selectedIndexState, setSelectedIndexState] = useState<number | undefined>();
@@ -41,4 +41,4 @@ const ProductSizeSelector: React.FC = (props) => {
     )
 }
 
-export default ProductSizeSelector
+export default ProductSize

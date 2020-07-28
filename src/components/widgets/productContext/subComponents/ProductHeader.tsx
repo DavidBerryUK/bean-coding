@@ -5,7 +5,7 @@ import { Typography }                           from '@material-ui/core';
 import ProductContext                           from "../context/productContext";
 import React                                    from 'react';
 
-const ProductHeaderDetails: React.FC = (props) => {
+const ProductHeader: React.FC = (props) => {
 
     const productState = useContext(ProductContext).state;
     
@@ -26,4 +26,4 @@ const ProductHeaderDetails: React.FC = (props) => {
     )
 }
 
-export default ProductHeaderDetails
+export default ProductHeader
