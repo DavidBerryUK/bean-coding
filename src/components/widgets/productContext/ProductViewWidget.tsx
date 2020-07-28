@@ -18,7 +18,8 @@ const ProductViewWidget: React.FC<IProperties> = (props) => {
 
     const dispatch = useContext(ProductContext).dispatch;
 
-    useEffect(() => {
+    useEffect(() => {        
+        props.product.selectDefaultSize();
         dispatch(new CommandUpdateProduct(props.product));
     }, [dispatch, props.product]);
 

@@ -11,4 +11,16 @@ export default class ProductModel {
     sizes: Array<ProductSizeModel> = new Array<ProductSizeModel>();
 
     selectedSize: ProductSizeModel | undefined;
+
+
+    /**
+     * Select first size if none is currently selected
+     */    
+    selectDefaultSize() {
+        if ( this.selectedSize === undefined) {
+            if ( this.sizes.length > 0) {
+                this.selectedSize = this.sizes[0];
+            }
+        }
+    }
 }

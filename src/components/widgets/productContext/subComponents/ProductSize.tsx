@@ -1,7 +1,7 @@
 import { useContext }                           from 'react';
 import { useMemo }                              from 'react';
 import { useState }                             from 'react';
-import CommandUpdateProduct                            from "../context/actions/CommandUpdate";
+import CommandUpdateProduct                     from "../context/actions/CommandUpdate";
 import ItemListSelector                         from '../../../ui/itemListSelector/ItemListSelector';
 import ProductContext                           from "../context/productContext";
 import ProductSizeService                       from '../../../../Services/productParser/productSize/ProductSizeService';
@@ -10,8 +10,7 @@ import React                                    from 'react';
 
 const ProductSize: React.FC = () => {
 
-    const productContext = useContext(ProductContext);
-    var [selectedIndexState, setSelectedIndexState] = useState<number | undefined>();
+    const productContext = useContext(ProductContext);    
 
     const [thumbnailCollectionState, setThumbnailCollectionState] = useState<Array<React.ReactElement>>(new Array<React.ReactElement>());
 
@@ -27,16 +26,23 @@ const ProductSize: React.FC = () => {
 
 
     const handleItemSelected = (index: number) => {        
-        setSelectedIndexState(index);
         const sizeModel = productContext.state.product.sizes[index];    
         productContext.state.product.selectedSize = sizeModel;
         productContext.dispatch( new CommandUpdateProduct(productContext.state.product));
     }
 
+    const calculatedSelectedIndex = () : number | undefined => {
+        if ( productContext.state.product.selectedSize ) {
+            const index = productContext.state.product.sizes.findIndex((item) => item.name === productContext.state.product.selectedSize?.name);
+            return index;
+        }
+        return;
+    }
+
     return (
         <ItemListSelector
             elements={thumbnailCollectionState}
-            selectedIndex={selectedIndexState}
+            selectedIndex={calculatedSelectedIndex()}
             onItemSelected={(index: number) => { handleItemSelected(index) }} />
     )
 }

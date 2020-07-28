@@ -1,7 +1,7 @@
-import SizeModel from "../../repository/productRepository/models/SizeModel";
-import ParseRecipe from "./ParseRecipe";
-import ParseNutrition from "./ParseNutrition";
-import ParseIngredients from "./ParseIngredients";
+import ParseIngredients                         from "./ParseIngredients";
+import ParseNutrition                           from "./ParseNutrition";
+import ParseRecipe                              from "./ParseRecipe";
+import SizeModel                                from "../../repository/productRepository/models/SizeModel";
 
 export default class ParseSize {
 
