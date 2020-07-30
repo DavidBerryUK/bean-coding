@@ -30,4 +30,8 @@ export default class ProductModel {
         }
         return false;
     }
+
+    getOptionModel(optionType: enumOptionType)  : OptionBaseModel | undefined {
+        return this.options.find((option) => option.optionType === optionType);        
+    }
 }
