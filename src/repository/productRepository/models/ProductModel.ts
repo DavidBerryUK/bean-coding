@@ -1,3 +1,4 @@
+import { enumOptionType }                       from "./options/OptionBaseModel";
 import OptionBaseModel                          from "./options/OptionBaseModel";
 import ProductSizeModel                         from "./SizeModel";
 
@@ -12,7 +13,6 @@ export default class ProductModel {
 
     selectedSize: ProductSizeModel | undefined;
 
-
     /**
      * Select first size if none is currently selected
      */    
@@ -22,5 +22,12 @@ export default class ProductModel {
                 this.selectedSize = this.sizes[0];
             }
         }
+    }
+
+    hasOption( optionType: enumOptionType ) : boolean {
+        if (this.options.find((option) => option.optionType === optionType)) {
+            return true;
+        }
+        return false;
     }
 }

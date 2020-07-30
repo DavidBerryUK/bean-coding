@@ -9,14 +9,14 @@ import React                                    from 'react';
 const TillPage: React.FC = () => {
 
     const [category, setCategory] = useState<CategoryModel>();
-    const [product, setProduct] = useState<ProductModel>();
+
 
     const handleCategoryClicked = (category: CategoryModel) => {
         setCategory(category);
     }
 
     const handleProductClicked = (product: ProductModel) => {
-        setProduct(product);
+
     }
 
     return (

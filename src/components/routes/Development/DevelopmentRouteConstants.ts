@@ -11,4 +11,16 @@ export enum EnumDevelopmentRoutes  {
     Muted = '/development/muted',
     ProductInfo = '/development/productInfo',
     ShotCount = '/development/shotCount',
+    
+    OptionBase = '/development/option',
+    OptionAddIn = '/development/option/addin',
+    OptionBlended = '/development/option/blend',
+    OptionButterAndSpreads = '/development/option/butterAndSpreads',
+    OptionDiaryAlternatives = '/development/option/diaryAlternatives',
+    OptionFlavours = '/development/option/flavours',
+    OptionSandwich = '/development/option/sandwich',
+    OptionShots = '/development/option/shots',
+    OptionTea = '/development/option/tea',
+    OptionToppings = '/development/option/toppings',
+    OptionWarming = '/development/option/warming',
 }

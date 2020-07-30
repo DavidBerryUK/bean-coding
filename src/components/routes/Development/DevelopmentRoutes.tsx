@@ -11,6 +11,7 @@ import DevMenuHierarchicalListPage              from '../../pagesDevelopment/dev
 import DevMenuListPage                          from '../../pagesDevelopment/devMenuListPage/DevMenuListPage';
 import DevMenuSliderDevelopmentPage             from '../../pagesDevelopment/devMenuSliderDevelopmentPage/DevMenuSliderDevelopmentPage';
 import DevMutedImagePage                        from '../../pagesDevelopment/devMutedImagePage/DevMutedImagePage';
+import DevProductContextWrapper                 from '../../pagesDevelopment/devOptionsPages/DevProductContextWrapper';
 import DevProductInfoPage                       from '../../pagesDevelopment/devProductInfo/DevProductInfoPage';
 import DevShotCountSelectorPage                 from '../../pagesDevelopment/devShotCountSelectorPage/DevShotCountSelectorPage';
 import React                                    from 'react';
@@ -24,14 +25,26 @@ const DevelopmentRoutes: React.SFC = () => {
       <Route path={EnumDevelopmentRoutes.FrostedGlass} component={DevFrostedGlassPage} />
       <Route path={EnumDevelopmentRoutes.ItemList} component={DevItemListSelectorPage} />
       <Route path={EnumDevelopmentRoutes.ItemQuantity} component={DevItemQuantitySelectorPage} />
-      <Route path={EnumDevelopmentRoutes.MenuCategoryMenuPicker} component={DevMenuCategoryProductPickerPage}  />
+      <Route path={EnumDevelopmentRoutes.MenuCategoryMenuPicker} component={DevMenuCategoryProductPickerPage} />
       <Route path={EnumDevelopmentRoutes.MenuhierarchicalList} component={DevMenuHierarchicalListPage} />
-      <Route path={EnumDevelopmentRoutes.MenuList} component={DevMenuListPage}  />
-      <Route path={EnumDevelopmentRoutes.MenuSliderMechanism} component={DevMenuSliderDevelopmentPage}  />
+      <Route path={EnumDevelopmentRoutes.MenuList} component={DevMenuListPage} />
+      <Route path={EnumDevelopmentRoutes.MenuSliderMechanism} component={DevMenuSliderDevelopmentPage} />
       <Route path={EnumDevelopmentRoutes.Muted} component={DevMutedImagePage} />
       <Route path={EnumDevelopmentRoutes.ProductInfo} component={DevProductInfoPage} />
       <Route path={EnumDevelopmentRoutes.ShotCount} component={DevShotCountSelectorPage} />
-      
+
+      <Route path={EnumDevelopmentRoutes.OptionBase} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionAddIn} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionBlended} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionButterAndSpreads} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionDiaryAlternatives} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionFlavours} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionSandwich} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionShots} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionTea} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionToppings} component={DevProductContextWrapper} />
+      <Route path={EnumDevelopmentRoutes.OptionWarming} component={DevProductContextWrapper} />
+
     </Switch>
   )
 }

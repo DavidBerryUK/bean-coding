@@ -1,6 +1,18 @@
+import { enumOptionType }                       from '../../../repository/productRepository/models/options/OptionBaseModel';
 import { useContext }                           from 'react';
 import { useEffect }                            from 'react';
 import CommandUpdateProduct                     from './context/actions/CommandUpdate';
+import OptionsForAddIns                         from './subComponents/OptionsForAddIns';
+import OptionsForBlended                        from './subComponents/OptionsForBlended';
+import OptionsForButtersAndSpreads              from './subComponents/OptionsForButtersAndSpreads';
+import OptionsForDairyAlternatives              from './subComponents/OptionsForDairyAlternatives';
+import OptionsForFlavours                       from './subComponents/OptionsForFlavours';
+import OptionsForSandwhich                      from './subComponents/OptionsForSandwhich';
+import OptionsForShots                          from './subComponents/OptionsForShot';
+import OptionsForTea                            from './subComponents/OptionsForTea';
+import OptionsForToppings                       from './subComponents/OptionsForToppings';
+import OptionsForWarming                        from './subComponents/OptionsForWarming';
+import OptionsSelector                          from './subComponents/OptionsSelector';
 import ProductContext                           from './context/productContext';
 import ProductHeader                            from './subComponents/ProductHeader';
 import ProductIngredients                       from './subComponents/ProductIngredients';
@@ -16,7 +28,7 @@ interface IProperties {
 
 const ProductViewWidget: React.FC<IProperties> = (props) => {
 
-    const dispatch = useContext(ProductContext).dispatch;
+    const {state, dispatch} = useContext(ProductContext);
 
     useEffect(() => {        
         props.product.selectDefaultSize();
@@ -30,6 +42,17 @@ const ProductViewWidget: React.FC<IProperties> = (props) => {
             <ProductRecipe />
             <ProductNutrition />
             <ProductIngredients />
+            <OptionsSelector />            
+            {state.product.hasOption(enumOptionType.AddIn) && <OptionsForAddIns />}
+            {state.product.hasOption(enumOptionType.Blended) && <OptionsForBlended />}
+            {state.product.hasOption(enumOptionType.ButterAndSpreads) && <OptionsForButtersAndSpreads />}
+            {state.product.hasOption(enumOptionType.DiaryAlternatives) && <OptionsForDairyAlternatives />}
+            {state.product.hasOption(enumOptionType.Flavours) && <OptionsForFlavours />}
+            {state.product.hasOption(enumOptionType.Sandwich) && <OptionsForSandwhich />}
+            {state.product.hasOption(enumOptionType.Shots) && <OptionsForShots />}
+            {state.product.hasOption(enumOptionType.Tea) && <OptionsForTea />}
+            {state.product.hasOption(enumOptionType.Toppings) && <OptionsForToppings />}
+            {state.product.hasOption(enumOptionType.Warming) && <OptionsForWarming />}
         </>
     )
 }

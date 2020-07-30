@@ -36,6 +36,7 @@ export default class ApplicationMenuFactory {
         item.add(new MenuItemModel('test', '4:11', "Menu Category Product Picker", EnumDevelopmentRoutes.MenuCategoryMenuPicker, React.createElement(AppsOutlinedIcon)));
         item.add(new MenuItemModel('test', '4:12', "Menu Slider", EnumDevelopmentRoutes.MenuSliderMechanism, React.createElement(BuildOutlinedIcon)));
         item.add(new MenuItemModel('test', '4:13', "Product Info", EnumDevelopmentRoutes.ProductInfo, React.createElement(InfoOutlinedIcon)));
+        item.add(this.getProductOptionsMenu());
         item.add(new MenuItemModel('test', '4:4', "Cup Thumbnail", EnumDevelopmentRoutes.CupSizeThumbnail, React.createElement(CropOriginalOutlinedIcon)));
         item.add(new MenuItemModel('test', '4:5', "Item List", EnumDevelopmentRoutes.ItemList, React.createElement(ListAltIcon)));
         item.add(new MenuItemModel('test', '4:6', "Item Quantity", EnumDevelopmentRoutes.ItemQuantity, React.createElement(AddCircleOutlineIcon)));
@@ -43,6 +44,23 @@ export default class ApplicationMenuFactory {
         item.add(new MenuItemModel('test', '4:8', "App Background", EnumDevelopmentRoutes.AppBackground, React.createElement(WallpaperIcon)));
         item.add(new MenuItemModel('test', '4:9', "Frosted Glass", EnumDevelopmentRoutes.FrostedGlass, React.createElement(WallpaperIcon)));
         item.add(new MenuItemModel('test', '4:10', "Muted Images", EnumDevelopmentRoutes.Muted, React.createElement(WallpaperIcon)));
+        return item;
+    }
+
+    private static getProductOptionsMenu(): MenuItemModel {
+        var item = new MenuItemModel('test', '5', "Product Options", "", React.createElement(BuildOutlinedIcon));
+
+        item.add(new MenuItemModel('test', '5:01', 'AddIn', EnumDevelopmentRoutes.OptionAddIn, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:02', 'Blended', EnumDevelopmentRoutes.OptionBlended, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:03', 'ButterAndSpreads', EnumDevelopmentRoutes.OptionButterAndSpreads, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:04', 'DiaryAlternatives', EnumDevelopmentRoutes.OptionDiaryAlternatives, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:05', 'Flavours', EnumDevelopmentRoutes.OptionFlavours, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:06', 'Sandwich', EnumDevelopmentRoutes.OptionSandwich, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:07', 'Shots', EnumDevelopmentRoutes.OptionShots, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:08', 'Tea', EnumDevelopmentRoutes.OptionTea, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:09', 'Toppings', EnumDevelopmentRoutes.OptionToppings, React.createElement(InfoOutlinedIcon)));
+        item.add(new MenuItemModel('test', '5:10', 'Warming', EnumDevelopmentRoutes.OptionWarming, React.createElement(InfoOutlinedIcon)));
+
         return item;
     }
 }
