@@ -29,7 +29,8 @@ const DataItemCollectionControl: React.FC<IProperties> = (props) => {
     }
 
     return (
-        <Paper>                    
+        <Paper>       
+            <div>{props.data?.name}             </div>
             <ItemListSelector
                 elements={thumbnailCollection()}
                 selectedIndex={undefined}

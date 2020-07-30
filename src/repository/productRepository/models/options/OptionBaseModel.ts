@@ -1,5 +1,5 @@
 export enum enumOptionType {
-    AddIn,
+    AddIn = 100,
     Blended,
     ButterAndSpreads,
     DiaryAlternatives,
