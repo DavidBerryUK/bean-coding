@@ -17,8 +17,8 @@ const DataItemCollectionQuantityControl: React.FC<IProperties> = (props) => {
         <Paper>
             {props.data?.name}
             <ItemQuantitySelector value={props.data.quantityRequired} onValueChanged={handleOnValueChanged} />
-            {props.data?.items.map((item) => (
-                <div>
+            {props.data?.items.map((item,index) => (
+                <div key={index}>                    
                     &nbsp;&nbsp;&nbsp;{item.value}
                 </div>
             ))}
