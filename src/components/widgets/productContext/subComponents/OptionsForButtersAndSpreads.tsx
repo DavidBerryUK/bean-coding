@@ -3,7 +3,7 @@ import { Paper }                                from '@material-ui/core';
 import { useContext }                           from 'react';
 import { useEffect }                            from 'react';
 import { useState }                             from 'react';
-import DataQuantityItemCollectionControl        from '../ui/DataQuantityItemCollectionControl';
+import DataQuantityItemCollectionControl        from '../dataItemsUi/DataQuantityItemCollectionControl';
 import OptionButterAndSpreadsModel              from '../../../../repository/productRepository/models/options/OptionButterAndSpreadsModel';
 import ProductContext                           from '../context/productContext';
 import React                                    from 'react';

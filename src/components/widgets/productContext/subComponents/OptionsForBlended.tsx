@@ -3,7 +3,7 @@ import { Paper }                                from '@material-ui/core';
 import { useContext }                           from 'react';
 import { useEffect }                            from 'react';
 import { useState }                             from 'react';
-import DataQuantityItemCollectionGroupControl   from '../ui/DataQuantityItemCollectionGroupControl';
+import DataQuantityItemCollectionGroupControl   from '../dataItemsUi/DataQuantityItemCollectionGroupControl';
 import OptionBlendedModel                       from '../../../../repository/productRepository/models/options/OptionBlendedModel';
 import ProductContext                           from '../context/productContext';
 import React                                    from 'react';

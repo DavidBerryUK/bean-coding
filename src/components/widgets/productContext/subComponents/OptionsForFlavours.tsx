@@ -3,7 +3,7 @@ import { Paper }                                from '@material-ui/core';
 import { useContext }                           from 'react';
 import { useEffect }                            from 'react';
 import { useState }                             from 'react';
-import DataItemCollectionQuantityGroupsControl  from '../ui/DataItemCollectionQuantityGroupsControl';
+import DataItemCollectionQuantityGroupsControl  from '../dataItemsUi/DataItemCollectionQuantityGroupsControl';
 import OptionFlavoursModel                      from '../../../../repository/productRepository/models/options/OptionFlavoursModel';
 import ProductContext                           from '../context/productContext';
 import React                                    from 'react';

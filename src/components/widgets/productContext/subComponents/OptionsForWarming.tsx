@@ -3,7 +3,7 @@ import { Paper }                                from '@material-ui/core';
 import { useContext }                           from 'react';
 import { useEffect }                            from 'react';
 import { useState }                             from 'react';
-import DataItemCollectionControl                from '../ui/DataItemCollectionControl';
+import DataItemCollectionControl                from '../dataItemsUi/DataItemCollectionControl';
 import OptionWarmingModel                       from '../../../../repository/productRepository/models/options/OptionWarmingModel';
 import ProductContext                           from '../context/productContext';
 import React                                    from 'react';
@@ -27,4 +27,3 @@ const OptionsForWarming: React.FC = () => {
 }
 
 export default OptionsForWarming
-
