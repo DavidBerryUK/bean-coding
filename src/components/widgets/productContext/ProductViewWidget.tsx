@@ -12,7 +12,6 @@ import OptionsForShots                          from './subComponents/OptionsFor
 import OptionsForTea                            from './subComponents/OptionsForTea';
 import OptionsForToppings                       from './subComponents/OptionsForToppings';
 import OptionsForWarming                        from './subComponents/OptionsForWarming';
-import OptionsSelector                          from './subComponents/OptionsSelector';
 import ProductContext                           from './context/productContext';
 import ProductHeader                            from './subComponents/ProductHeader';
 import ProductIngredients                       from './subComponents/ProductIngredients';
@@ -41,8 +40,7 @@ const ProductViewWidget: React.FC<IProperties> = (props) => {
             <ProductSize />
             <ProductRecipe />
             <ProductNutrition />
-            <ProductIngredients />
-            <OptionsSelector />            
+            <ProductIngredients />   
             {state.product.hasOption(enumOptionType.Shots) && <OptionsForShots />}
             {state.product.hasOption(enumOptionType.AddIn) && <OptionsForAddIns />}
             {state.product.hasOption(enumOptionType.Blended) && <OptionsForBlended />}
