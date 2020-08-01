@@ -1,0 +1,97 @@
+{
+    "ProductId": 2122974,
+    "Name": "Free range egg & mayo sandwich",
+    "Description": "Free-range egg with Dijon mustard mayonnaise and cress on a seeded farmhouse bread",
+    "ImageThumbnailUri": "6b137edaecf94fea84c469ab9cd0c6ed.jpg",
+    "ImageFullSizeUri": "c8982e71e7b049369f113cf6986112ef.jpg",
+    "Options": [
+        {
+            "OptionsGroups": {
+                "Groups": [
+                    {
+                        "Name": "Sauces",
+                        "GroupItems": [
+                            {
+                                "Name": "HP Sauce",
+                                "Items": [
+                                    {
+                                        "Value": "HP Sauce"
+                                    }
+                                ]
+                            },
+                            {
+                                "Name": "Ketchup",
+                                "Items": [
+                                    {
+                                        "Value": "Ketchup"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "Name": "Sandwich Options",
+            "OptionType": "Sandwich"
+        }
+    ],
+    "Sizes": [
+        {
+            "Name": "1 Piece",
+            "Nutrition": {
+                "ServiceSize": "215 g",
+                "Calories": " 492 kcal",
+                "CaloriesFromFat": " 0 kcal",
+                "Facts": [
+                    {
+                        "Name": "Fat",
+                        "Value": "26 g",
+                        "DailyValue": "33 %",
+                        "SubFacts": [
+                            {
+                                "Name": "of which saturates",
+                                "Value": "4.1 g",
+                                "DailyPercentage": "20.5 %"
+                            },
+                            {
+                                "Name": "Trans Fat",
+                                "Value": "0 g"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Cholesterol",
+                        "Value": "0 mg"
+                    },
+                    {
+                        "Name": "Salt",
+                        "Value": "1.7 g",
+                        "DailyValue": "0 %"
+                    },
+                    {
+                        "Name": "Carbohydrate",
+                        "Value": "45 g",
+                        "DailyValue": "16 %",
+                        "SubFacts": [
+                            {
+                                "Name": "Fibre",
+                                "Value": "4.7 g",
+                                "DailyPercentage": "16 %"
+                            },
+                            {
+                                "Name": "of which sugars",
+                                "Value": "2.8 g"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Protein",
+                        "Value": "19 g",
+                        "DailyValue": "38 %"
+                    }
+                ]
+            },
+            "Price": 2.45
+        }
+    ]
+}
