@@ -15,6 +15,7 @@ import ProductRepository                        from '../../../repository/produc
 import ProductViewWidget                        from '../../widgets/productContext/ProductViewWidget';
 import React                                    from 'react';
 import SizeModel                                from '../../../repository/productRepository/models/SizeModel';
+import ProductSelectionInitialiseService        from '../../../Services/productSelection/ProductSelectionInitialiseService';
 
 const DevProductInfoPage: React.FC = () => {
 
@@ -41,6 +42,9 @@ const DevProductInfoPage: React.FC = () => {
                 if (  sizeName.length > 0  ) {
                     product.selectedSize = product.sizes.find((item) => item.name === sizeName);
                 }
+
+                var productSelectionInitialiseService = new ProductSelectionInitialiseService();                
+                productSelectionInitialiseService.initialiseSelection(product);
                 setProductState(product);
             }
         }
@@ -59,8 +63,12 @@ const DevProductInfoPage: React.FC = () => {
         history.push(`${EnumDevelopmentRoutes.ProductInfo}/${productState?.ProductId}/${size.name}`)
     }
 
-    const handleProductSelected = (product: ProductModel) => {
+    const handleProductSelected = (product: ProductModel) => {        
+        product.selectDefaultSize();                    
         setProductState(product)
+        
+        var productSelectionInitialiseService = new ProductSelectionInitialiseService();                
+        productSelectionInitialiseService.initialiseSelection(product);
         history.push(`${EnumDevelopmentRoutes.ProductInfo}/${product.ProductId}`)
     }
 

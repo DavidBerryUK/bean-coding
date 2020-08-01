@@ -1,6 +1,7 @@
 import { enumOptionType }                       from "./options/OptionBaseModel";
 import OptionBaseModel                          from "./options/OptionBaseModel";
 import ProductSizeModel                         from "./SizeModel";
+import SelectionCollection                      from "./selections/SelectionCollection";
 
 export default class ProductModel {
     ProductId: number = 0;
@@ -9,9 +10,9 @@ export default class ProductModel {
     ImageThumbnailUri: string = "";
     ImageFullSizeUri: string = "";
     options: Array<OptionBaseModel> = new Array<OptionBaseModel>();
-    sizes: Array<ProductSizeModel> = new Array<ProductSizeModel>();
-
+    sizes: Array<ProductSizeModel> = new Array<ProductSizeModel>();    
     selectedSize: ProductSizeModel | undefined;
+    selections = new SelectionCollection();
 
     /**
      * Select first size if none is currently selected
