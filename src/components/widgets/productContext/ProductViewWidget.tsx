@@ -20,9 +20,11 @@ import ProductNutrition                         from './subComponents/ProductNut
 import ProductRecipe                            from './subComponents/ProductRecipe';
 import ProductSize                              from './subComponents/ProductSize';
 import React                                    from 'react';
+import SizeModel                                from '../../../repository/productRepository/models/SizeModel';
 
 interface IProperties {
-    product: ProductModel
+    product: ProductModel,
+    onSizeChanged?: (size: SizeModel) => void;
 }
 
 const ProductViewWidget: React.FC<IProperties> = (props) => {
@@ -34,10 +36,16 @@ const ProductViewWidget: React.FC<IProperties> = (props) => {
         dispatch(new CommandUpdateProduct(props.product));
     }, [dispatch, props.product]);
 
+    const handleProductSizeChanged = (size: SizeModel) => {
+        if ( props.onSizeChanged ) {
+            props.onSizeChanged(size);
+        }
+    }
+
     return (
         <>
             <ProductHeader />
-            <ProductSize />
+            <ProductSize onSizeChanged={(size:SizeModel)=> {handleProductSizeChanged(size)}}/>
             <ProductRecipe />
             <ProductNutrition />
             <ProductIngredients />   

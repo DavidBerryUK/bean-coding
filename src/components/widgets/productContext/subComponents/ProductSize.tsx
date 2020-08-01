@@ -7,8 +7,13 @@ import ProductContext                           from "../context/productContext"
 import ProductSizeService                       from '../../../../Services/productParser/productSize/ProductSizeService';
 import ProductSizeThumbnail                     from '../../../ui/productSizeThumbnail/ProductSizeThumbnail';
 import React                                    from 'react';
+import SizeModel                                from '../../../../repository/productRepository/models/SizeModel';
 
-const ProductSize: React.FC = () => {
+interface IProperties {
+    onSizeChanged?: (size : SizeModel ) => void
+}
+
+const ProductSize: React.FC<IProperties> = (props) => {
 
     const productContext = useContext(ProductContext);    
 
@@ -27,8 +32,11 @@ const ProductSize: React.FC = () => {
 
     const handleItemSelected = (index: number) => {        
         const sizeModel = productContext.state.product.sizes[index];    
-        productContext.state.product.selectedSize = sizeModel;
+        productContext.state.product.selectedSize = sizeModel;        
         productContext.dispatch( new CommandUpdateProduct(productContext.state.product));
+        if ( props.onSizeChanged ) {
+            props.onSizeChanged(sizeModel);
+        }
     }
 
     const calculatedSelectedIndex = () : number | undefined => {
