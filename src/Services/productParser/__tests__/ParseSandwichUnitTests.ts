@@ -1,6 +1,6 @@
 import { enumOptionType }                       from '../../../repository/productRepository/models/options/OptionBaseModel';
 import OptionSandwichModel                      from '../../../repository/productRepository/models/options/OptionSandwichModel';
-import optionsJson                              from './data/optionSandwhich.json';
+import optionsJson                              from './data/optionSandwich.json';
 import ParseOptions                             from '../optionParsers/ParseOptions';
 import { da } from 'date-fns/locale';
 

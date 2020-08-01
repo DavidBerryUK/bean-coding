@@ -7,7 +7,7 @@ import OptionsForBlended                        from './subComponents/OptionsFor
 import OptionsForButtersAndSpreads              from './subComponents/OptionsForButtersAndSpreads';
 import OptionsForDairyAlternatives              from './subComponents/OptionsForDairyAlternatives';
 import OptionsForFlavours                       from './subComponents/OptionsForFlavours';
-import OptionsForSandwhich                      from './subComponents/OptionsForSandwhich';
+import OptionsForSandwich                      from './subComponents/OptionsForSandwich';
 import OptionsForShots                          from './subComponents/OptionsForShot';
 import OptionsForTea                            from './subComponents/OptionsForTea';
 import OptionsForToppings                       from './subComponents/OptionsForToppings';
@@ -43,13 +43,13 @@ const ProductViewWidget: React.FC<IProperties> = (props) => {
             <ProductNutrition />
             <ProductIngredients />
             <OptionsSelector />            
+            {state.product.hasOption(enumOptionType.Shots) && <OptionsForShots />}
             {state.product.hasOption(enumOptionType.AddIn) && <OptionsForAddIns />}
             {state.product.hasOption(enumOptionType.Blended) && <OptionsForBlended />}
             {state.product.hasOption(enumOptionType.ButterAndSpreads) && <OptionsForButtersAndSpreads />}
             {state.product.hasOption(enumOptionType.DiaryAlternatives) && <OptionsForDairyAlternatives />}
             {state.product.hasOption(enumOptionType.Flavours) && <OptionsForFlavours />}
-            {state.product.hasOption(enumOptionType.Sandwich) && <OptionsForSandwhich />}
-            {state.product.hasOption(enumOptionType.Shots) && <OptionsForShots />}
+            {state.product.hasOption(enumOptionType.Sandwich) && <OptionsForSandwich />}
             {state.product.hasOption(enumOptionType.Tea) && <OptionsForTea />}
             {state.product.hasOption(enumOptionType.Toppings) && <OptionsForToppings />}
             {state.product.hasOption(enumOptionType.Warming) && <OptionsForWarming />}

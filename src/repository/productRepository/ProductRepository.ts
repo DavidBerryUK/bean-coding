@@ -14,7 +14,7 @@ import JsonLoaderMacchiato                      from "./loaders/JsonLoaderMacchi
 import JsonLoaderMocha                          from "./loaders/JsonLoaderMocha";
 import JsonLoaderMuffinsAndBreads               from "./loaders/JsonLoaderMuffinsAndBreads";
 import JsonLoaderSalads                         from "./loaders/JsonLoaderSalad";
-import JsonLoaderSandwhiches                    from "./loaders/JsonLoaderSandwhiches";
+import JsonLoaderSandwiches                     from "./loaders/JsonLoaderSandwiches";
 import JsonLoaderScones                         from "./loaders/JsonLoaderScones";
 import JsonLoaderWraps                          from "./loaders/JsonLoaderWraps";
 import ProductModel                             from "./models/ProductModel";
@@ -49,7 +49,7 @@ export default class ProductRepository {
             products = products.concat(this.getMocha());
             products = products.concat(this.getMuffinsAndBreads());
             products = products.concat(this.getSalads());
-            products = products.concat(this.getSandwhiches());
+            products = products.concat(this.getSandwiches());
             products = products.concat(this.getScones());
             products = products.concat(this.getWraps());
 
@@ -118,8 +118,8 @@ export default class ProductRepository {
         return this.productParser.parseCollection(JsonLoaderSalads.load())
     }
 
-    public getSandwhiches(): Array<ProductModel> {
-        return this.productParser.parseCollection(JsonLoaderSandwhiches.load())
+    public getSandwiches(): Array<ProductModel> {
+        return this.productParser.parseCollection(JsonLoaderSandwiches.load())
     }
 
     public getScones(): Array<ProductModel> {

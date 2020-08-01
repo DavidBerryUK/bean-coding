@@ -34,16 +34,6 @@ const DevelopmentRoutes: React.SFC = () => {
       <Route path={EnumDevelopmentRoutes.ShotCount} component={DevShotCountSelectorPage} />
 
       <Route path={EnumDevelopmentRoutes.OptionBase} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionAddIn} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionBlended} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionButterAndSpreads} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionDiaryAlternatives} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionFlavours} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionSandwich} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionShots} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionTea} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionToppings} component={DevProductContextWrapper} />
-      <Route path={EnumDevelopmentRoutes.OptionWarming} component={DevProductContextWrapper} />
 
     </Switch>
   )

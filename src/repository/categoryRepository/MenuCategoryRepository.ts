@@ -169,7 +169,7 @@ export default class MenuCategoryRepository {
     getLunchCategory(): MenuCategoryModel {
         const category = new MenuCategoryModel("lunch", "Lunch");
         category.categories.push(this.getSaladCategory());
-        category.categories.push(this.getSandwhichesCategory());
+        category.categories.push(this.getSandwichesCategory());
         category.categories.push(this.getWrapsCategory());
         return category;
     }
@@ -180,9 +180,9 @@ export default class MenuCategoryRepository {
         return category;
     }
 
-    getSandwhichesCategory(): MenuCategoryModel {
-        const category = new MenuCategoryModel("sandwhiches", "Sandwhiches");
-        category.products = this.productRepository.getSandwhiches();
+    getSandwichesCategory(): MenuCategoryModel {
+        const category = new MenuCategoryModel("Sandwiches", "Sandwiches");
+        category.products = this.productRepository.getSandwiches();
         return category;
     }
 

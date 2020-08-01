@@ -4,7 +4,7 @@ import ItemQuantitySelector                     from '../../../ui/itemQuantitySe
 import React                                    from 'react';
 
 interface IProperties {
-    data: DataQuantityItem;
+    data?: DataQuantityItem;
 }
 
 const DataQuantityItemControl: React.FC<IProperties> = (props) => {
@@ -13,9 +13,15 @@ const DataQuantityItemControl: React.FC<IProperties> = (props) => {
         console.log(`value :${value}`)
     }
 
+    if ( props.data === undefined) {
+        return (
+            <></>
+        )
+    }
+
     return (
         <Paper>
-            {props.data.name}
+            {props.data?.name}
             <ItemQuantitySelector 
                 value={props.data.quantity}
                 onValueChanged={handleOnValueChanged}

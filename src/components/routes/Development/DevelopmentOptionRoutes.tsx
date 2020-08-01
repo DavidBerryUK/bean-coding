@@ -6,7 +6,8 @@ import DevOptionBlendedPage                     from '../../pagesDevelopment/dev
 import DevOptionButtersAndSpreadsPage           from '../../pagesDevelopment/devOptionsPages/DevOptionButterAndSpreadsPage';
 import DevOptionDairyAlternativesPage           from '../../pagesDevelopment/devOptionsPages/DevOptionDiaryAlternativesPage';
 import DevOptionFlavoursPage                    from '../../pagesDevelopment/devOptionsPages/DevOptionFlavoursPage';
-import DevOptionSandwhichPage                   from '../../pagesDevelopment/devOptionsPages/DevOptionSandwhichPage';
+import DevOptionSandwichPage                   from '../../pagesDevelopment/devOptionsPages/DevOptionSandwichPage';
+import DevOptionShotsPage                       from '../../pagesDevelopment/devOptionsPages/DevOptionShotsPage';
 import DevOptionTeaPage                         from '../../pagesDevelopment/devOptionsPages/DevOptionTeaPage';
 import DevOptionToppingsPage                    from '../../pagesDevelopment/devOptionsPages/DevOptionToppingsPage';
 import DevOptionWarmingPage                     from '../../pagesDevelopment/devOptionsPages/DevOptionWarmingPage';
@@ -21,8 +22,8 @@ const DevelopmentOptionRoutes: React.SFC = () => {
       <Route path={EnumDevelopmentRoutes.OptionButterAndSpreads} component={DevOptionButtersAndSpreadsPage} />
       <Route path={EnumDevelopmentRoutes.OptionDiaryAlternatives} component={DevOptionDairyAlternativesPage} />
       <Route path={EnumDevelopmentRoutes.OptionFlavours} component={DevOptionFlavoursPage} />
-      <Route path={EnumDevelopmentRoutes.OptionSandwich} component={DevOptionFlavoursPage} />
-      <Route path={EnumDevelopmentRoutes.OptionShots} component={DevOptionSandwhichPage} />
+      <Route path={EnumDevelopmentRoutes.OptionSandwich} component={DevOptionSandwichPage} />
+      <Route path={EnumDevelopmentRoutes.OptionShots} component={DevOptionShotsPage} />
       <Route path={EnumDevelopmentRoutes.OptionTea} component={DevOptionTeaPage} />
       <Route path={EnumDevelopmentRoutes.OptionToppings} component={DevOptionToppingsPage} />
       <Route path={EnumDevelopmentRoutes.OptionWarming} component={DevOptionWarmingPage} />
